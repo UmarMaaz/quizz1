@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CSS/FPSC MPT Quiz</title>
+<style>
+:root{
+  --bg:#f6f5f2; --card:#ffffff; --ink:#1c1c1c; --sub:#6b6b6b;
+  --accent:#0f5132; --accent2:#8a6d00; --line:#e4e1da; --danger:#8a1f11; --good:#0f5132bb;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#161512; --card:#1f1e1a; --ink:#f0efe9; --sub:#a9a69d; --line:#33322c;
+  }
+}
+:root[data-theme="dark"]{--bg:#161512;--card:#1f1e1a;--ink:#f0efe9;--sub:#a9a69d;--line:#33322c;}
+*{box-sizing:border-box;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:'Georgia','Times New Roman',serif;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  min-height:100%;
+}
+.wrap{max-width:720px;margin:0 auto;padding:24px 18px 60px;}
+header{text-align:center;margin-bottom:20px;}
+h1{font-size:1.5rem;margin:0 0 4px;letter-spacing:.3px;}
+.sub{color:var(--sub);font-size:.85rem;font-family:system-ui,sans-serif;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;margin-bottom:16px;}
+.section-picker{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:18px;}
+.chip{
+  font-family:system-ui,sans-serif;font-size:.8rem;padding:7px 13px;border-radius:20px;
+  border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;
+}
+.chip.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+.progress-row{display:flex;justify-content:space-between;align-items:center;font-family:system-ui,sans-serif;font-size:.8rem;color:var(--sub);margin-bottom:10px;}
+.bar{height:6px;background:var(--line);border-radius:4px;overflow:hidden;margin-bottom:18px;}
+.bar-fill{height:100%;background:var(--accent);transition:width .25s;}
+.qtag{font-family:system-ui,sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent2);margin-bottom:8px;}
+.qtext{font-size:1.15rem;line-height:1.5;margin-bottom:18px;}
+.opt{
+  display:block;width:100%;text-align:left;padding:12px 14px;margin-bottom:10px;
+  border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--ink);
+  font-family:system-ui,sans-serif;font-size:.95rem;cursor:pointer;
+}
+.opt:hover{border-color:var(--accent);}
+.opt.correct{background:#0f513222;border-color:var(--accent);}
+.opt.wrong{background:#8a1f1122;border-color:var(--danger);}
+.opt[disabled]{cursor:default;}
+.explain{
+  margin-top:14px;padding:12px 14px;border-radius:8px;background:var(--bg);
+  border:1px dashed var(--line);font-family:system-ui,sans-serif;font-size:.88rem;line-height:1.5;color:var(--sub);
+}
+.explain b{color:var(--ink);}
+.nav-row{display:flex;justify-content:space-between;margin-top:18px;gap:10px;font-family:system-ui,sans-serif;}
+button.nav{
+  flex:1;padding:11px;border-radius:8px;border:none;background:var(--accent);color:#fff;
+  font-size:.9rem;cursor:pointer;
+}
+button.nav.secondary{background:transparent;color:var(--ink);border:1px solid var(--line);}
+button.nav:disabled{opacity:.4;cursor:default;}
+.score-screen{text-align:center;}
+.score-num{font-size:3rem;margin:10px 0;color:var(--accent);font-family:system-ui,sans-serif;font-weight:700;}
+.start-screen p{font-family:system-ui,sans-serif;color:var(--sub);font-size:.9rem;line-height:1.6;}
+footer{text-align:center;font-family:system-ui,sans-serif;font-size:.72rem;color:var(--sub);margin-top:20px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>CSS / FPSC MPT — MCQ Quiz</h1>
+  <div class="sub">Practice questions from your preparation notes</div>
+</header>
+
+<div id="app"></div>
+
+<footer>Based on the CSS/FPSC MPT Complete Preparation Notes · 100 questions across 7 sections</footer>
+</div>
+
+<script>
+const QUESTIONS = [{"section": "English", "q": "Which sentence uses correct subject-verb agreement?", "opts": ["The list of items are on the desk.", "The list of items is on the desk.", "The list of items were on the desk.", "The list of item is on the desk."], "ans": 1, "exp": "'List' (singular) is the true subject, not 'items'; singular subjects take singular verbs — 'is'."}, {"section": "English", "q": "'Neither the teacher nor the students ___ late.'", "opts": ["was", "is", "were", "be"], "ans": 2, "exp": "With 'neither...nor', the verb agrees with the NEARER subject — 'students' (plural) → 'were'."}, {"section": "English", "q": "Choose the correctly punctuated sentence about time frames: 'She has lived here ___ 2015.'", "opts": ["for", "since", "during", "from"], "ans": 1, "exp": "'Since' pairs with a point in time (2015) and Present Perfect; 'for' pairs with a duration."}, {"section": "English", "q": "Pick the correct article: '___ university offers ___ one-year diploma.'", "opts": ["An, a", "A, an", "A, a", "An, an"], "ans": 2, "exp": "'University' starts with a consonant SOUND (yoo-) → 'a'; 'one-year' starts with a 'w' sound → 'a'."}, {"section": "English", "q": "'Success depends ___ hard work.'", "opts": ["of", "on", "in", "with"], "ans": 1, "exp": "The fixed preposition pattern is 'depend ON'."}, {"section": "English", "q": "Convert to passive: 'He wrote a letter.'", "opts": ["A letter is written by him.", "A letter was written by him.", "A letter has written by him.", "A letter was writing by him."], "ans": 1, "exp": "Past Simple active → 'was/were + V3' in passive: 'was written'."}, {"section": "English", "q": "Indirect speech: He said, 'I am tired.' → He said that ___.", "opts": ["he is tired", "he was tired", "he has been tired", "he will be tired"], "ans": 1, "exp": "In reported speech, tense shifts one step back: Present Simple → Past Simple."}, {"section": "English", "q": "Superlative form of 'good' is:", "opts": ["goodest", "best", "better", "most good"], "ans": 1, "exp": "'Good' is an irregular adjective: good → better → best."}, {"section": "English", "q": "Which is correct? 'There is ___ water left in the bottle.'", "opts": ["few", "a few", "little", "a little"], "ans": 3, "exp": "'Water' is uncountable, and 'a little' means 'some' (positive); 'little' alone would mean 'hardly any'."}, {"section": "English", "q": "A word meaning 'short-lived, transient' is:", "opts": ["Ephemeral", "Perennial", "Permanent", "Static"], "ans": 0, "exp": "'Ephemeral' means lasting for a very short time; its antonym is 'permanent'."}, {"section": "English", "q": "'To let the cat out of the bag' means:", "opts": ["To adopt a pet", "To reveal a secret unintentionally", "To cause chaos", "To escape danger"], "ans": 1, "exp": "This idiom means to accidentally reveal a secret."}, {"section": "English", "q": "One word for 'a person who loves and collects books' is:", "opts": ["Bibliophile", "Bibliophobe", "Philanthropist", "Bibliographer"], "ans": 0, "exp": "A 'bibliophile' is a lover/collector of books."}, {"section": "English", "q": "Choose the correctly spelled word:", "opts": ["Accomodate", "Acommodate", "Accommodate", "Acomodate"], "ans": 2, "exp": "The correct spelling is 'Accommodate' — with double 'c' and double 'm'."}, {"section": "English", "q": "Identify the correct sentence (parallel structure):", "opts": ["She likes reading, writing, and to paint.", "She likes reading, writing, and painting.", "She likes to read, writing, and paint.", "She likes read, write, and paint."], "ans": 1, "exp": "Parallel structure requires the same grammatical form throughout a list — all gerunds: reading, writing, painting."}, {"section": "English", "q": "'Fewer' is used with:", "opts": ["Uncountable nouns", "Countable nouns", "Both equally", "Neither"], "ans": 1, "exp": "'Fewer' modifies countable nouns (fewer books); 'less' modifies uncountable nouns (less water)."}, {"section": "English", "q": "First Conditional structure is:", "opts": ["If + past, would + V1", "If + present, will + V1", "If + past perfect, would have + V3", "If + present, present"], "ans": 1, "exp": "First Conditional expresses real/likely future situations: If + present simple, ... will + base verb."}, {"section": "English", "q": "'If I ___ you, I would apologise.'", "opts": ["was", "am", "were", "be"], "ans": 2, "exp": "The subjunctive mood requires 'were' for all persons in unreal/hypothetical present conditionals: 'If I were you'."}, {"section": "English", "q": "Tag question: 'They play cricket, ___?'", "opts": ["do they", "don't they", "isn't it", "aren't they"], "ans": 1, "exp": "A positive statement takes a negative tag using the auxiliary 'do': 'don't they?'"}, {"section": "English", "q": "Which sentence shows correct inversion after a negative opener?", "opts": ["Never I have seen such a sunset.", "Never have I seen such a sunset.", "I never have seen such a sunset.", "Never did I have seen such a sunset."], "ans": 1, "exp": "Sentence-initial negative adverbials like 'Never' require the auxiliary before the subject: 'Never have I seen...'"}, {"section": "General Science & Ability", "q": "If A can complete a job in 12 days and B in 18 days, working together they will finish in:", "opts": ["6 days", "7.2 days", "8 days", "9 days"], "ans": 1, "exp": "Combined rate = 1/12 + 1/18 = 5/36 per day → time = 36/5 = 7.2 days."}, {"section": "General Science & Ability", "q": "Simple Interest on Rs. 1000 at 10% per annum for 2 years is:", "opts": ["Rs. 100", "Rs. 200", "Rs. 1100", "Rs. 210"], "ans": 1, "exp": "SI = (P×R×T)/100 = (1000×10×2)/100 = Rs. 200."}, {"section": "General Science & Ability", "q": "The value of sin(30°) is:", "opts": ["1/2", "√3/2", "1", "1/√2"], "ans": 0, "exp": "sin(30°) = 1/2, a standard trigonometric value."}, {"section": "General Science & Ability", "q": "In an Arithmetic Progression 3, 7, 11, 15..., the 10th term is:", "opts": ["35", "39", "43", "41"], "ans": 1, "exp": "nth term = a + (n-1)d = 3 + 9×4 = 39."}, {"section": "General Science & Ability", "q": "A number of students ___ absent today.", "opts": ["is", "are", "was", "has"], "ans": 1, "exp": "'A number of' (meaning several) takes a plural verb — this is also a grammar-adjacent reasoning/agreement point tested with quantities."}, {"section": "General Science & Ability", "q": "Which identity is always true for any angle θ?", "opts": ["sinθ + cosθ = 1", "sin²θ + cos²θ = 1", "sinθ × cosθ = 1", "sin²θ - cos²θ = 1"], "ans": 1, "exp": "The Pythagorean trigonometric identity sin²θ + cos²θ = 1 holds for all angles."}, {"section": "General Science & Ability", "q": "If the cost price is Rs. 500 and selling price is Rs. 600, the profit percentage is:", "opts": ["15%", "20%", "25%", "10%"], "ans": 1, "exp": "Profit% = (Profit/CP)×100 = (100/500)×100 = 20%."}, {"section": "General Science & Ability", "q": "A geometric progression 2, 6, 18, 54... has a common ratio of:", "opts": ["2", "3", "4", "6"], "ans": 1, "exp": "Each term is obtained by multiplying the previous term by 3 (the common ratio r)."}, {"section": "General Science & Ability", "q": "The unit of electrical resistance is:", "opts": ["Volt", "Ampere", "Ohm", "Watt"], "ans": 2, "exp": "Resistance is measured in Ohms, named after Georg Ohm."}, {"section": "General Science & Ability", "q": "The process by which plants make their food using sunlight is called:", "opts": ["Respiration", "Transpiration", "Photosynthesis", "Osmosis"], "ans": 2, "exp": "Photosynthesis converts light energy into chemical energy (glucose) in green plants."}, {"section": "General Science & Ability", "q": "Water boils at what temperature at sea level (in Celsius)?", "opts": ["90°C", "100°C", "110°C", "80°C"], "ans": 1, "exp": "At standard atmospheric pressure (sea level), water boils at 100°C."}, {"section": "General Science & Ability", "q": "The powerhouse of the cell is the:", "opts": ["Nucleus", "Ribosome", "Mitochondria", "Golgi body"], "ans": 2, "exp": "Mitochondria generate ATP (energy) for the cell, earning the nickname 'powerhouse of the cell'."}, {"section": "General Science & Ability", "q": "Which gas is most abundant in Earth's atmosphere?", "opts": ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"], "ans": 1, "exp": "Nitrogen makes up about 78% of Earth's atmosphere, more than oxygen's ~21%."}, {"section": "General Science & Ability", "q": "If 60% of a number is 90, the number is:", "opts": ["120", "150", "135", "180"], "ans": 1, "exp": "60% × x = 90 → x = 90/0.6 = 150."}, {"section": "General Science & Ability", "q": "pH value of a neutral solution (like pure water) is:", "opts": ["0", "7", "14", "1"], "ans": 1, "exp": "A pH of 7 is neutral; below 7 is acidic, above 7 is basic (alkaline)."}, {"section": "General Science & Ability", "q": "Average of 10, 20, 30, and 40 is:", "opts": ["20", "25", "30", "35"], "ans": 1, "exp": "Average = Sum/Count = 100/4 = 25."}, {"section": "General Science & Ability", "q": "The speed of light in a vacuum is approximately:", "opts": ["3×10^5 km/s", "3×10^8 m/s", "3×10^6 m/s", "3×10^3 m/s"], "ans": 1, "exp": "Light travels at approximately 3×10^8 metres per second in a vacuum."}, {"section": "General Science & Ability", "q": "If a train travels 60 km in 1.5 hours, its speed is:", "opts": ["30 km/h", "40 km/h", "45 km/h", "50 km/h"], "ans": 1, "exp": "Speed = Distance/Time = 60/1.5 = 40 km/h."}, {"section": "General Science & Ability", "q": "The chemical formula for common table salt is:", "opts": ["NaCl", "KCl", "CaCO3", "NaHCO3"], "ans": 0, "exp": "Table salt is Sodium Chloride, chemical formula NaCl."}, {"section": "Pakistan Affairs", "q": "The All-India Muslim League was founded in which year and city?", "opts": ["1906, Dhaka", "1906, Lahore", "1913, Aligarh", "1916, Lucknow"], "ans": 0, "exp": "The Muslim League was founded in 1906 in Dhaka (then Dacca)."}, {"section": "Pakistan Affairs", "q": "The Lahore Resolution, demanding independent Muslim states, was passed on:", "opts": ["14 August 1947", "23 March 1940", "16 August 1946", "3 June 1947"], "ans": 1, "exp": "The Lahore Resolution (later called the Pakistan Resolution) was passed on 23 March 1940."}, {"section": "Pakistan Affairs", "q": "Allama Iqbal's famous address proposing a separate Muslim state was delivered at:", "opts": ["Lucknow, 1916", "Allahabad, 1930", "Lahore, 1940", "Aligarh, 1875"], "ans": 1, "exp": "Iqbal's Allahabad Address in 1930 first articulated the idea of a separate Muslim state in the subcontinent."}, {"section": "Pakistan Affairs", "q": "Who founded the Muhammadan Anglo-Oriental College at Aligarh?", "opts": ["Quaid-e-Azam", "Allama Iqbal", "Sir Syed Ahmad Khan", "Liaquat Ali Khan"], "ans": 2, "exp": "Sir Syed Ahmad Khan founded the college in 1875, which later became Aligarh Muslim University."}, {"section": "Pakistan Affairs", "q": "The Lucknow Pact (1916) was an agreement between:", "opts": ["Muslim League and the British", "Congress and the Muslim League", "Congress and the British", "Muslim League and the Sikhs"], "ans": 1, "exp": "The Lucknow Pact was a joint agreement between the Indian National Congress and the All-India Muslim League."}, {"section": "Pakistan Affairs", "q": "'Direct Action Day' called by the Muslim League occurred on:", "opts": ["16 August 1946", "23 March 1940", "14 August 1947", "3 June 1947"], "ans": 0, "exp": "Direct Action Day was observed on 16 August 1946, following the Cabinet Mission Plan negotiations."}, {"section": "Pakistan Affairs", "q": "Pakistan's first Prime Minister was:", "opts": ["Muhammad Ali Jinnah", "Liaquat Ali Khan", "Chaudhry Muhammad Ali", "Khawaja Nazimuddin"], "ans": 1, "exp": "Liaquat Ali Khan served as Pakistan's first Prime Minister from 1947 until his assassination in 1951."}, {"section": "Pakistan Affairs", "q": "Which river flows through the Punjab province and gives Pakistan its name element 'P'?", "opts": ["Indus", "Punjab (Five Rivers)", "Chenab", "Jhelum"], "ans": 1, "exp": "'Punjab' means 'land of five rivers' and lends the 'P' to the acronym often cited for 'Pakistan'."}, {"section": "Pakistan Affairs", "q": "The capital of Pakistan is:", "opts": ["Karachi", "Lahore", "Islamabad", "Rawalpindi"], "ans": 2, "exp": "Islamabad has been Pakistan's capital since the 1960s, replacing Karachi."}, {"section": "Pakistan Affairs", "q": "Pakistan's national language is:", "opts": ["English", "Punjabi", "Urdu", "Sindhi"], "ans": 2, "exp": "Urdu is designated as Pakistan's national language, per the Constitution."}, {"section": "Pakistan Affairs", "q": "The highest mountain peak in Pakistan is:", "opts": ["Nanga Parbat", "K2", "Tirich Mir", "Rakaposhi"], "ans": 1, "exp": "K2, located in the Karakoram Range, is the world's second-highest peak and Pakistan's highest."}, {"section": "Pakistan Affairs", "q": "Which province of Pakistan is the largest by area?", "opts": ["Punjab", "Sindh", "Balochistan", "Khyber Pakhtunkhwa"], "ans": 2, "exp": "Balochistan is Pakistan's largest province by land area, though sparsely populated."}, {"section": "Pakistan Affairs", "q": "Pakistan gained independence on:", "opts": ["14 August 1947", "15 August 1947", "23 March 1940", "27 October 1947"], "ans": 0, "exp": "Pakistan became independent on 14 August 1947."}, {"section": "Pakistan Affairs", "q": "The 1973 Constitution of Pakistan established which form of government?", "opts": ["Presidential", "Parliamentary federal", "Monarchy", "Unitary"], "ans": 1, "exp": "The 1973 Constitution established a parliamentary federal system with a bicameral legislature."}, {"section": "Islamic Studies / Civics & Ethics", "q": "How many Articles of Faith (Iman-e-Mufassal) are there in Islam?", "opts": ["Five", "Six", "Seven", "Four"], "ans": 1, "exp": "The six articles include belief in Allah, Angels, Books, Prophets, the Day of Judgment, and Divine Destiny (Taqdeer)."}, {"section": "Islamic Studies / Civics & Ethics", "q": "Which of the following is NOT one of the Five Pillars of Islam?", "opts": ["Shahadah", "Zakat", "Jihad", "Hajj"], "ans": 2, "exp": "The Five Pillars are Shahadah, Salah, Zakat, Sawm, and Hajj — Jihad is not one of the five formal pillars."}, {"section": "Islamic Studies / Civics & Ethics", "q": "Zakat is obligatory at what rate on qualifying wealth held for a lunar year?", "opts": ["1%", "2.5%", "5%", "10%"], "ans": 1, "exp": "Zakat is calculated at 2.5% of qualifying wealth (nisab) held for one lunar year."}, {"section": "Islamic Studies / Civics & Ethics", "q": "The Holy Quran was revealed over a period of approximately:", "opts": ["10 years", "13 years", "23 years", "33 years"], "ans": 2, "exp": "Revelation of the Quran to Prophet Muhammad (PBUH) took place over approximately 23 years."}, {"section": "Islamic Studies / Civics & Ethics", "q": "The Quran was revealed to Prophet Muhammad (PBUH) through which angel?", "opts": ["Mikail", "Israfil", "Jibreel", "Azrael"], "ans": 2, "exp": "The Angel Jibreel (Gabriel) conveyed the revelations of the Quran."}, {"section": "Islamic Studies / Civics & Ethics", "q": "Which of these is one of the revealed books mentioned in Islamic belief?", "opts": ["Vedas", "Torah", "Bhagavad Gita", "Talmud"], "ans": 1, "exp": "The revealed books recognised in Islam are the Torah, Zaboor (Psalms), Injeel (Gospel), and the Quran."}, {"section": "Islamic Studies / Civics & Ethics", "q": "Fasting (Sawm) is observed during the Islamic month of:", "opts": ["Shawwal", "Ramadan", "Muharram", "Rajab"], "ans": 1, "exp": "Sawm is the obligatory fasting observed throughout the month of Ramadan, from dawn to sunset."}, {"section": "Islamic Studies / Civics & Ethics", "q": "Hajj is obligatory upon a Muslim:", "opts": ["Every year", "Once in a lifetime, if able", "Twice in a lifetime", "Only for scholars"], "ans": 1, "exp": "Hajj is obligatory once in a lifetime for Muslims who are physically and financially able."}, {"section": "Islamic Studies / Civics & Ethics", "q": "'Khatam-un-Nabiyyeen' refers to the belief that Prophet Muhammad (PBUH) is:", "opts": ["The first Prophet", "The last Prophet", "A minor Prophet", "An angel"], "ans": 1, "exp": "'Khatam-un-Nabiyyeen' means the 'Seal of the Prophets', affirming Muhammad (PBUH) as the final prophet."}, {"section": "Islamic Studies / Civics & Ethics", "q": "How many daily obligatory prayers (Salah) does a Muslim perform?", "opts": ["Three", "Four", "Five", "Six"], "ans": 2, "exp": "The five daily prayers are Fajr, Zuhr, Asr, Maghrib, and Isha."}, {"section": "Islamic Studies / Civics & Ethics", "q": "Shahadah is the declaration of:", "opts": ["Fasting intention", "Faith in the Oneness of Allah and Prophethood of Muhammad (PBUH)", "Charity", "Pilgrimage intent"], "ans": 1, "exp": "Shahadah is the testimony that there is no god but Allah and Muhammad (PBUH) is His Messenger."}, {"section": "Islamic Studies / Civics & Ethics", "q": "In Islamic belief, 'Taqdeer' refers to:", "opts": ["Angels", "Divine Destiny/predestination", "Revealed Books", "The Day of Judgment"], "ans": 1, "exp": "Taqdeer is the belief that both good and bad occur by the will and decree of Allah."}, {"section": "Islamic Studies / Civics & Ethics", "q": "Civics, as a subject for non-Muslim CSS candidates, primarily studies:", "opts": ["Religious rituals", "Rights, duties, and functioning of the state/citizens", "Foreign languages", "Military strategy"], "ans": 1, "exp": "Civics covers citizenship, rights and duties, and the structure/functioning of government."}, {"section": "Islamic Studies / Civics & Ethics", "q": "Which pillar of Islam involves obligatory almsgiving to the eligible poor?", "opts": ["Salah", "Sawm", "Zakat", "Hajj"], "ans": 2, "exp": "Zakat is the pillar concerned with obligatory almsgiving."}, {"section": "Islamic Studies / Civics & Ethics", "q": "The final and unaltered revealed book, according to Islamic belief, is the:", "opts": ["Torah", "Zaboor", "Injeel", "Quran"], "ans": 3, "exp": "Muslims believe the Quran is the final revelation and, unlike earlier scriptures, remains unaltered."}, {"section": "Current Affairs", "q": "FPSC current affairs questions typically draw on events from roughly the preceding:", "opts": ["1-2 months", "12-18 months", "5 years", "10 years"], "ans": 1, "exp": "FPSC generally sources Current Affairs MCQs from developments in the past 12-18 months before the exam."}, {"section": "Current Affairs", "q": "'Static facts' in current affairs preparation refer to information that:", "opts": ["Changes frequently", "Rarely changes (e.g., HQ locations, founding years)", "Is always current affairs only", "Cannot be memorised"], "ans": 1, "exp": "Static facts (organisation headquarters, founding years, treaties) are stable and can be memorised well in advance."}, {"section": "Current Affairs", "q": "'Dynamic facts' such as heads of state/government should be verified:", "opts": ["A year in advance", "In the final days before the exam", "Never — they don't matter", "Only after the exam"], "ans": 1, "exp": "Dynamic facts change often, so they should be re-verified close to the exam date rather than memorised early."}, {"section": "Current Affairs", "q": "The United Nations' primary organ responsible for international peace and security is the:", "opts": ["General Assembly", "Security Council", "Secretariat", "ECOSOC"], "ans": 1, "exp": "The UN Security Council holds primary responsibility for maintaining international peace and security."}, {"section": "Current Affairs", "q": "SAARC stands for:", "opts": ["South Asian Association for Regional Cooperation", "South Asian Alliance for Regional Cooperation", "South Asian Assembly for Regional Coordination", "South Asian Agreement for Regional Commerce"], "ans": 0, "exp": "SAARC is the South Asian Association for Regional Cooperation."}, {"section": "Current Affairs", "q": "The headquarters of the United Nations is located in:", "opts": ["Geneva", "New York", "Vienna", "The Hague"], "ans": 1, "exp": "The UN's main headquarters is in New York City, USA."}, {"section": "Current Affairs", "q": "CPEC is a flagship project connecting Pakistan with:", "opts": ["India", "China", "Afghanistan", "Iran"], "ans": 1, "exp": "The China-Pakistan Economic Corridor (CPEC) links Gwadar Port in Pakistan to China's Xinjiang region."}, {"section": "Current Affairs", "q": "The IMF (International Monetary Fund) is primarily concerned with:", "opts": ["Global health", "International monetary cooperation and financial stability", "Trade tariffs only", "Environmental policy"], "ans": 1, "exp": "The IMF works to foster global monetary cooperation, financial stability, and facilitate international trade."}, {"section": "Current Affairs", "q": "World Environment Day is observed annually on:", "opts": ["5 June", "22 April", "1 March", "10 December"], "ans": 0, "exp": "World Environment Day is observed on 5 June each year."}, {"section": "Current Affairs", "q": "The headquarters of SAARC is located in:", "opts": ["Islamabad", "Kathmandu", "New Delhi", "Dhaka"], "ans": 1, "exp": "The SAARC Secretariat is headquartered in Kathmandu, Nepal."}, {"section": "Urdu Grammar", "q": "اردو میں 'اسم' کسے کہتے ہیں؟", "opts": ["فعل کو", "کسی شخص، جگہ یا چیز کے نام کو", "صفت کو", "حرفِ ربط کو"], "ans": 1, "exp": "اسم وہ لفظ ہے جو کسی شخص، جگہ، یا چیز کا نام ظاہر کرے، جیسے کتاب، الہور۔"}, {"section": "Urdu Grammar", "q": "'محبت' کس قسم کا اسم ہے؟", "opts": ["اسمِ ذات", "اسمِ معنی (کیفیت)", "اسمِ صفت", "اسمِ ضمیر"], "ans": 1, "exp": "'محبت' ایک کیفیت یا جذبے کا نام ہے، اس لیے یہ اسمِ معنی (اسمِ کیفیت) کہلاتا ہے۔"}, {"section": "Urdu Grammar", "q": "فعل کسے کہتے ہیں؟", "opts": ["کسی کام کے کرنے یا ہونے کو ظاہر کرنے والا لفظ", "کسی چیز کا نام", "جوڑنے والا حرف", "تعجب ظاہر کرنے والا لفظ"], "ans": 0, "exp": "فعل وہ لفظ ہے جو کسی کام کے کرنے یا ہونے کی خبر دے۔"}, {"section": "Urdu Grammar", "q": "'محاورہ' کی تعریف ہے:", "opts": ["ایک مروجہ فقرہ جس کا مطلب لفظی معنی سے مختلف ہو", "صرف ایک لفظ", "شعر کی ایک قسم", "گرامر کا اصول"], "ans": 0, "exp": "محاورہ ایسا فقرہ ہے جس کا حقیقی مفہوم اس کے الفاظ کے لغوی معنی سے مختلف ہوتا ہے۔"}, {"section": "Urdu Grammar", "q": "مترادف الفاظ سے کیا مراد ہے؟", "opts": ["ایک جیسے معنی رکھنے والے الفاظ", "مخالف معنی رکھنے والے الفاظ", "نئے الفاظ", "غیر ملکی الفاظ"], "ans": 0, "exp": "مترادف الفاظ وہ ہوتے ہیں جن کے معنی ایک جیسے یا ملتے جلتے ہوں۔"}, {"section": "Urdu Grammar", "q": "متضاد الفاظ سے کیا مراد ہے؟", "opts": ["ایک جیسے معنی رکھنے والے الفاظ", "ایک دوسرے کے مخالف معنی رکھنے والے الفاظ", "صرف اسماء", "محاورات"], "ans": 1, "exp": "متضاد الفاظ وہ ہیں جن کے معنی ایک دوسرے کے برعکس ہوں، جیسے دن اور رات۔"}, {"section": "Urdu Grammar", "q": "ترجمہ (انگریزی سے اردو) کرتے وقت سب سے اہم بات کیا ہے؟", "opts": ["لفظ بہ لفظ ترجمہ کرنا", "معنی اور روانی کو برقرار رکھنا", "صرف مشکل الفاظ استعمال کرنا", "جملے کو مختصر کرنا"], "ans": 1, "exp": "اچھے ترجمے میں اصل معنی اور فطری روانی دونوں کا خیال رکھا جاتا ہے، لفظی ترجمہ اکثر مفہوم بگاڑ دیتا ہے۔"}, {"section": "Urdu Grammar", "q": "'حرفِ ربط' کس کے لیے استعمال ہوتا ہے؟", "opts": ["الفاظ یا جملوں کو جوڑنے کے لیے", "نام ظاہر کرنے کے لیے", "کام ظاہر کرنے کے لیے", "تعجب ظاہر کرنے کے لیے"], "ans": 0, "exp": "حرفِ ربط جیسے 'اور'، 'لیکن' الفاظ یا جملوں کو آپس میں جوڑنے کا کام کرتا ہے۔"}, {"section": "General Knowledge", "q": "The largest country in the world by area is:", "opts": ["China", "Canada", "Russia", "USA"], "ans": 2, "exp": "Russia is the largest country in the world by total land area."}, {"section": "General Knowledge", "q": "The smallest country in the world by area is:", "opts": ["Monaco", "Vatican City", "San Marino", "Liechtenstein"], "ans": 1, "exp": "Vatican City is the world's smallest sovereign state by both area and population."}, {"section": "General Knowledge", "q": "The longest river in the world is generally considered to be:", "opts": ["Amazon", "Nile", "Yangtze", "Mississippi"], "ans": 1, "exp": "The Nile in Africa is traditionally regarded as the world's longest river."}, {"section": "General Knowledge", "q": "The highest mountain in the world is:", "opts": ["K2", "Mount Everest", "Kangchenjunga", "Nanga Parbat"], "ans": 1, "exp": "Mount Everest, on the Nepal-China border, stands at 8,849 metres, the world's highest peak."}, {"section": "General Knowledge", "q": "The largest ocean on Earth is the:", "opts": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"], "ans": 2, "exp": "The Pacific Ocean is the largest and deepest of the world's oceans."}, {"section": "General Knowledge", "q": "The largest continent by area is:", "opts": ["Africa", "Asia", "North America", "Europe"], "ans": 1, "exp": "Asia is the largest continent both by area and population."}, {"section": "General Knowledge", "q": "The Sahara Desert, the world's largest hot desert, is located in:", "opts": ["Asia", "Africa", "Australia", "South America"], "ans": 1, "exp": "The Sahara Desert spans much of North Africa."}, {"section": "General Knowledge", "q": "The deepest oceanic trench in the world is the:", "opts": ["Puerto Rico Trench", "Mariana Trench", "Java Trench", "Tonga Trench"], "ans": 1, "exp": "The Mariana Trench, in the western Pacific Ocean, is the deepest known point in Earth's oceans."}, {"section": "General Knowledge", "q": "The world's most populous country (as of recent years) is:", "opts": ["China", "India", "USA", "Indonesia"], "ans": 1, "exp": "India overtook China to become the world's most populous country in 2023."}, {"section": "General Knowledge", "q": "The largest island in the world is:", "opts": ["Madagascar", "Borneo", "Greenland", "New Guinea"], "ans": 2, "exp": "Greenland is the world's largest island by area."}, {"section": "General Knowledge", "q": "World War II ended in the year:", "opts": ["1943", "1944", "1945", "1946"], "ans": 2, "exp": "World War II ended in 1945, with Japan's surrender in September of that year."}, {"section": "General Knowledge", "q": "The United Nations was established in the year:", "opts": ["1919", "1945", "1950", "1939"], "ans": 1, "exp": "The UN was founded in 1945, following the end of World War II, replacing the League of Nations."}, {"section": "General Knowledge", "q": "The currency of Japan is the:", "opts": ["Yuan", "Won", "Yen", "Ringgit"], "ans": 2, "exp": "Japan's official currency is the Yen."}, {"section": "General Knowledge", "q": "The Great Wall is located in which country?", "opts": ["India", "China", "Mongolia", "Japan"], "ans": 1, "exp": "The Great Wall of China was built across historic northern Chinese borders."}, {"section": "General Knowledge", "q": "The smallest continent by area is:", "opts": ["Europe", "Australia", "Antarctica", "South America"], "ans": 1, "exp": "Australia is the smallest of the seven continents by land area."}];
+
+const SECTIONS = [...new Set(QUESTIONS.map(q=>q.section))];
+let state = {
+  section: 'All',
+  pool: [],
+  idx: 0,
+  answered: {},
+  score: 0
+};
+
+function buildPool(section){
+  const list = section === 'All' ? QUESTIONS : QUESTIONS.filter(q=>q.section===section);
+  return list.map((q,i)=>({...q, poolIndex:i}));
+}
+
+function startQuiz(section){
+  state.section = section;
+  state.pool = buildPool(section);
+  state.idx = 0;
+  state.answered = {};
+  state.score = 0;
+  renderQuestion();
+}
+
+function renderStart(){
+  const app = document.getElementById('app');
+  let chips = SECTIONS.map(s=>`<div class="chip" data-sec="${s}">${s} (${QUESTIONS.filter(q=>q.section===s).length})</div>`).join('');
+  app.innerHTML = `
+    <div class="card start-screen">
+      <p>Choose a section to focus on, or take the full mixed quiz. Each question shows a short explanation right after you answer.</p>
+      <div class="section-picker">
+        <div class="chip active" data-sec="All">All Sections (${QUESTIONS.length})</div>
+        ${chips}
+      </div>
+      <div class="nav-row">
+        <button class="nav" id="beginBtn">Start Quiz</button>
+      </div>
+    </div>`;
+  let chosen = 'All';
+  document.querySelectorAll('.chip').forEach(c=>{
+    c.addEventListener('click', ()=>{
+      document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));
+      c.classList.add('active');
+      chosen = c.dataset.sec;
+    });
+  });
+  document.getElementById('beginBtn').addEventListener('click', ()=> startQuiz(chosen));
+}
+
+function renderQuestion(){
+  const app = document.getElementById('app');
+  const total = state.pool.length;
+  const q = state.pool[state.idx];
+  const pct = Math.round((state.idx/total)*100);
+  const already = state.answered[state.idx];
+
+  const optsHtml = q.opts.map((opt,i)=>{
+    let cls = 'opt';
+    let disabledAttr = '';
+    if(already !== undefined){
+      disabledAttr = 'disabled';
+      if(i === q.ans) cls += ' correct';
+      else if(i === already) cls += ' wrong';
+    }
+    return `<button class="${cls}" data-i="${i}" ${disabledAttr}>${String.fromCharCode(65+i)}. ${opt}</button>`;
+  }).join('');
+
+  const explainHtml = already !== undefined ? `<div class="explain"><b>${already===q.ans?'Correct. ':'Not quite. '}</b>${q.exp}</div>` : '';
+
+  app.innerHTML = `
+    <div class="progress-row">
+      <span>Question ${state.idx+1} / ${total}</span>
+      <span>Score: ${state.score}</span>
+    </div>
+    <div class="bar"><div class="bar-fill" style="width:${pct}%"></div></div>
+    <div class="card">
+      <div class="qtag">${q.section}</div>
+      <div class="qtext">${q.q}</div>
+      ${optsHtml}
+      ${explainHtml}
+      <div class="nav-row">
+        <button class="nav secondary" id="prevBtn" ${state.idx===0?'disabled':''}>Previous</button>
+        <button class="nav" id="nextBtn" ${already===undefined?'disabled':''}>${state.idx===total-1?'Finish':'Next'}</button>
+      </div>
+    </div>`;
+
+  document.querySelectorAll('.opt').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      if(state.answered[state.idx] !== undefined) return;
+      const i = parseInt(btn.dataset.i);
+      state.answered[state.idx] = i;
+      if(i === q.ans) state.score++;
+      renderQuestion();
+    });
+  });
+  document.getElementById('prevBtn').addEventListener('click', ()=>{
+    if(state.idx>0){ state.idx--; renderQuestion(); }
+  });
+  document.getElementById('nextBtn').addEventListener('click', ()=>{
+    if(state.idx < total-1){ state.idx++; renderQuestion(); }
+    else renderScore();
+  });
+}
+
+function renderScore(){
+  const app = document.getElementById('app');
+  const total = state.pool.length;
+  const pct = Math.round((state.score/total)*100);
+  app.innerHTML = `
+    <div class="card score-screen">
+      <div class="qtag">${state.section}</div>
+      <div>You scored</div>
+      <div class="score-num">${state.score} / ${total}</div>
+      <div class="sub">${pct}% correct</div>
+      <div class="nav-row">
+        <button class="nav secondary" id="retryBtn">Retry Section</button>
+        <button class="nav" id="homeBtn">Choose Another Section</button>
+      </div>
+    </div>`;
+  document.getElementById('retryBtn').addEventListener('click', ()=> startQuiz(state.section));
+  document.getElementById('homeBtn').addEventListener('click', renderStart);
+}
+
+renderStart();
+</script>
+</body>
+</html>
