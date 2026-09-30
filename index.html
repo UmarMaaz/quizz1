@@ -1,209 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>CSS/FPSC MPT Quiz — Set 2</title>
+<title>CSS/FPSC MPT Quiz — Set 3 (Mixed)</title>
 <style>
-:root{
-  --bg:#f6f5f2; --card:#ffffff; --ink:#1c1c1c; --sub:#6b6b6b;
-  --accent:#0f5132; --accent2:#8a6d00; --line:#e4e1da; --danger:#8a1f11; --good:#0f5132bb;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#161512; --card:#1f1e1a; --ink:#f0efe9; --sub:#a9a69d; --line:#33322c;
-  }
-}
-:root[data-theme="dark"]{--bg:#161512;--card:#1f1e1a;--ink:#f0efe9;--sub:#a9a69d;--line:#33322c;}
-*{box-sizing:border-box;}
-html{scroll-padding-top:env(safe-area-inset-top,0px);}
-body{
-  margin:0; background:var(--bg); color:var(--ink);
-  font-family:'Georgia','Times New Roman',serif;
-  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-  min-height:100%;
-}
-.wrap{max-width:720px;margin:0 auto;padding:24px 18px 60px;}
-header{text-align:center;margin-bottom:20px;}
-h1{font-size:1.5rem;margin:0 0 4px;letter-spacing:.3px;}
-.sub{color:var(--sub);font-size:.85rem;font-family:system-ui,sans-serif;}
-.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;margin-bottom:16px;}
-.section-picker{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:18px;}
-.chip{
-  font-family:system-ui,sans-serif;font-size:.8rem;padding:7px 13px;border-radius:20px;
-  border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;
-}
-.chip.active{background:var(--accent);color:#fff;border-color:var(--accent);}
-.progress-row{display:flex;justify-content:space-between;align-items:center;font-family:system-ui,sans-serif;font-size:.8rem;color:var(--sub);margin-bottom:10px;}
-.bar{height:6px;background:var(--line);border-radius:4px;overflow:hidden;margin-bottom:18px;}
-.bar-fill{height:100%;background:var(--accent);transition:width .25s;}
-.qtag{font-family:system-ui,sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent2);margin-bottom:8px;}
-.qtext{font-size:1.15rem;line-height:1.5;margin-bottom:18px;}
-.opt{
-  display:block;width:100%;text-align:left;padding:12px 14px;margin-bottom:10px;
-  border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--ink);
-  font-family:system-ui,sans-serif;font-size:.95rem;cursor:pointer;
-}
-.opt:hover{border-color:var(--accent);}
-.opt.correct{background:#0f513222;border-color:var(--accent);}
-.opt.wrong{background:#8a1f1122;border-color:var(--danger);}
-.opt[disabled]{cursor:default;}
-.explain{
-  margin-top:14px;padding:12px 14px;border-radius:8px;background:var(--bg);
-  border:1px dashed var(--line);font-family:system-ui,sans-serif;font-size:.88rem;line-height:1.5;color:var(--sub);
-}
-.explain b{color:var(--ink);}
-.nav-row{display:flex;justify-content:space-between;margin-top:18px;gap:10px;font-family:system-ui,sans-serif;}
-button.nav{
-  flex:1;padding:11px;border-radius:8px;border:none;background:var(--accent);color:#fff;
-  font-size:.9rem;cursor:pointer;
-}
-button.nav.secondary{background:transparent;color:var(--ink);border:1px solid var(--line);}
-button.nav:disabled{opacity:.4;cursor:default;}
-.score-screen{text-align:center;}
-.score-num{font-size:3rem;margin:10px 0;color:var(--accent);font-family:system-ui,sans-serif;font-weight:700;}
-.start-screen p{font-family:system-ui,sans-serif;color:var(--sub);font-size:.9rem;line-height:1.6;}
-footer{text-align:center;font-family:system-ui,sans-serif;font-size:.72rem;color:var(--sub);margin-top:20px;}
-</style>
-</head>
-<body>
-<div class="wrap">
-<header>
-  <h1>CSS / FPSC MPT — MCQ Quiz (Set 2)</h1>
-  <div class="sub">Practice questions from your preparation notes</div>
-</header>
+:root{--bg:#f6f7f9;--card:#fff;--tx:#1a1d23;--mu:#5d6675;--bd:#dfe3ea;--ac:#2557d6;--ok:#15803d;--okb:#e3f6ea;--no:#b91c1c;--nob:#fde8e8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111418;--card:#1b2027;--tx:#eceff4;--mu:#9aa5b5;--bd:#2c3440;--ac:#6b93ff;--ok:#4ade80;--okb:#12301f;--no:#f87171;--nob:#3a1717}}
+:root[data-theme="dark"]{--bg:#111418;--card:#1b2027;--tx:#eceff4;--mu:#9aa5b5;--bd:#2c3440;--ac:#6b93ff;--ok:#4ade80;--okb:#12301f;--no:#f87171;--nob:#3a1717}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:680px;margin:0 auto;padding:18px 14px 40px}
+h1{font-size:1.3rem;margin:0 0 4px}.sub{color:var(--mu);margin:0 0 16px;font-size:.92rem}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 16px}
+.chip{border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:8px 12px;border-radius:999px;cursor:pointer;font-size:.9rem}
+.chip.on{background:var(--ac);border-color:var(--ac);color:#fff}
+.btn{background:var(--ac);color:#fff;border:0;border-radius:10px;padding:12px 18px;font-size:1rem;cursor:pointer}
+.btn.g{background:transparent;color:var(--ac);border:1px solid var(--ac)}
+.top{display:flex;justify-content:space-between;color:var(--mu);font-size:.85rem;margin-bottom:8px}
+.bar{height:6px;background:var(--bd);border-radius:6px;overflow:hidden;margin-bottom:16px}.bar i{display:block;height:100%;background:var(--ac);width:0;transition:width .25s}
+.tag{display:inline-block;font-size:.72rem;padding:2px 8px;border-radius:6px;background:var(--bd);color:var(--mu);margin-bottom:8px}
+.q{font-size:1.08rem;font-weight:600;margin:0 0 14px}
+.o{display:block;width:100%;text-align:left;background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:11px 13px;margin:0 0 9px;font-size:1rem;cursor:pointer}
+.o:hover:not(:disabled){border-color:var(--ac)}
+.o.ok{background:var(--okb);border-color:var(--ok)}.o.no{background:var(--nob);border-color:var(--no)}
+.ex{margin-top:12px;padding:12px;border-radius:10px;background:var(--bg);border-left:4px solid var(--ac);font-size:.94rem}
+.sc{font-size:2.4rem;font-weight:700;margin:6px 0}
+.hide{display:none}.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.rv{border-top:1px solid var(--bd);padding:10px 0;font-size:.92rem}.rv b.ok{color:var(--ok)}.rv b.no{color:var(--no)}
+</style></head>
+<body><div class="w">
+<h1>CSS/FPSC MPT Quiz — Set 3</h1>
+<p class="sub">100 mixed MCQs, weighted toward Maths, English and GK. Explanation after every answer.</p>
 
-<div id="app"></div>
+<div id="home" class="card">
+<b>Choose a mode</b>
+<div class="chips" id="chips"></div>
+<label class="sub"><input type="checkbox" id="shuf" checked> Shuffle question order</label>
+<div class="row"><button class="btn" id="start">Start quiz</button></div>
+</div>
 
-<footer>Based on the CSS/FPSC MPT Complete Preparation Notes · 100 questions across 7 sections (Set 2)</footer>
+<div id="play" class="hide">
+<div class="top"><span id="cnt"></span><span id="scr"></span></div>
+<div class="bar"><i id="pb"></i></div>
+<div class="card"><span class="tag" id="tg"></span><p class="q" id="qt"></p><div id="opts"></div>
+<div id="ex" class="ex hide"></div>
+<div class="row"><button class="btn hide" id="nx">Next</button></div></div>
+</div>
+
+<div id="end" class="card hide">
+<b>Quiz complete</b><div class="sc" id="fs"></div><div id="fm" class="sub"></div>
+<div class="row"><button class="btn" id="again">Try again</button><button class="btn g" id="revb">Review answers</button></div>
+<div id="rev" class="hide"></div>
+</div>
 </div>
 
 <script>
-const QUESTIONS = [{"section": "English", "q": "Which verb correctly follows 'enjoy' as a gerund-only verb?", "opts": ["She enjoys to read novels.", "She enjoys reading novels.", "She enjoy reading novels.", "She enjoys read novels."], "ans": 1, "exp": "'Enjoy' is always followed by a gerund (V-ing), never a to-infinitive: 'enjoys reading'."}, {"section": "English", "q": "'He is good ___ mathematics.'", "opts": ["in", "at", "on", "with"], "ans": 1, "exp": "The fixed collocation is 'good AT' a subject or skill."}, {"section": "English", "q": "Which sentence uses 'less' correctly?", "opts": ["There are less students today.", "There is less water in the tank.", "He has less books than me.", "Fewer sugar, please."], "ans": 1, "exp": "'Less' modifies uncountable nouns like 'water'; 'fewer' is used for countable nouns like 'students' or 'books'."}, {"section": "English", "q": "'Between you and ___, this is a secret.'", "opts": ["I", "me", "myself", "mine"], "ans": 1, "exp": "'Between' is a preposition and takes the objective case pronoun: 'me', not the subjective 'I'."}, {"section": "English", "q": "The idiom 'once in a blue moon' means:", "opts": ["Every night", "Very rarely", "Regularly", "Never"], "ans": 1, "exp": "This idiom describes something that happens very rarely or infrequently."}, {"section": "English", "q": "'I wish I ___ taller.'", "opts": ["am", "was", "were", "be"], "ans": 2, "exp": "Wishes about the present/unreal situations use the subjunctive 'were' for all subjects."}, {"section": "English", "q": "'Pernicious' most nearly means:", "opts": ["Harmless", "Harmful in a gradual, subtle way", "Extremely fast", "Very cheap"], "ans": 1, "exp": "'Pernicious' describes something that causes harm in a gradual or insidious manner."}, {"section": "English", "q": "Correct the error: 'Everybody have their own opinion.'", "opts": ["Everybody has his or her own opinion.", "Everybody having own opinion.", "Everybody have own opinions.", "No error"], "ans": 0, "exp": "'Everybody' is grammatically singular and requires a singular verb ('has') and singular pronoun reference."}, {"section": "English", "q": "Correct the error: 'I am knowing the answer.'", "opts": ["I am knowing the answer well.", "I know the answer.", "I was knowing the answer.", "No error"], "ans": 1, "exp": "'Know' is a stative verb and is not normally used in continuous (-ing) forms; simple present is correct."}, {"section": "English", "q": "Correct the error: 'She is married with a doctor.'", "opts": ["She is married to a doctor.", "She is married by a doctor.", "She is married for a doctor.", "No error"], "ans": 0, "exp": "The correct preposition after 'married' (as a state) is 'to', not 'with'."}, {"section": "English", "q": "Correct the error: 'Although he was tired, but he continued working.'", "opts": ["Although he was tired, he continued working.", "Although he was tired, so he continued working.", "He was tired although but continued.", "No error"], "ans": 0, "exp": "'Although' should not be paired with 'but' in the same sentence — only one connector is needed."}, {"section": "English", "q": "'Adopt' most correctly fits which sentence?", "opts": ["The committee will ___ the new policy tomorrow.", "She had to ___ to the new environment.", "He is quite ___ at his job.", "They were ___ to change."], "ans": 0, "exp": "'Adopt' means to formally take up or accept (e.g., a policy); 'adapt' means to adjust to new conditions."}, {"section": "English", "q": "'Sound counsel' means:", "opts": ["Sound advice", "A legal council meeting", "A loud noise", "A written agreement"], "ans": 0, "exp": "'Counsel' (noun) means advice; 'council' refers to a group or committee — a commonly confused pair."}, {"section": "English", "q": "'Desert' and 'Dessert' differ in that:", "opts": ["Desert = arid land/to abandon; Dessert = sweet course after a meal", "Both mean the same", "Desert = sweet food; Dessert = arid land", "Neither is a real word"], "ans": 0, "exp": "'Desert' (one 's') means arid land or to abandon; 'dessert' (two 's's) is the sweet food course."}, {"section": "English", "q": "'Precede' most nearly means:", "opts": ["To come before", "To continue forward", "To follow after", "To stop completely"], "ans": 0, "exp": "'Precede' means to come before something in time or order; 'proceed' means to continue or go forward."}, {"section": "English", "q": "Complete the analogy: Author : Book :: Composer : ?", "opts": ["Instrument", "Symphony", "Concert", "Audience"], "ans": 1, "exp": "A composer creates a symphony just as an author creates a book — creator to their creation."}, {"section": "English", "q": "Complete the analogy: Fish : Water :: Bird : ?", "opts": ["Nest", "Air", "Tree", "Egg"], "ans": 1, "exp": "A fish's natural medium is water, just as a bird's natural medium is air."}, {"section": "English", "q": "A gerund functions grammatically as a:", "opts": ["Verb only", "Noun", "Adjective only", "Preposition"], "ans": 1, "exp": "A gerund (V-ing form) functions as a noun in a sentence, e.g., 'Swimming is good exercise.'"}, {"section": "English", "q": "Which collocation is correct?", "opts": ["Do a decision", "Make a decision", "Make a homework", "Do an effort"], "ans": 1, "exp": "The standard English collocation is 'make a decision', not 'do a decision'."}, {"section": "General Science & Ability", "q": "A car's odometer reads distance in km. If it travels at 80 km/h for 45 minutes, the distance covered is:", "opts": ["40 km", "60 km", "70 km", "90 km"], "ans": 1, "exp": "45 minutes = 0.75 hours; Distance = Speed × Time = 80 × 0.75 = 60 km."}, {"section": "General Science & Ability", "q": "The next term in the series 5, 10, 20, 40, ___ is:", "opts": ["60", "70", "80", "90"], "ans": 2, "exp": "Each term is double the previous one (geometric progression with ratio 2): 40 × 2 = 80."}, {"section": "General Science & Ability", "q": "If the perimeter of a square is 48 cm, its area is:", "opts": ["100 cm²", "121 cm²", "144 cm²", "169 cm²"], "ans": 2, "exp": "Side = Perimeter/4 = 48/4 = 12 cm; Area = side² = 144 cm²."}, {"section": "General Science & Ability", "q": "A sum invested at compound interest doubles in 10 years. In how many years (approx.) will it become four times the original, at the same rate?", "opts": ["15 years", "20 years", "25 years", "30 years"], "ans": 1, "exp": "Doubling twice (2×2=4) takes roughly twice the doubling period: 10 + 10 = 20 years (approximate rule for compound growth)."}, {"section": "General Science & Ability", "q": "The boiling point of water decreases at higher altitudes because:", "opts": ["Temperature increases with altitude", "Atmospheric pressure decreases with altitude", "Gravity increases with altitude", "Air becomes denser at altitude"], "ans": 1, "exp": "Lower atmospheric pressure at high altitudes means water boils at a lower temperature."}, {"section": "General Science & Ability", "q": "Which organ in the human body is primarily responsible for filtering blood and producing urine?", "opts": ["Liver", "Kidney", "Pancreas", "Spleen"], "ans": 1, "exp": "The kidneys filter blood to remove waste and excess fluid, producing urine."}, {"section": "General Science & Ability", "q": "The chemical formula for water is:", "opts": ["H2O2", "HO2", "H2O", "H3O"], "ans": 2, "exp": "Water consists of two hydrogen atoms and one oxygen atom: H2O."}, {"section": "General Science & Ability", "q": "Which of the following is NOT a state of matter?", "opts": ["Solid", "Liquid", "Gas", "Energy"], "ans": 3, "exp": "The classical states of matter are solid, liquid, gas (and plasma) — 'energy' is not a state of matter."}, {"section": "General Science & Ability", "q": "A ratio of 3:5 needs to be expressed as a percentage. What is it?", "opts": ["50%", "60%", "65%", "70%"], "ans": 1, "exp": "3/(3+5) = 3/8... but if the ratio itself (3 out of 5 parts, i.e., 3/5) is meant: 3/5 = 60%."}, {"section": "General Science & Ability", "q": "If 15 workers can build a wall in 12 days, how many days will 20 workers take (at the same rate)?", "opts": ["8 days", "9 days", "10 days", "11 days"], "ans": 1, "exp": "Using inverse proportion: 15×12 = 20×x → x = 180/20 = 9 days."}, {"section": "General Science & Ability", "q": "The main gas responsible for the greenhouse effect (in largest human-caused quantity) is:", "opts": ["Oxygen", "Carbon dioxide", "Nitrogen", "Helium"], "ans": 1, "exp": "Carbon dioxide (CO2) is the primary greenhouse gas emitted by human activity contributing to global warming."}, {"section": "General Science & Ability", "q": "An angle greater than 90° but less than 180° is called:", "opts": ["Acute", "Right", "Obtuse", "Reflex"], "ans": 2, "exp": "An obtuse angle measures between 90° and 180°."}, {"section": "General Science & Ability", "q": "Which vitamin is primarily obtained from sunlight exposure on skin?", "opts": ["Vitamin A", "Vitamin B12", "Vitamin C", "Vitamin D"], "ans": 3, "exp": "Vitamin D is synthesized in the skin upon exposure to sunlight (UVB rays)."}, {"section": "General Science & Ability", "q": "The value of 2^5 is:", "opts": ["16", "32", "64", "10"], "ans": 1, "exp": "2^5 = 2×2×2×2×2 = 32."}, {"section": "General Science & Ability", "q": "If the average of 4 numbers is 20, their total sum is:", "opts": ["60", "70", "80", "90"], "ans": 2, "exp": "Sum = Average × Count = 20 × 4 = 80."}, {"section": "General Science & Ability", "q": "Which of these numbers is NOT a perfect square?", "opts": ["36", "49", "54", "64"], "ans": 2, "exp": "54 is not a perfect square; 36=6², 49=7², 64=8²."}, {"section": "General Science & Ability", "q": "Sound travels faster in which medium?", "opts": ["Vacuum", "Air", "Water", "Steel"], "ans": 3, "exp": "Sound travels fastest through solids like steel, due to closely packed molecules, and cannot travel through a vacuum at all."}, {"section": "General Science & Ability", "q": "The process of a liquid changing directly into a gas at its surface (below boiling point) is called:", "opts": ["Boiling", "Evaporation", "Condensation", "Sublimation"], "ans": 1, "exp": "Evaporation is the gradual conversion of liquid to vapor at the surface, occurring below the boiling point."}, {"section": "General Science & Ability", "q": "If a clock shows 3:15, the angle between the hour and minute hands is approximately:", "opts": ["0°", "7.5°", "15°", "30°"], "ans": 1, "exp": "At 3:15, the minute hand is at 90°, the hour hand has moved slightly past 90° (by 0.5°×15=7.5°), giving a gap of about 7.5°."}, {"section": "Pakistan Affairs", "q": "According to the 1973 Constitution, the National Assembly has how many total seats?", "opts": ["272", "336", "342", "350"], "ans": 1, "exp": "The National Assembly comprises 336 seats: 266 general + 60 reserved for women + 10 for non-Muslims."}, {"section": "Pakistan Affairs", "q": "The Senate of Pakistan has how many total seats?", "opts": ["96", "100", "104", "110"], "ans": 0, "exp": "The Senate comprises 96 seats, with equal representation ensured across the four provinces."}, {"section": "Pakistan Affairs", "q": "The term of a Senator in Pakistan is:", "opts": ["4 years", "5 years", "6 years", "7 years"], "ans": 2, "exp": "Senators serve a 6-year term, with half the House retiring every 3 years."}, {"section": "Pakistan Affairs", "q": "The Khyber Pass connects Pakistan to which neighboring country?", "opts": ["Iran", "Afghanistan", "China", "India"], "ans": 1, "exp": "The historic Khyber Pass connects Peshawar, Pakistan, to Jalalabad/Kabul in Afghanistan."}, {"section": "Pakistan Affairs", "q": "The Karakoram Pass connects Gilgit-Baltistan to which country?", "opts": ["Afghanistan", "Iran", "China", "India"], "ans": 2, "exp": "The Karakoram Pass provides a route connecting Gilgit-Baltistan, Pakistan, to Xinjiang, China."}, {"section": "Pakistan Affairs", "q": "Nanga Parbat, nicknamed the 'Killer Mountain', is the world's:", "opts": ["Highest peak", "2nd highest peak", "9th highest peak", "15th highest peak"], "ans": 2, "exp": "Nanga Parbat, at 8,126 m, is the world's 9th-highest mountain and is notorious for its difficulty and danger."}, {"section": "Pakistan Affairs", "q": "Pakistan's largest freshwater lake is:", "opts": ["Attabad Lake", "Manchar Lake", "Saif-ul-Malook Lake", "Keenjhar Lake"], "ans": 1, "exp": "Manchar Lake, located in Sindh, is Pakistan's largest freshwater lake."}, {"section": "Pakistan Affairs", "q": "Youm-e-Takbeer, commemorating Pakistan's 1998 nuclear tests, is observed on:", "opts": ["23 March", "1 May", "28 May", "6 September"], "ans": 2, "exp": "Youm-e-Takbeer marks the anniversary of Pakistan's nuclear tests at Chagai on 28 May 1998."}, {"section": "Pakistan Affairs", "q": "Defence Day, commemorating the 1965 war with India, is observed on:", "opts": ["23 March", "6 September", "5 February", "9 November"], "ans": 1, "exp": "Defence Day is observed on 6 September each year, commemorating Pakistan's defence in the 1965 war."}, {"section": "Pakistan Affairs", "q": "According to Pakistan's 2023 digital census, the total population was approximately:", "opts": ["207.7 million", "220 million", "241.5 million", "260 million"], "ans": 2, "exp": "The 2023 census recorded Pakistan's population at approximately 241.5 million, up from 207.7 million in 2017."}, {"section": "Pakistan Affairs", "q": "According to the 2023 census, which is the most widely spoken mother tongue in Pakistan?", "opts": ["Urdu", "Punjabi", "Pashto", "Sindhi"], "ans": 1, "exp": "Punjabi is the most common mother tongue (about 37%), even though Urdu is the national/official language."}, {"section": "Pakistan Affairs", "q": "Shah Abdul Latif Bhittai, author of the 'Shah Jo Risalo', is a celebrated Sufi poet of:", "opts": ["Punjab", "Sindh", "Balochistan", "Khyber Pakhtunkhwa"], "ans": 1, "exp": "Shah Abdul Latif Bhittai was a renowned Sindhi Sufi poet who authored the 'Shah Jo Risalo'."}, {"section": "Pakistan Affairs", "q": "Khushal Khan Khattak, called the 'Father of Pashto Poetry', was also known as a:", "opts": ["Diplomat", "Warrior-poet", "Scientist", "Painter"], "ans": 1, "exp": "Khushal Khan Khattak is remembered both as a warrior and a major figure in Pashto literature."}, {"section": "Pakistan Affairs", "q": "The Indus Waters Treaty (1960) was brokered and guaranteed by:", "opts": ["The United Nations", "The World Bank", "NATO", "The IMF"], "ans": 1, "exp": "The World Bank facilitated and guaranteed the Indus Waters Treaty signed between Pakistan and India in 1960."}, {"section": "Pakistan Affairs", "q": "Under the Indus Waters Treaty, the three Western Rivers allocated to Pakistan are:", "opts": ["Ravi, Beas, Sutlej", "Indus, Jhelum, Chenab", "Indus, Ravi, Sutlej", "Jhelum, Beas, Chenab"], "ans": 1, "exp": "Pakistan received primary rights to the Indus, Jhelum, and Chenab rivers under the treaty."}, {"section": "Pakistan Affairs", "q": "Which political party was founded by Zulfikar Ali Bhutto in 1967?", "opts": ["Jamaat-e-Islami", "Pakistan Peoples Party (PPP)", "Pakistan Muslim League", "MQM"], "ans": 1, "exp": "Zulfikar Ali Bhutto founded the Pakistan Peoples Party (PPP) in 1967."}, {"section": "Pakistan Affairs", "q": "Jamaat-e-Islami (JI) was founded in 1941 by:", "opts": ["Maulana Abul Ala Maududi", "Allama Iqbal", "Liaquat Ali Khan", "Altaf Hussain"], "ans": 0, "exp": "Maulana Abul Ala Maududi founded Jamaat-e-Islami in 1941."}, {"section": "Pakistan Affairs", "q": "The National Command Authority (NCA), overseeing Pakistan's strategic nuclear assets, was established in:", "opts": ["1956", "1976", "1998", "2000"], "ans": 3, "exp": "The NCA was established in 2000 as the apex body for Pakistan's nuclear policy and strategic assets."}, {"section": "Islamic Studies / Civics & Ethics", "q": "The Holy Quran consists of how many Surahs?", "opts": ["110", "114", "116", "120"], "ans": 1, "exp": "The Quran is divided into 114 Surahs (chapters)."}, {"section": "Islamic Studies / Civics & Ethics", "q": "The Quran is divided into how many Paras (Juz)?", "opts": ["28", "29", "30", "32"], "ans": 2, "exp": "The Quran is traditionally divided into 30 Paras (Juz) for ease of recitation."}, {"section": "Islamic Studies / Civics & Ethics", "q": "The longest Surah in the Quran is:", "opts": ["Al-Baqarah", "Al-Kausar", "Al-Fatiha", "Yaseen"], "ans": 0, "exp": "Al-Baqarah is the longest Surah of the Quran, while Al-Kausar is the shortest."}, {"section": "Islamic Studies / Civics & Ethics", "q": "The shortest Surah in the Quran is:", "opts": ["Al-Ikhlas", "Al-Kausar", "An-Nas", "Al-Falaq"], "ans": 1, "exp": "Al-Kausar, with just three verses, is the shortest Surah in the Quran."}, {"section": "Islamic Studies / Civics & Ethics", "q": "Surahs revealed before the Prophet's migration to Madinah are classified as:", "opts": ["Madani", "Makki", "Hijri", "Qudsi"], "ans": 1, "exp": "Surahs revealed in Makkah before Hijrah are called 'Makki'; those revealed after migration to Madinah are 'Madani'."}, {"section": "Islamic Studies / Civics & Ethics", "q": "Prophet Muhammad (PBUH) was born in the year traditionally known as the:", "opts": ["Year of the Elephant", "Year of Sorrow", "Year of Victory", "Year of Unity"], "ans": 0, "exp": "The Prophet was born in 570 CE, referred to as the 'Year of the Elephant' due to Abraha's failed attack on the Kaaba."}, {"section": "Islamic Studies / Civics & Ethics", "q": "At what age did Prophet Muhammad (PBUH) receive his first revelation?", "opts": ["25", "30", "40", "50"], "ans": 2, "exp": "The Prophet received his first revelation at age 40, in the Cave of Hira."}, {"section": "Islamic Studies / Civics & Ethics", "q": "The Quran was standardized into a single authoritative text during the caliphate of:", "opts": ["Abu Bakr", "Umar", "Uthman", "Ali"], "ans": 2, "exp": "While initial compilation occurred under Abu Bakr, the standardized text was produced and distributed under Caliph Uthman."}, {"section": "Islamic Studies / Civics & Ethics", "q": "Zakat is calculated on wealth held for how long before it becomes due?", "opts": ["6 months", "One lunar year", "One solar year", "Two years"], "ans": 1, "exp": "Zakat becomes obligatory on qualifying wealth that has been held for one complete lunar (Hijri) year."}, {"section": "Islamic Studies / Civics & Ethics", "q": "How many verses (Ayat) does the Quran approximately contain?", "opts": ["Approximately 5,000", "Approximately 6,236", "Approximately 7,500", "Approximately 8,000"], "ans": 1, "exp": "The Quran contains approximately 6,236 verses, though exact counts vary slightly by counting convention."}, {"section": "Islamic Studies / Civics & Ethics", "q": "The Farewell Sermon was delivered near which location?", "opts": ["Madinah", "Mount Arafat (during Hajj)", "Cave of Hira", "Jerusalem"], "ans": 1, "exp": "The Farewell Sermon was delivered on Mount Arafat during the Prophet's only Hajj (Hajjatul Wida)."}, {"section": "Islamic Studies / Civics & Ethics", "q": "Belief in the Prophets includes the belief that Adam (AS) was the first Prophet and Muhammad (PBUH) was the:", "opts": ["Second-to-last Prophet", "Last Prophet (Khatam-un-Nabiyyeen)", "A minor Prophet", "Not considered a Prophet"], "ans": 1, "exp": "Muhammad (PBUH) is believed to be the final Prophet, sealing the chain of prophethood."}, {"section": "Islamic Studies / Civics & Ethics", "q": "In civics, 'fundamental rights' typically refer to:", "opts": ["Optional privileges granted by rulers", "Basic rights guaranteed to citizens by the constitution", "Only religious obligations", "Military duties"], "ans": 1, "exp": "Fundamental rights are basic guarantees enshrined in a country's constitution, protecting citizens' freedoms."}, {"section": "Islamic Studies / Civics & Ethics", "q": "'Ihsan' in Islamic ethics broadly refers to:", "opts": ["Excellence and sincerity in worship and conduct, as if seeing Allah", "Only charitable giving", "Ritual cleanliness", "Legal punishment"], "ans": 0, "exp": "'Ihsan' represents the highest level of faith — doing good with excellence and sincerity, as though one sees Allah."}, {"section": "Current Affairs", "q": "The term 'Youm-e-Takbeer' is specifically linked to Pakistan's:", "opts": ["Independence", "Nuclear tests of 1998", "First constitution", "First elections"], "ans": 1, "exp": "Youm-e-Takbeer commemorates Pakistan's successful nuclear tests conducted at Chagai on 28 May 1998."}, {"section": "Current Affairs", "q": "CPEC 2.0, the current phase of the China-Pakistan Economic Corridor, primarily shifts emphasis toward:", "opts": ["Only road construction", "Special Economic Zones, agriculture, and industrial relocation", "Military cooperation only", "Tourism exclusively"], "ans": 1, "exp": "CPEC 2.0 emphasizes Special Economic Zones, agricultural cooperation, industrial relocation from China, and social-sector development."}, {"section": "Current Affairs", "q": "India's announcement of holding the Indus Waters Treaty 'in abeyance' occurred in:", "opts": ["2020", "2022", "April 2025", "2018"], "ans": 2, "exp": "India announced holding the Indus Waters Treaty in abeyance in April 2025, marking a major shift in a treaty that had survived decades of tension."}, {"section": "Current Affairs", "q": "The 'Strategic Plans Division (SPD)' functions as the secretariat of which Pakistani body?", "opts": ["Ministry of Defence", "National Command Authority (NCA)", "Pakistan Army GHQ", "Senate of Pakistan"], "ans": 1, "exp": "The SPD serves as the secretariat supporting the National Command Authority, which oversees Pakistan's strategic assets."}, {"section": "Current Affairs", "q": "Which international body sets global rules for international trade disputes?", "opts": ["IMF", "World Bank", "WTO", "UNCTAD"], "ans": 2, "exp": "The World Trade Organization (WTO) establishes and enforces rules governing international trade."}, {"section": "Current Affairs", "q": "The 'Paris Agreement' is an international accord primarily concerning:", "opts": ["Nuclear disarmament", "Climate change mitigation", "Trade tariffs", "Refugee resettlement"], "ans": 1, "exp": "The Paris Agreement, adopted in 2015, is a legally binding international treaty on climate change mitigation."}, {"section": "Current Affairs", "q": "'Soft power' in international relations refers to a country's ability to influence others through:", "opts": ["Military force", "Economic sanctions only", "Culture, values, and diplomacy rather than coercion", "Direct invasion"], "ans": 2, "exp": "Soft power describes influence gained through attraction — culture, diplomacy, and values — rather than military or economic coercion."}, {"section": "Current Affairs", "q": "The African Union (AU) headquarters is located in:", "opts": ["Cairo, Egypt", "Addis Ababa, Ethiopia", "Nairobi, Kenya", "Johannesburg, South Africa"], "ans": 1, "exp": "The African Union is headquartered in Addis Ababa, Ethiopia."}, {"section": "Current Affairs", "q": "Which country hosted the G20 Summit as part of its ongoing rotating presidency structure most recently discussed in current affairs prep?", "opts": ["This changes yearly — always verify the current host shortly before the exam", "Always the USA", "Always China", "Always held in Switzerland"], "ans": 0, "exp": "The G20 presidency rotates annually among member states, so candidates should verify the current host country close to their exam date rather than memorising a fixed answer."}, {"section": "Current Affairs", "q": "The term 'Bretton Woods Institutions' commonly refers to:", "opts": ["The UN and WHO", "The IMF and World Bank", "NATO and the EU", "WTO and OPEC"], "ans": 1, "exp": "The IMF and World Bank were established following the 1944 Bretton Woods Conference and are collectively known as the Bretton Woods Institutions."}, {"section": "Urdu Grammar", "q": "'کنایہ' سے کیا مراد ہے؟", "opts": ["بلاواسطہ بات کہنا جو بالواسطہ مفہوم دے", "براہ راست بات کہنا", "صرف تشبیہ", "شعر کی بحر"], "ans": 0, "exp": "کنایہ میں بات کو براہ راست کہنے کے بجائے اشارے یا کنائے میں بیان کیا جاتا ہے۔"}, {"section": "Urdu Grammar", "q": "جملہ اسمیہ کی پہچان ہے کہ اس میں:", "opts": ["فعل کی موجودگی لازمی ہے", "خبر اسم یا صفت کی صورت میں ہوتی ہے، فعل ناگزیر نہیں", "صرف حروف ربط ہوتے ہیں", "کوئی مبتدا نہیں ہوتا"], "ans": 1, "exp": "جملہ اسمیہ وہ جملہ ہے جس میں خبر اسم یا صفت کی شکل میں ہو، جیسے 'علی ہوشیار ہے'۔"}, {"section": "Urdu Grammar", "q": "'روز و شب' میں 'و' کس قسم کا حرف ہے؟", "opts": ["حرفِ ربط (عطف)", "حرفِ جار", "اسم", "فعل"], "ans": 0, "exp": "'و' یہاں عطف کا حرف ہے جو دو الفاظ کو جوڑنے کے لیے استعمال ہوتا ہے، جیسے 'روز و شب' یعنی دن اور رات۔"}, {"section": "Urdu Grammar", "q": "'تشبیہ' میں دو چیزوں کا موازنہ کس لفظ کی مدد سے کیا جاتا ہے؟", "opts": ["جیسے / کی طرح", "اور", "لیکن", "کیونکہ"], "ans": 0, "exp": "تشبیہ میں 'جیسے'، 'کی طرح' جیسے الفاظ کی مدد سے دو چیزوں میں مشابہت بیان کی جاتی ہے۔"}, {"section": "Urdu Grammar", "q": "مصدر کی تعریف ہے:", "opts": ["فعل کی اصل اور غیر متعین شکل", "اسم کی ایک قسم", "حرف ربط", "صفت کی قسم"], "ans": 0, "exp": "مصدر فعل کی وہ بنیادی شکل ہے جس میں زمانہ اور فاعل کا تعین نہیں ہوتا، جیسے 'لکھنا'۔"}, {"section": "General Knowledge", "q": "The Amazon Rainforest is primarily located in which country?", "opts": ["Peru", "Brazil", "Colombia", "Venezuela"], "ans": 1, "exp": "The majority of the Amazon Rainforest lies within Brazil, though it extends into several neighboring countries."}, {"section": "General Knowledge", "q": "The 'Great Barrier Reef' is located off the coast of:", "opts": ["Brazil", "Australia", "South Africa", "Indonesia"], "ans": 1, "exp": "The Great Barrier Reef, the world's largest coral reef system, lies off the coast of Queensland, Australia."}, {"section": "General Knowledge", "q": "Which country is home to the ancient city of Petra?", "opts": ["Egypt", "Jordan", "Syria", "Lebanon"], "ans": 1, "exp": "Petra, an ancient rock-carved city, is located in Jordan."}, {"section": "General Knowledge", "q": "The currency of China is the:", "opts": ["Yuan (Renminbi)", "Won", "Baht", "Ringgit"], "ans": 0, "exp": "China's official currency is the Renminbi, commonly denominated in Yuan."}, {"section": "General Knowledge", "q": "The 'Great Pyramid of Giza' is located in:", "opts": ["Iraq", "Egypt", "Sudan", "Libya"], "ans": 1, "exp": "The Great Pyramid of Giza, one of the Seven Wonders of the Ancient World, is located near Cairo, Egypt."}, {"section": "General Knowledge", "q": "Which of these countries is landlocked (has no coastline)?", "opts": ["Nepal", "Sri Lanka", "Bangladesh", "Myanmar"], "ans": 0, "exp": "Nepal is a landlocked country, situated between India and China with no access to the sea."}, {"section": "General Knowledge", "q": "The Sahara Desert experiences its climate primarily due to:", "opts": ["High latitude cold air", "Subtropical high-pressure belts", "Monsoon winds", "Ocean currents alone"], "ans": 1, "exp": "The Sahara's arid climate is largely driven by persistent subtropical high-pressure systems that suppress rainfall."}, {"section": "General Knowledge", "q": "'Silicon Valley', a global hub for technology companies, is located in which US state?", "opts": ["Texas", "New York", "California", "Washington"], "ans": 2, "exp": "Silicon Valley, home to numerous major tech companies, is located in the San Francisco Bay Area of California."}, {"section": "General Knowledge", "q": "The 'Big Ben' clock tower is a landmark of which city?", "opts": ["Paris", "London", "Berlin", "Rome"], "ans": 1, "exp": "Big Ben is the nickname for the clock tower at the Houses of Parliament in London."}, {"section": "General Knowledge", "q": "Mount Fuji, an iconic peak, is located in which country?", "opts": ["China", "Japan", "South Korea", "Taiwan"], "ans": 1, "exp": "Mount Fuji, Japan's highest peak and a cultural icon, is an active stratovolcano near Tokyo."}, {"section": "General Knowledge", "q": "The 'Dead Sea', known for its high salinity, borders which two countries primarily?", "opts": ["Israel/Jordan", "Egypt/Israel", "Syria/Lebanon", "Iraq/Iran"], "ans": 0, "exp": "The Dead Sea lies on the border between Israel and Jordan, and is one of the saltiest bodies of water on Earth."}, {"section": "General Knowledge", "q": "The world's longest wall, the Great Wall, was primarily built to:", "opts": ["Promote trade", "Defend against invasions", "Serve as a religious site", "Mark territory for farming"], "ans": 1, "exp": "The Great Wall of China was primarily constructed to protect against invasions from northern nomadic groups."}, {"section": "General Knowledge", "q": "Which African country was never formally colonized by a European power?", "opts": ["Ethiopia", "Kenya", "Nigeria", "Algeria"], "ans": 0, "exp": "Ethiopia successfully resisted colonization (except for a brief Italian occupation 1936-41) and is often cited as never having been formally colonized."}, {"section": "General Knowledge", "q": "The currency of the European Union member states (most of them) is the:", "opts": ["Franc", "Euro", "Mark", "Lira"], "ans": 1, "exp": "The Euro is the common currency used by most European Union member states within the Eurozone."}, {"section": "General Knowledge", "q": "The 'Roof of the World' is a nickname commonly given to:", "opts": ["The Andes", "The Alps", "The Pamir/Tibetan Plateau region", "The Rockies"], "ans": 2, "exp": "The Pamir Mountains and Tibetan Plateau region, due to their extreme elevation, are often called the 'Roof of the World'."}];
+const N={M:"Maths",E:"English",G:"General Knowledge",P:"Pakistan & Islamic"};
+// [cat, question, "opt|opt|opt|opt", correctIndex, explanation]
+const Q=[
+["M","In an exam a student scores 462 out of 700. What is the percentage?","60%|66%|68%|72%",1,"(462/700) × 100 = 66%."],
+["M","Simple interest on Rs. 10,000 at 5% per annum for 4 years is:","Rs. 1,500|Rs. 2,000|Rs. 2,500|Rs. 3,000",1,"SI = (P×R×T)/100 = (10000×5×4)/100 = Rs. 2,000."],
+["M","Compound interest on Rs. 1,000 at 10% per annum for 2 years is:","Rs. 200|Rs. 210|Rs. 220|Rs. 250",1,"A = 1000(1.1)² = 1210, so CI = A − P = Rs. 210."],
+["M","A price rises by 20% and then falls by 10%. The net change is:","+10%|+8%|+12%|+6%",1,"Net = a + b + ab/100 = 20 − 10 − 2 = +8%."],
+["M","Two successive discounts of 20% and 10% equal a single discount of:","30%|28%|25%|32%",1,"Net discount = a + b − ab/100 = 30 − 2 = 28%, not 30%."],
+["M","A car goes at 40 km/h and returns the same route at 60 km/h. Average speed for the round trip is:","50 km/h|48 km/h|45 km/h|52 km/h",1,"Equal distances: 2xy/(x+y) = 2×40×60/100 = 48 km/h."],
+["M","A can finish a job in 12 days and B in 18 days. Together they finish it in:","6 days|7.2 days|8 days|15 days",1,"Rate = 1/12 + 1/18 = 5/36 per day, so time = 36/5 = 7.2 days."],
+["M","Pipe A fills a tank in 6 h; pipe B empties it in 8 h. Both open together, the tank fills in:","14 h|18 h|24 h|48 h",2,"Net rate = 1/6 − 1/8 = 1/24, so 24 hours."],
+["M","Present ages of A and B are in ratio 3:5. After 6 years the ratio is 2:3. A's present age is:","15|18|21|24",1,"(3x+6)/(5x+6) = 2/3 gives x = 6, so A = 18."],
+["M","A and B invest Rs. 20,000 and Rs. 30,000. Profit is Rs. 10,000. A's share is:","Rs. 4,000|Rs. 5,000|Rs. 6,000|Rs. 3,000",0,"Profit is shared in the ratio of investment 2:3, so A gets 2/5 × 10,000 = Rs. 4,000."],
+["M","A boat's still-water speed is 10 km/h and the stream is 2 km/h. Upstream speed is:","12 km/h|8 km/h|10 km/h|6 km/h",1,"Upstream = 10 − 2 = 8 km/h (downstream would be 12)."],
+["M","HCF of two numbers is 6, LCM is 84 and one number is 12. The other is:","36|42|48|54",1,"HCF × LCM = product, so other = 6×84/12 = 42."],
+["M","Which number is divisible by 11?","2728|2729|2730|2731",0,"Alternate digit sums: (2+2) and (7+8) = 4 and 15; difference 11 is divisible by 11."],
+["M","The only even prime number is:","1|2|3|5",1,"2 is divisible only by 1 and itself, and it is even."],
+["M","If a + b = 7 and ab = 12, then a² + b² equals:","25|37|19|29",0,"a² + b² = (a+b)² − 2ab = 49 − 24 = 25."],
+["M","The value of 13² − 12² is:","1|25|156|169",1,"a² − b² = (a+b)(a−b) = 25 × 1 = 25."],
+["M","The roots of x² − 5x + 6 = 0 are:","2 and 3|1 and 6|−2 and −3|−1 and −6",0,"Factorise: (x−2)(x−3) = 0."],
+["M","2³ × 2⁴ equals:","64|128|256|32",1,"Same base: add exponents, 2⁷ = 128."],
+["M","Sum of interior angles of a hexagon is:","540°|720°|900°|1080°",1,"(n−2) × 180° = 4 × 180° = 720°."],
+["M","Area of a circle of radius 7 (π = 22/7) is:","44|154|49|22",1,"πr² = 22/7 × 49 = 154."],
+["M","A right triangle has sides 6 and 8. The hypotenuse is:","9|10|12|14",1,"√(6² + 8²) = √100 = 10."],
+["M","Volume of a cylinder with r = 7 and h = 10 (π = 22/7) is:","1540|770|154|3080",0,"πr²h = 22/7 × 49 × 10 = 1540."],
+["M","Volume of a sphere of radius 3 is:","12π|36π|27π|108π",1,"(4/3)πr³ = (4/3) × 27 × π = 36π."],
+["M","Area of a trapezium with parallel sides 8 and 12 and height 5 is:","100|50|40|60",1,"½(a+b)×h = ½ × 20 × 5 = 50."],
+["M","10th term of the AP 3, 7, 11, 15… is:","39|43|37|35",0,"a + 9d = 3 + 36 = 39."],
+["M","6th term of the GP 2, 6, 18, 54… is:","162|486|1458|324",1,"a×r⁵ = 2 × 243 = 486."],
+["M","sin 30° equals:","1/2|√3/2|1|1/√3",0,"Standard value: sin 30° = 1/2."],
+["M","A die is thrown once. Probability of an even number is:","1/6|1/3|1/2|2/3",2,"Favourable outcomes 2, 4, 6 out of 6 = 1/2."],
+["M","The value of 5C2 is:","10|20|5|25",0,"5!/(2!×3!) = 10."],
+["M","30 students like Maths, 25 like Science, 15 like both. How many like at least one?","55|40|45|70",1,"|A∪B| = 30 + 25 − 15 = 40."],
+["M","In a pie chart, a 25% share corresponds to an angle of:","60°|75°|90°|100°",2,"Each 1% = 3.6°, so 25% = 90°."],
+["M","Next term in the series 2, 6, 12, 20, 30, ? is:","40|42|44|36",1,"Differences 4, 6, 8, 10, 12, so 30 + 12 = 42."],
+["M","A painted cube is cut into 4×4×4 small cubes. How many have exactly one face painted?","24|12|8|36",0,"6(n−2)² = 6 × 4 = 24."],
+["M","Simplify 12 + 6 ÷ 2 × (3 − 1):","18|10|14|24",0,"BODMAS: bracket 2; 6÷2×2 = 6; 12 + 6 = 18."],
+["M","√72 in simplest surd form is:","6√2|8√3|36√2|12√6",0,"√(36×2) = 6√2."],
 
-const SECTIONS = [...new Set(QUESTIONS.map(q=>q.section))];
-let state = {
-  section: 'All',
-  pool: [],
-  idx: 0,
-  answered: {},
-  score: 0
-};
+["E","Neither of the boys ___ present.","is|are|were|have been",0,"'Neither' takes a singular verb."],
+["E","He is good ___ mathematics.","in|at|on|with",1,"The fixed preposition is 'good at'."],
+["E","She is coming, ___?","isn't she|doesn't she|won't she|is she",0,"Positive statement takes a negative tag repeating the auxiliary 'is'."],
+["E","Let's go, ___?","will we|shall we|don't we|won't we",1,"After 'Let's', the tag is 'shall we?'."],
+["E","I am late, ___?","am I not|aren't I|isn't I|don't I",1,"'I am' takes the irregular tag 'aren't I?'."],
+["E","Never ___ such a beautiful sunset.","I have seen|have I seen|I seen|did I saw",1,"Negative opener triggers inversion: auxiliary before the subject."],
+["E","No sooner had he left ___ it started raining.","when|than|then|that",1,"'No sooner… than' is the correct pair; 'hardly… when'."],
+["E","Hardly had we sat down ___ the phone rang.","than|when|then|while",1,"'Hardly… when' (not 'than')."],
+["E","Choose the correct adjective order:","a wooden old small table|an old small wooden table|a small old wooden table|a small wooden old table",2,"Order: size → age → material, giving 'a small old wooden table'."],
+["E","If I ___ you, I would apologise.","was|were|am|be",1,"Second conditional (unreal present) uses 'were' for all subjects."],
+["E","If she had studied, she ___ passed.","would|will have|would have|had",2,"Third conditional: had + past participle → would have + past participle."],
+["E","Passive of 'They are building a bridge':","A bridge is built|A bridge is being built|A bridge was built|A bridge has been built",1,"Present continuous passive: is/are + being + past participle."],
+["E","Indirect speech: He said, \"I am tired.\"","He said that he is tired|He said that he was tired|He said that I was tired|He said he has been tired",1,"Present tense backshifts to past: 'was tired'."],
+["E","She is the ___ of the two sisters.","tall|taller|tallest|more tall",1,"Comparative is used for two persons."],
+["E","Synonym of 'abundant':","scarce|plentiful|tiny|costly",1,"Abundant means existing in large quantities; plentiful."],
+["E","Antonym of 'benevolent':","kind|malevolent|generous|gentle",1,"Benevolent = well-meaning; malevolent = wishing harm."],
+["E","One word for 'a person who loves books':","Bibliophile|Philanthropist|Misogynist|Bibliographer",0,"Biblio (book) + phile (lover)."],
+["E","'Once in a blue moon' means:","every night|very rarely|quite often|at midnight",1,"An idiom for something that happens very rarely."],
+["E","'To break the ice' means:","to destroy something|to start a conversation in an awkward situation|to feel cold|to fail|",1,"It means easing initial social tension."],
+["E","The new law will ___ everyone.","effect|affect|effects|affects to",1,"'Affect' is the verb (to influence); 'effect' is normally the noun."],
+["E","Honesty is a guiding ___.","principal|principle|principel|principals",1,"'Principle' = rule; 'principal' = head or main."],
+["E","'Slow and steady wins the race' means:","speed always wins|consistent effort beats reckless haste|racing is unfair|never hurry up",1,"Careful, consistent effort beats reckless speed."],
+["E","Choose the correct spelling:","Acommodation|Accomodation|Accommodation|Acomodation",2,"Double c and double m: accommodation."],
+["E","'Give up' as a phrasal verb means:","to donate|to quit or surrender|to raise|to wake",1,"Give up = stop trying or surrender."],
+["E","'Peter Piper picked a peck of pickled peppers' is an example of:","Simile|Alliteration|Metaphor|Irony",1,"Repetition of the same initial consonant sound."],
+["E","'I've told you a million times' is:","Hyperbole|Simile|Oxymoron|Personification",0,"Deliberate exaggeration for effect."],
+["E","'Bona fide' means:","in good faith / genuine|at first sight|for the good|as a favour",0,"Latin for 'in good faith'; means genuine."],
+["E","She enjoys ___ in the river.","to swim|swimming|swim|swam",1,"'Enjoy' is followed by a gerund (-ing form)."],
+["E","Close the door, ___?","won't you|will you|do you|are you",1,"Imperatives usually take the tag 'will you?'."],
+["E","Which sentence has no redundancy?","He returned back home.|He returned home.|Repeat it again.|Return back quickly.",1,"'Return' already means 'come back', so 'back' is redundant."],
 
-function buildPool(section){
-  const list = section === 'All' ? QUESTIONS : QUESTIONS.filter(q=>q.section===section);
-  return list.map((q,i)=>({...q, poolIndex:i}));
+["G","The largest planet in the solar system is:","Saturn|Jupiter|Neptune|Earth",1,"Jupiter is the largest planet."],
+["G","The planet closest to the Sun is:","Venus|Mercury|Mars|Earth",1,"Mercury is both closest and smallest."],
+["G","Number of bones in an adult human body:","206|212|300|180",0,"An adult has 206 bones."],
+["G","Penicillin was discovered by:","Marie Curie|Alexander Fleming|Louis Pasteur|Edison",1,"Alexander Fleming discovered penicillin."],
+["G","The telephone was invented by:","Edison|Bell|Marconi|Tesla",1,"Alexander Graham Bell."],
+["G","The ozone layer protects Earth from:","Infrared heat|Ultraviolet radiation|Sound waves|Meteors",1,"It absorbs harmful UV radiation."],
+["G","The main greenhouse gas from fossil fuels is:","Oxygen|Carbon dioxide|Nitrogen|Helium",1,"Carbon dioxide (CO₂)."],
+["G","The nearest star to Earth after the Sun is:","Sirius|Proxima Centauri|Polaris|Betelgeuse",1,"Proxima Centauri."],
+["G","The highest mountain in Pakistan is:","Nanga Parbat|K2|Rakaposhi|Tirich Mir",1,"K2 (8,611 m) is the highest in Pakistan and second highest in the world."],
+["G","The longest river of Pakistan is:","Jhelum|Indus|Ravi|Sutlej",1,"The Indus."],
+["G","Vitamin C deficiency causes:","Rickets|Scurvy|Night blindness|Beriberi",1,"Scurvy."],
+["G","The powerhouse of the cell is:","Nucleus|Mitochondria|Ribosome|Golgi body",1,"Mitochondria produce ATP."],
+["G","The universal blood donor group is:","AB+|O negative|A negative|B+",1,"O negative can be given to any group in emergencies."],
+["G","Chemical symbol of sodium is:","So|Na|Sd|S",1,"Na, from Latin 'natrium'."],
+["G","The hardest natural substance is:","Iron|Diamond|Quartz|Granite",1,"Diamond."],
+["G","The SI unit of force is:","Joule|Newton|Watt|Pascal",1,"Newton (N)."],
+["G","The 'Red Planet' is:","Venus|Mars|Jupiter|Mercury",1,"Mars, due to iron oxide on its surface."],
+["G","An instrument that measures earthquakes is:","Barometer|Seismograph|Hygrometer|Anemometer",1,"Seismograph."],
+["G","Insulin is produced by the:","Liver|Pancreas|Kidney|Stomach",1,"Pancreas."],
+["G","The largest ocean is:","Atlantic|Pacific|Indian|Arctic",1,"Pacific Ocean."],
+["G","Boiling point of water at sea level:","90°C|100°C|110°C|120°C",1,"100°C (212°F)."],
+["G","The largest organ of the human body is:","Liver|Skin|Lungs|Brain",1,"The skin."],
+["G","The most abundant gas in Earth's atmosphere is:","Oxygen|Nitrogen|Carbon dioxide|Argon",1,"Nitrogen, about 78%."],
+["G","Single-celled organisms without a nucleus belong to Kingdom:","Protista|Monera|Fungi|Plantae",1,"Monera (bacteria)."],
+["G","Which is the smallest planet?","Mars|Mercury|Venus|Neptune",1,"Mercury."],
+
+["P","The Pakistan Resolution was passed in:","1930|1940|1947|1935",1,"Lahore Resolution, 23 March 1940."],
+["P","Pakistan's first Prime Minister was:","Liaquat Ali Khan|Khawaja Nazimuddin|Ghulam Muhammad|Iskander Mirza",0,"Liaquat Ali Khan (1947–1951)."],
+["P","The present Constitution of Pakistan was adopted in:","1956|1962|1973|1985",2,"The 1973 Constitution."],
+["P","Allama Iqbal gave his Allahabad Address in:","1927|1930|1937|1940",1,"1930, presenting the idea of a separate Muslim state."],
+["P","Number of Surahs in the Holy Quran:","110|114|120|124",1,"114 Surahs."],
+["P","Number of Paras (Juz) in the Quran:","20|25|30|40",2,"30 Paras."],
+["P","The Indus Waters Treaty was signed in:","1947|1960|1965|1972",1,"1960, mediated by the World Bank."],
+["P","Pakistan became independent on:","14 August 1947|15 August 1947|23 March 1940|11 September 1948",0,"14 August 1947."],
+["P","The Hijra (migration to Madinah) took place in:","610 CE|622 CE|632 CE|570 CE",1,"622 CE, marking the start of the Islamic calendar."],
+["P","The national language of Pakistan is:","Punjabi|Urdu|Sindhi|Pashto",1,"Urdu is the national language; English is also official."]
+];
+const $=id=>document.getElementById(id);
+let mode="ALL",list=[],i=0,sc=0,log=[];
+const modes=[["ALL","Full mixed (100)"],["M","Maths"],["E","English"],["G","GK"],["P","Pak & Islamic"]];
+$("chips").innerHTML=modes.map(m=>`<button class="chip${m[0]=="ALL"?" on":""}" data-m="${m[0]}">${m[1]}</button>`).join("");
+$("chips").onclick=e=>{const b=e.target.closest(".chip");if(!b)return;mode=b.dataset.m;[...$("chips").children].forEach(c=>c.classList.toggle("on",c===b))};
+function show(id){["home","play","end"].forEach(x=>$(x).classList.toggle("hide",x!==id))}
+function start(){
+  list=Q.filter(q=>mode=="ALL"||q[0]==mode);
+  if($("shuf").checked)list=list.map(q=>[Math.random(),q]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]);
+  i=0;sc=0;log=[];show("play");render();
 }
-
-function startQuiz(section){
-  state.section = section;
-  state.pool = buildPool(section);
-  state.idx = 0;
-  state.answered = {};
-  state.score = 0;
-  renderQuestion();
+function render(){
+  const q=list[i],o=q[2].split("|").filter(Boolean);
+  $("cnt").textContent=`Question ${i+1} / ${list.length}`;$("scr").textContent=`Score: ${sc}`;
+  $("pb").style.width=(i/list.length*100)+"%";
+  $("tg").textContent=N[q[0]];$("qt").textContent=q[1];
+  $("ex").classList.add("hide");$("nx").classList.add("hide");
+  $("opts").innerHTML="";
+  o.forEach((t,k)=>{const b=document.createElement("button");b.className="o";b.textContent=String.fromCharCode(65+k)+") "+t;b.onclick=()=>pick(k,b);$("opts").appendChild(b)});
 }
-
-function renderStart(){
-  const app = document.getElementById('app');
-  let chips = SECTIONS.map(s=>`<div class="chip" data-sec="${s}">${s} (${QUESTIONS.filter(q=>q.section===s).length})</div>`).join('');
-  app.innerHTML = `
-    <div class="card start-screen">
-      <p>Choose a section to focus on, or take the full mixed quiz. Each question shows a short explanation right after you answer.</p>
-      <div class="section-picker">
-        <div class="chip active" data-sec="All">All Sections (${QUESTIONS.length})</div>
-        ${chips}
-      </div>
-      <div class="nav-row">
-        <button class="nav" id="beginBtn">Start Quiz</button>
-      </div>
-    </div>`;
-  let chosen = 'All';
-  document.querySelectorAll('.chip').forEach(c=>{
-    c.addEventListener('click', ()=>{
-      document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));
-      c.classList.add('active');
-      chosen = c.dataset.sec;
-    });
-  });
-  document.getElementById('beginBtn').addEventListener('click', ()=> startQuiz(chosen));
+function pick(k,btn){
+  const q=list[i],bs=[...$("opts").children];
+  bs.forEach(b=>b.disabled=true);
+  const good=k===q[3];
+  if(good){sc++;btn.classList.add("ok")}else{btn.classList.add("no");bs[q[3]].classList.add("ok")}
+  log.push([q,k,good]);
+  $("scr").textContent=`Score: ${sc}`;
+  $("ex").innerHTML=`<b>${good?"Correct.":"Incorrect."}</b> ${q[4]}`;$("ex").classList.remove("hide");
+  $("nx").textContent=i+1<list.length?"Next":"See result";$("nx").classList.remove("hide");
 }
-
-function renderQuestion(){
-  const app = document.getElementById('app');
-  const total = state.pool.length;
-  const q = state.pool[state.idx];
-  const pct = Math.round((state.idx/total)*100);
-  const already = state.answered[state.idx];
-
-  const optsHtml = q.opts.map((opt,i)=>{
-    let cls = 'opt';
-    let disabledAttr = '';
-    if(already !== undefined){
-      disabledAttr = 'disabled';
-      if(i === q.ans) cls += ' correct';
-      else if(i === already) cls += ' wrong';
-    }
-    return `<button class="${cls}" data-i="${i}" ${disabledAttr}>${String.fromCharCode(65+i)}. ${opt}</button>`;
-  }).join('');
-
-  const explainHtml = already !== undefined ? `<div class="explain"><b>${already===q.ans?'Correct. ':'Not quite. '}</b>${q.exp}</div>` : '';
-
-  app.innerHTML = `
-    <div class="progress-row">
-      <span>Question ${state.idx+1} / ${total}</span>
-      <span>Score: ${state.score}</span>
-    </div>
-    <div class="bar"><div class="bar-fill" style="width:${pct}%"></div></div>
-    <div class="card">
-      <div class="qtag">${q.section}</div>
-      <div class="qtext">${q.q}</div>
-      ${optsHtml}
-      ${explainHtml}
-      <div class="nav-row">
-        <button class="nav secondary" id="prevBtn" ${state.idx===0?'disabled':''}>Previous</button>
-        <button class="nav" id="nextBtn" ${already===undefined?'disabled':''}>${state.idx===total-1?'Finish':'Next'}</button>
-      </div>
-    </div>`;
-
-  document.querySelectorAll('.opt').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      if(state.answered[state.idx] !== undefined) return;
-      const i = parseInt(btn.dataset.i);
-      state.answered[state.idx] = i;
-      if(i === q.ans) state.score++;
-      renderQuestion();
-    });
-  });
-  document.getElementById('prevBtn').addEventListener('click', ()=>{
-    if(state.idx>0){ state.idx--; renderQuestion(); }
-  });
-  document.getElementById('nextBtn').addEventListener('click', ()=>{
-    if(state.idx < total-1){ state.idx++; renderQuestion(); }
-    else renderScore();
-  });
+$("nx").onclick=()=>{i++;if(i<list.length)render();else finish()};
+function finish(){
+  show("end");const p=Math.round(sc/list.length*100);
+  $("fs").textContent=`${sc} / ${list.length} (${p}%)`;
+  $("fm").textContent=p>=80?"Excellent — exam ready.":p>=60?"Good — revise the missed topics.":"Keep practising — review the explanations.";
+  $("rev").classList.add("hide");
+  $("rev").innerHTML=log.map((l,n)=>{const o=l[0][2].split("|");return `<div class="rv"><b class="${l[2]?"ok":"no"}">${n+1}. ${l[2]?"✓":"✗"}</b> ${l[0][1]}<br><span class="sub">Answer: ${o[l[0][3]]} — ${l[0][4]}</span></div>`}).join("");
 }
-
-function renderScore(){
-  const app = document.getElementById('app');
-  const total = state.pool.length;
-  const pct = Math.round((state.score/total)*100);
-  app.innerHTML = `
-    <div class="card score-screen">
-      <div class="qtag">${state.section}</div>
-      <div>You scored</div>
-      <div class="score-num">${state.score} / ${total}</div>
-      <div class="sub">${pct}% correct</div>
-      <div class="nav-row">
-        <button class="nav secondary" id="retryBtn">Retry Section</button>
-        <button class="nav" id="homeBtn">Choose Another Section</button>
-      </div>
-    </div>`;
-  document.getElementById('retryBtn').addEventListener('click', ()=> startQuiz(state.section));
-  document.getElementById('homeBtn').addEventListener('click', renderStart);
-}
-
-renderStart();
-</script>
-</body>
-</html>
+$("revb").onclick=()=>$("rev").classList.toggle("hide");
+$("start").onclick=start;$("again").onclick=()=>show("home");
+</script></body></html>
