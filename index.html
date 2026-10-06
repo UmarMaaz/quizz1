@@ -1,232 +1,407 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>CSS/FPSC MPT Quiz — Set 6</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CSS Quiz: Pakistan Affairs, Current Affairs, Islamiat</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600;700&display=swap">
 <style>
-:root{--bg:#f6f5f2;--card:#fff;--ink:#1c1c1c;--sub:#6b6b6b;--ac:#0f5132;--line:#e4e1da;--bad:#8a1f11;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161512;--card:#1f1e1a;--ink:#f0efe9;--sub:#a9a69d;--line:#33322c}}
-:root[data-theme="dark"]{--bg:#161512;--card:#1f1e1a;--ink:#f0efe9;--sub:#a9a69d;--line:#33322c}
+:root{--bg:#eef3f1;--card:#fff;--ink:#12302b;--mute:#5d726d;--line:#cfdcd8;--brand:#0e6b55;--brand-ink:#fff;--ok:#12794f;--okbg:#dff3e9;--bad:#b3261e;--badbg:#fbe4e1;--sun:#c98a00;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a17;--card:#14262l;--card:#142621;--ink:#e4f0ec;--mute:#93aaa4;--line:#27403a;--brand:#3fbf98;--brand-ink:#062019;--ok:#5fd6a0;--okbg:#12362a;--bad:#ff8a80;--badbg:#3b1d1a;--sun:#e8b43a}}
+:root[data-theme="dark"]{--bg:#0d1a17;--card:#142621;--ink:#e4f0ec;--mute:#93aaa4;--line:#27403a;--brand:#3fbf98;--brand-ink:#062019;--ok:#5fd6a0;--okbg:#12362a;--bad:#ff8a80;--badbg:#3b1d1a;--sun:#e8b43a}
+*{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,serif}
-.w{max-width:700px;margin:0 auto;padding:22px 16px 50px}
-h1{font-size:1.4rem;text-align:center;margin:0 0 16px}
-.c{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;margin-bottom:14px;font-family:system-ui,sans-serif}
-.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0}
-.chip{padding:7px 13px;border:1px solid var(--line);border-radius:20px;cursor:pointer;font-size:.8rem}
-.chip.a{background:var(--ac);color:#fff;border-color:var(--ac)}
-.opt{display:block;width:100%;text-align:left;padding:11px 13px;margin-bottom:9px;border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--ink);font-size:.95rem;cursor:pointer}
-.opt.ok{background:#0f513230;border-color:var(--ac)}.opt.no{background:#8a1f1130;border-color:var(--bad)}
-.q{font-family:Georgia,serif;font-size:1.12rem;line-height:1.5;margin:6px 0 16px}
-.t,.s{font-size:.75rem;color:var(--sub)}.t{text-transform:uppercase;letter-spacing:.08em}
-.ex{margin-top:10px;padding:11px;border:1px dashed var(--line);border-radius:8px;font-size:.88rem;color:var(--sub);line-height:1.5}
-.r{display:flex;gap:10px;margin-top:14px}
-.b{flex:1;padding:11px;border:0;border-radius:8px;background:var(--ac);color:#fff;font-size:.9rem;cursor:pointer}
-.b.g{background:transparent;color:var(--ink);border:1px solid var(--line)}.b:disabled{opacity:.4}
-.bar{height:6px;background:var(--line);border-radius:4px;margin:8px 0 14px}.bar div{height:100%;background:var(--ac);border-radius:4px}
-.big{font-size:3rem;color:var(--ac);font-weight:700;text-align:center}
-</style></head><body><div class="w"><h1>CSS / FPSC MPT Quiz — Set 6</h1><div id="app"></div></div>
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}
+.wrap{max-width:680px;margin:0 auto;padding:20px 16px 48px}
+h1,h2{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;margin:0;line-height:1.2}
+h1{font-size:2rem}
+h2{font-size:1.35rem}
+p{margin:.4rem 0}
+.mute{color:var(--mute)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:16px}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+button{font:inherit;cursor:pointer;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:12px 16px;min-height:46px}
+button:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.primary{background:var(--brand);color:var(--brand-ink);border-color:var(--brand);font-weight:700}
+.primary:disabled{opacity:.45;cursor:not-allowed}
+.chips button{flex:1 1 150px;text-align:left;padding:12px 14px}
+.chips button[aria-pressed="true"]{border-color:var(--brand);box-shadow:inset 0 0 0 2px var(--brand);font-weight:600}
+.chips small{display:block;color:var(--mute);font-weight:400}
+label.opt{display:flex;align-items:center;gap:10px;padding:8px 0}
+input[type=checkbox]{width:20px;height:20px;accent-color:var(--brand)}
+select{font:inherit;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);min-height:44px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.bar{height:8px;background:var(--line);border-radius:6px;overflow:hidden;margin-top:10px}
+.bar>i{display:block;height:100%;background:var(--brand);width:0;transition:width .25s}
+.tag{display:inline-block;font-size:.85rem;font-weight:600;padding:2px 10px;border-radius:20px;background:var(--okbg);color:var(--ok)}
+.q{font-family:"Source Serif 4",Georgia,serif;font-size:1.3rem;line-height:1.35;margin:12px 0 16px;font-weight:600}
+.choices{display:grid;gap:10px}
+.choice{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;padding:13px 14px}
+.choice b{flex:0 0 26px;height:26px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:.85rem}
+.choice.correct{background:var(--okbg);border-color:var(--ok)}
+.choice.correct b{background:var(--ok);color:var(--card);border-color:var(--ok)}
+.choice.wrong{background:var(--badbg);border-color:var(--bad)}
+.choice.wrong b{background:var(--bad);color:var(--card);border-color:var(--bad)}
+.choice.picked{border-color:var(--brand);box-shadow:inset 0 0 0 2px var(--brand)}
+.expl{margin-top:14px;padding:12px 14px;border-left:4px solid var(--brand);background:var(--bg);border-radius:6px}
+.big{font-family:"Source Serif 4",Georgia,serif;font-size:3.2rem;font-weight:700;line-height:1}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.stats div{background:var(--bg);border-radius:10px;padding:10px;text-align:center}
+.stats b{display:block;font-size:1.3rem}
+.rev{border-top:1px solid var(--line);padding:12px 0}
+.rev:first-child{border-top:0}
+.hide{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section id="home">
+  <h1>CSS Quiz</h1>
+  <p class="mute">100 MCQs on Pakistan Affairs, International and Current Affairs, and Islamic Studies.</p>
+  <div class="card">
+    <h2>Choose a section</h2>
+    <div class="row chips" id="secChips" style="margin-top:12px"></div>
+  </div>
+  <div class="card">
+    <h2>Settings</h2>
+    <div style="margin-top:10px">
+      <label for="count">Number of questions</label><br>
+      <select id="count"></select>
+    </div>
+    <div style="margin-top:10px">
+      <label for="mode">Mode</label><br>
+      <select id="mode">
+        <option value="practice">Practice: show the answer after each question</option>
+        <option value="exam">Exam: show all answers at the end</option>
+      </select>
+    </div>
+    <label class="opt"><input type="checkbox" id="shuffleQ" checked> Shuffle questions</label>
+    <label class="opt"><input type="checkbox" id="shuffleO" checked> Shuffle answer options</label>
+    <div class="row" style="margin-top:12px">
+      <button class="primary" id="start">Start quiz</button>
+      <button id="theme">Switch theme</button>
+    </div>
+  </div>
+</section>
+
+<section id="quiz" class="hide">
+  <div class="top">
+    <strong id="qCount">Question 1 of 10</strong>
+    <span id="liveScore" class="tag">Score 0</span>
+  </div>
+  <div class="bar"><i id="barFill"></i></div>
+  <div class="card">
+    <span class="mute" id="qSection"></span>
+    <p class="q" id="qText"></p>
+    <div class="choices" id="choices"></div>
+    <div class="expl hide" id="expl"></div>
+    <div class="row" style="margin-top:16px">
+      <button class="primary" id="next" disabled>Next question</button>
+      <button id="quit">End quiz</button>
+    </div>
+    <p class="mute" style="font-size:.85rem;margin-top:12px">Keyboard: press 1 to 4 to answer, Enter for next.</p>
+  </div>
+</section>
+
+<section id="result" class="hide">
+  <div class="card">
+    <h2>Your result</h2>
+    <p class="big" id="rPct">0%</p>
+    <p id="rMsg" class="mute"></p>
+    <div class="stats">
+      <div><b id="rOk">0</b>Correct</div>
+      <div><b id="rBad">0</b>Wrong</div>
+      <div><b id="rSkip">0</b>Skipped</div>
+    </div>
+    <h2 style="margin-top:18px">By section</h2>
+    <div id="rSec"></div>
+    <div class="row" style="margin-top:16px">
+      <button class="primary" id="retryWrong">Retry wrong answers</button>
+      <button id="again">New quiz</button>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Review</h2>
+    <div class="row" style="margin:10px 0">
+      <button id="fAll" aria-pressed="true">All</button>
+      <button id="fWrong" aria-pressed="false">Wrong only</button>
+    </div>
+    <div id="review"></div>
+  </div>
+</section>
+
+</div>
+
 <script>
-const H="High-Yield FPSC Topics",G="General Knowledge",U="Urdu Grammar",M="MPT Pattern",I="Islamic Studies",E="English",S="General Science & Ability",C="Current Affairs",P="Pakistan Affairs";
+/* Row format: [section, question, "A|B|C|D", correctIndex, explanation] */
 const Q=[
-[H,"The Bogra Formula (1953) is best known for:",["A presidential system","Naming the Lower House 'House of People'","Abolishing the Senate","Declaring an Islamic Republic"],1,"PM Bogra's formula named the lower house 'House of People'."],
-[H,"Mujibur Rahman presented his Six Points in:",["1958","1962","1966","1970"],2,"Demanding East Pakistan's autonomy, in 1966."],
-[H,"Direct Action Day (16 Aug 1946) led to major violence in:",["Delhi","Calcutta","Lahore","Dhaka"],1,"Calcutta saw severe communal riots."],
-[H,"'Train to Pakistan' was written by:",["Manto","Khushwant Singh","Bapsi Sidhwa","Intizar Hussain"],1,"Khushwant Singh depicted Partition violence."],
-[H,"Pakistan's national anthem was officially adopted in:",["1947","1951","1954","1956"],2,"Written by Hafeez Jalandhari; adopted 1954."],
-[H,"Operation Neptune Spear (May 2011) took place in:",["Peshawar","Quetta","Abbottabad","Rawalpindi"],2,"Osama bin Laden was killed in Abbottabad."],
-[H,"The Siachen Glacier lies in the:",["Himalayas","Karakoram","Hindu Kush","Sulaiman"],1,"Siachen is in the Karakoram Range."],
-[H,"Pakistan's largest island is:",["Manora","Astola","Bundal","Churna"],1,"Astola lies off the Balochistan coast."],
-[H,"The Sialkot–Lahore Motorway is designated:",["M1","M9","M11","M14"],2,"It is the M11."],
-[H,"The smallest country in the world is:",["Monaco","Vatican City","San Marino","Liechtenstein"],1,"Vatican City, by area."],
-[H,"'Land of the Rising Sun' refers to:",["China","Japan","South Korea","Thailand"],1,"This is Japan's nickname."],
-[H,"The Treaty of Hudaybiyyah was signed in:",["4 AH","5 AH","6 AH","8 AH"],2,"6 AH, after Bait-e-Rizwan."],
-[G,"The capital of Turkey is:",["Istanbul","Ankara","Izmir","Bursa"],1,"Ankara, not Istanbul."],
-[G,"The Magna Carta was signed in:",["1066","1215","1415","1603"],1,"1215 limited royal power."],
-[G,"The French Revolution began in:",["1689","1776","1789","1799"],2,"It began in 1789."],
-[G,"The Soviet Union dissolved in:",["1985","1989","1991","1995"],2,"1991 ended the Cold War era."],
-[G,"The Pakistani winner of the 1979 Nobel Prize in Physics:",["A.Q. Khan","Abdus Salam","Atta-ur-Rahman","Samar Mubarakmand"],1,"Abdus Salam, for electroweak theory."],
-[G,"Malala Yousafzai won the Nobel Peace Prize in:",["2012","2013","2014","2015"],2,"She won in 2014."],
-[G,"The first man on the Moon was:",["Buzz Aldrin","Neil Armstrong","Yuri Gagarin","John Glenn"],1,"Apollo 11, 1969."],
-[G,"The tallest building in the world is:",["Shanghai Tower","Burj Khalifa","One WTC","Petronas Towers"],1,"Burj Khalifa, Dubai."],
-[G,"Pakistan won the 1992 Cricket World Cup under:",["Javed Miandad","Imran Khan","Wasim Akram","Inzamam"],1,"Captain Imran Khan."],
-[G,"The UN has how many official languages?",["4","5","6","7"],2,"Arabic, Chinese, English, French, Russian, Spanish."],
-[G,"International Mother Language Day is on:",["8 March","21 February","7 April","5 June"],1,"21 February."],
-[G,"The Strait of Hormuz links the Persian Gulf to the:",["Red Sea","Gulf of Oman","Mediterranean","Black Sea"],1,"A key oil chokepoint."],
-[G,"The capital of the UAE is:",["Dubai","Abu Dhabi","Sharjah","Ajman"],1,"Abu Dhabi."],
-[S,"Malaria is transmitted by the:",["Housefly","Anopheles mosquito","Tsetse fly","Aedes mosquito"],1,"Anopheles carries Plasmodium."],
-[S,"Pakistan's first satellite (1990) was:",["PakSat-1","Badr-1","SUPARCO-1","Paksat-TR1"],1,"Badr-1."],
-[S,"A hygrometer measures:",["Pressure","Temperature","Humidity","Wind speed"],2,"Humidity of air."],
-[S,"A sphygmomanometer measures:",["Heart rate","Blood pressure","Body temperature","Lung volume"],1,"Blood pressure."],
-[S,"The Periodic Table was devised by:",["Einstein","Mendeleev","Newton","Curie"],1,"Mendeleev, 1869."],
-[S,"Newton's Third Law states:",["Inertia","F = ma","Every action has an equal and opposite reaction","Energy is conserved"],2,"Action–reaction pairs."],
-[S,"Bacteria belong to which kingdom?",["Protista","Monera","Fungi","Plantae"],1,"Monera: single-celled, no nucleus."],
-[S,"Compound interest on Rs. 10,000 at 10% for 2 years:",["Rs. 2,000","Rs. 2,100","Rs. 2,200","Rs. 1,000"],1,"12,100 − 10,000 = 2,100."],
-[S,"A number rises 20% then falls 20%. Net change:",["None","4% decrease","4% increase","20% decrease"],1,"1.2×0.8 = 0.96."],
-[S,"Chemical symbol of lead:",["Le","Ld","Pb","Pl"],2,"Pb from 'plumbum'."],
-[S,"A sum triples in 8 years at simple interest. Rate?",["20%","25%","30%","33.3%"],1,"SI = 2P; 200/8 = 25%."],
-[P,"TAPI is a gas pipeline: Turkmenistan–Afghanistan–Pakistan–?",["Iran","India","Tajikistan","China"],1,"India."],
-[P,"ML-1 under CPEC upgrades the railway between:",["Lahore–Islamabad","Karachi–Peshawar","Quetta–Karachi","Multan–Faisalabad"],1,"Karachi to Peshawar."],
-[P,"The ECP has the CEC plus how many Members?",["Two","Three","Four","Five"],2,"One Member per province."],
-[P,"The 'Manchester of Pakistan' is:",["Karachi","Lahore","Faisalabad","Multan"],2,"Textile hub."],
-[P,"Sukkur Barrage was built in:",["Punjab, 1932","Sindh, 1932","Sindh, 1956","Balochistan, 1947"],1,"On the Indus in Sindh, 1932."],
-[P,"The HEC was established in:",["1998","2002","2008","2010"],1,"2002."],
-[P,"Dawn newspaper was founded in 1941 by:",["Liaquat Ali Khan","Jinnah","Sir Syed","Iqbal"],1,"Quaid-e-Azam."],
-[P,"Marala Headworks is on the river:",["Indus","Jhelum","Chenab","Ravi"],2,"Chenab, near Sialkot."],
-[C,"The UN agency for refugees is:",["UNESCO","UNHCR","UNICEF","UNDP"],1,"UNHCR."],
-[C,"An MOU is generally:",["A binding treaty","A non-binding statement of intent","A war declaration","A trade embargo"],1,"Non-binding."],
-[C,"'High Commissioner' is the envoy title between:",["UN states","Commonwealth countries","EU states","NATO states"],1,"Used instead of 'Ambassador'."],
-[C,"An 'Embargo' refers to:",["A ceasefire","A ban on trade with a country","A military alliance","A loan"],1,"A narrower term than sanctions."],
-[C,"NATO is headquartered in:",["Washington","Brussels","Geneva","London"],1,"Brussels."],
-[C,"The SCO is headquartered in:",["Moscow","Beijing","Shanghai","Astana"],1,"Beijing."],
-[E,"Correct sentence:",["He is senior to me.","He is senior than me.","He is senior from me.","He is more senior than me."],0,"'Senior/junior' take 'to'."],
-[E,"Correct sentence:",["Despite the rain, we went out.","Despite of the rain, we went out.","In despite the rain, we went out.","Despite from rain we went out."],0,"'Despite' is never followed by 'of'."],
-[E,"'Deafening silence' is an example of:",["Oxymoron","Simile","Metonymy","Hyperbole"],0,"Two contradictory terms combined."],
-[E,"'Passed away' for 'died' is a:",["Hyperbole","Euphemism","Metaphor","Oxymoron"],1,"A softer expression."],
-[E,"Allusion vs Illusion:",["Indirect reference vs false perception","Same meaning","False perception vs indirect reference","Neither is a word"],0,"Allusion = reference; illusion = false perception."],
-[U,"اردو میں سوالیہ جملے کے آخر میں کون سی علامت آتی ہے؟",["ختمہ (۔)","وقفہ (،)","علامت استفہام (؟)","علامت تعجب (!)"],2,"سوالیہ جملے میں علامت استفہام آتی ہے۔"],
-[U,"فہرست یا وضاحت سے پہلے کون سی علامت لگتی ہے؟",["ختمہ (۔)","رابطہ (:)","وقفہ (،)","واوین"],1,"رابطہ یعنی کولن (:)۔"],
-[U,"لفظ ‘آسمان’ کس زبان سے آیا؟",["عربی","فارسی","ترکی","سنسکرت"],1,"یہ فارسی کا لفظ ہے۔"],
-[M,"The CSS MPT has how many MCQs?",["150","180","200","250"],2,"200 MCQs, 200 marks."],
-[M,"Time allowed for the CSS MPT:",["150 min","180 min","200 min","240 min"],2,"200 minutes."],
-[M,"Negative marking in the CSS MPT:",["0.25 per wrong","0.5 per wrong","None — attempt all","Only in Math"],2,"No negative marking, so guess."],
-[M,"The main CSS written exam carries:",["800","1,000","1,200","1,500"],2,"1,200 marks."],
-[I,"The Wars of Apostasy (Riddah) were fought against:",["External empires","Tribes who renounced Islam or refused Zakat","Byzantines","Persians"],1,"During Abu Bakr's caliphate."],
-[I,"The Battles of Jamal and Siffin occurred under:",["Abu Bakr (RA)","Umar (RA)","Usman (RA)","Ali (RA)"],3,"Hazrat Ali's caliphate."],
-[I,"'Isnad' in Hadith studies means:",["The Hadith text","The chain of narrators","A Quranic verse","A court ruling"],1,"Used to assess authenticity."],
-[I,"'Fiqh' is best defined as:",["The divine law itself","Human interpretation of Shariah","Consensus only","A Hadith book"],1,"Shariah is divine; Fiqh is jurisprudence."],
-[I,"The Abbasid Caliphate is known for:",["Isolation","The Islamic Golden Age of science","A brief existence","Only conquest"],1,"Baghdad, 750–1258 CE."],
-[I,"The Mughal Empire was founded by:",["Akbar","Babur","Shah Jahan","Aurangzeb"],1,"Babur, 1526."],
-[M,"Which MPT section carries the highest marks?",["English (50)","General Abilities (60)","General Knowledge (50)","Islamic Studies (20)"],1,"General Abilities = 60."],
-[M,"Islamic Studies/Civics & Ethics carries:",["10","20","30","40"],1,"20 marks."],
-[M,"Urdu Grammar & Comprehension carries:",["10","15","20","25"],2,"20 marks."],
-[M,"General Knowledge carries:",["40","50","60","70"],1,"50 marks."],
-[M,"The MPT is:",["Added to final merit","A qualifying screening test only","A replacement for the written exam","Only for optional subjects"],1,"Its marks aren't added to final merit."],
-[M,"Best strategy given no negative marking:",["Skip unsure questions","Attempt every question","Attempt only one section","Leave the last 20 blank"],1,"A guess costs nothing."],
-[M,"In comprehension passages, a good first step is to:",["Read the passage twice","Read the questions first","Skip the passage","Read only the last paragraph"],1,"Know what to look for."],
-[M,"For 'EXCEPT / NOT TRUE' questions:",["Pick the familiar option","Eliminate the three supported options","Choose the longest","Guess"],1,"The unsupported one remains."],
-[M,"Psychological Assessment and Viva Voce carry:",["100","200","300","400"],2,"300 marks."],
-[M,"The MPT is conducted in English except the:",["Math section","Urdu section","GK section","Islamic section"],1,"Urdu is answered in Urdu."],
-[P,"Shaukat Aziz served as Prime Minister during:",["2002-04","2004-07","2008-12","2013-17"],1,"2004 to 2007."],
-[P,"Ghulam Ishaq Khan was President during:",["1978-88","1988-93","1993-97","2001-08"],1,"1988 to 1993."],
-[P,"Pervez Musharraf was President from:",["1999-2001","2001-08","2008-13","2013-18"],1,"2001 to 2008."],
-[P,"Mamnoon Hussain was President during:",["2008-13","2013-18","2018-24","1993-97"],1,"2013 to 2018."],
-[P,"Shahid Khaqan Abbasi was Prime Minister from 2017 to:",["2018","2019","2020","2021"],0,"A brief tenure ending 2018."],
-[P,"The Objectives Resolution declared that sovereignty belongs to:",["The people","Allah","The Parliament","The President"],1,"Allah, held in trust by the people."],
-[P,"The One Unit scheme (1956) merged:",["East Pakistan only","West Pakistan's provinces into one unit","Punjab and Sindh","All four provinces"],1,"West Pakistan became one unit."],
-[P,"The NFC Award deals with:",["Foreign policy","Federal–provincial resource distribution","Military posts","Court procedure"],1,"Divides revenue."],
-[P,"Kotri Barrage is located near:",["Sukkur","Hyderabad","Multan","Larkana"],1,"On the Indus near Hyderabad."],
-[P,"Sialkot is famed for:",["Cement","Sports goods and surgical instruments","Rice","Cars"],1,"Footballs and surgical tools."],
-[P,"PTV was launched in:",["1958","1964","1971","1980"],1,"1964."],
-[P,"PEMRA was established in:",["1998","2000","2002","2010"],2,"2002."],
-[P,"The oldest public university in Pakistan (1882):",["QAU","Karachi University","University of the Punjab","Aligarh"],2,"Punjab University."],
-[P,"CPEC links Gwadar to:",["Beijing","Shanghai","Kashgar, Xinjiang","Tibet"],2,"About 3,000 km route."],
-[P,"Dhabeji is a CPEC Special Economic Zone in:",["Punjab","Sindh","KP","Balochistan"],1,"Sindh."],
-[P,"Pakistan's top export sector is:",["Agriculture","Textiles","IT","Leather"],1,"Textiles and products."],
-[P,"Pakistan joined the UN in:",["1945","1947","1948","1950"],1,"Same year as independence."],
-[C,"'Static facts' in current affairs include:",["Current heads of state","Organisation HQs and founding years","Ongoing conflicts","Monthly inflation"],1,"They rarely change."],
-[C,"'Dynamic facts' should be:",["Memorised early only","Re-verified just before the exam","Ignored","Studied only for GK"],1,"They change often."],
-[C,"'Bilateral' involves how many states?",["One","Two","Three","Four or more"],1,"Multilateral = three or more."],
-[C,"A confirmed person who fled across a border from persecution:",["Asylum seeker","Refugee","IDP","Migrant"],1,"IDPs stay inside their country."],
-[C,"An 'Armistice' is:",["An informal pause","A formal agreement to stop fighting","The final peace treaty","A sanction"],1,"Stronger than a ceasefire."],
-[C,"A 'Protocol' to a treaty is:",["Non-binding","A supplementary agreement","A trade term","The same as a treaty"],1,"Amends or adds to a treaty."],
-[C,"The SDGs were adopted in:",["2000","2010","2015","2020"],2,"2030 Agenda."],
-[C,"The SDGs succeeded the:",["MDGs","Kyoto Protocol","Agenda 21","Paris Framework"],0,"MDGs ran 2000–2015."],
-[C,"ASEAN's secretariat is in:",["Bangkok","Jakarta","Manila","Kuala Lumpur"],1,"Jakarta."],
-[C,"The EU's main institutions are based in:",["Paris","Brussels","Geneva","Strasbourg only"],1,"Brussels."],
-[E,"Elicit vs Illicit:",["Draw out vs illegal","Both illegal","Illegal vs draw out","Neither a word"],0,"Elicit = verb; illicit = adjective."],
-[E,"Farther vs Further:",["Physical distance vs additional/abstract","Same","Abstract vs physical","Neither correct"],0,"Farther = distance."],
-[E,"Advice vs Advise:",["Noun vs verb","Verb vs noun","Both nouns","Both verbs"],0,"Advice = noun."],
-[E,"Moral vs Morale:",["Right/wrong vs group spirit","Same","Group spirit vs right/wrong","Neither"],0,"Morale = confidence."],
-[E,"Personal vs Personnel:",["Private vs staff","Staff vs private","Both staff","Neither"],0,"Personnel = employees."],
-[E,"Human vs Humane:",["Of people vs compassionate","Both compassionate","Compassionate vs of people","Neither"],0,"Humane = kind."],
-[E,"Born vs Borne:",["Given birth vs carried","Same","Carried vs given birth","Neither"],0,"Borne = carried/endured."],
-[E,"'The company will ___ its policy to new rules.'",["adapt","adopt","adept","adaptable"],0,"Adapt = adjust."],
-[E,"Exaggeration for effect is:",["Simile","Hyperbole","Metaphor","Euphemism"],1,"Hyperbole."],
-[E,"Repeated initial consonant sounds:",["Alliteration","Onomatopoeia","Irony","Oxymoron"],0,"Peter Piper picked..."],
-[E,"Words imitating sounds, like 'buzz':",["Onomatopoeia","Alliteration","Simile","Pun"],0,"Onomatopoeia."],
-[E,"'You ___ submit the form; it's mandatory.'",["might","could","must","would"],2,"'Must' = obligation."],
-[E,"'You ___ come early; it's optional.'",["must","need not","shall","ought to"],1,"No obligation."],
-[E,"'To make ends meet' means:",["Finish on time","Have just enough money to live","Agree on a plan","Finish a race"],1,"Cover basic expenses."],
-[E,"Correct parallel structure:",["Swimming, running, and to cycle","Swimming, running, and cycling","To swim, running, cycle","Swim, run, cycling"],1,"All gerunds."],
-[E,"'Flying over the city, the buildings looked small' has a:",["Dangling modifier","Split infinitive","Double negative","Correct phrase"],0,"Buildings can't fly."],
-[E,"Correct sentence:",["He is one of the best players.","He is one of the best player.","He is one of best player.","He is best one player."],0,"Plural noun after 'one of'."],
-[E,"Correct sentence:",["The teacher explained the lesson to us.","The teacher explained us the lesson.","The teacher explain us lesson.","The teacher explained to lesson us."],0,"'Explain' needs 'to'."],
-[E,"Correct spelling:",["Millenium","Millennium","Milennium","Millenneum"],1,"Double n twice."],
-[E,"'Myriad' means:",["A great number","A few","None","One"],0,"Countless."],
-[E,"'Onerous' means:",["Effortless","Burdensome","Pleasant","Quick"],1,"Heavy to bear."],
-[E,"'Oligarchy' is rule by:",["One person","A small group","Everyone","Clerics only"],1,"Few rule."],
-[S,"Antibiotics are ineffective against:",["Bacteria","Viruses","Both","Neither"],1,"They target bacteria."],
-[S,"The human heart has how many chambers?",["2","3","4","6"],2,"Two atria, two ventricles."],
-[S,"The light-sensitive layer of the eye is the:",["Cornea","Lens","Retina","Pupil"],2,"Retina."],
-[S,"Stomach acid is:",["Sulfuric","Hydrochloric","Acetic","Nitric"],1,"HCl."],
-[S,"Sound intensity is measured in:",["Hertz","Decibels","Pascals","Watts"],1,"dB."],
-[S,"The 'Mode' of a data set is:",["Average","Middle value","Most frequent value","Range"],2,"Most frequent."],
-[S,"The 'Range' of a data set is:",["Average","Mode","Median","Highest minus lowest"],3,"Highest − lowest."],
-[S,"Seismology studies:",["Weather","Earthquakes","Rocks","Stars"],1,"Earthquakes."],
-[S,"An anemometer measures:",["Pressure","Wind speed","Humidity","Rain"],1,"Wind speed."],
-[S,"A barometer measures:",["Humidity","Atmospheric pressure","Wind","Rain"],1,"Air pressure."],
-[S,"Primary colours of light:",["Red, Yellow, Blue","Red, Green, Blue","Cyan, Magenta, Yellow","Red, Orange, Blue"],1,"RGB."],
-[S,"Photosynthesis produces:",["Oxygen and nitrogen","Glucose and oxygen","Carbon and water","Glucose and CO₂"],1,"CO₂ + water + light."],
-[S,"The first artificial satellite (1957) was:",["Sputnik 1","Explorer 1","Vostok 1","Luna 1"],0,"USSR."],
-[S,"The system that removes body waste:",["Endocrine","Muscular","Excretory","Skeletal"],2,"Kidneys, skin."],
-[S,"The chemical symbol of sodium:",["So","Sd","Na","S"],2,"From 'natrium'."],
-[S,"The chemical symbol of silver:",["Si","Sv","Ag","Sl"],2,"From 'argentum'."],
-[S,"Atomic number of carbon:",["1","6","8","12"],1,"6."],
-[S,"A see-saw is a:",["Lever","Ramp","Pulley","Wedge"],0,"A simple machine."],
-[S,"Amoeba belongs to kingdom:",["Monera","Protista","Fungi","Animalia"],1,"Protista."],
-[S,"Divided 2:3:5, C gets Rs. 3,000 more than A. Total?",["8,000","9,000","10,000","12,000"],2,"3 parts = 3,000."],
-[S,"3/8 as a percentage:",["32.5%","35%","37.5%","40%"],2,"0.375."],
-[S,"SI on a sum for 4 yrs at 5% is Rs. 800. Principal?",["3,000","3,500","4,000","4,500"],2,"800 = P×0.2."],
-[S,"Efficiency up 25%; job took 20 days. Now?",["14","15","16","18"],2,"20/1.25."],
-[S,"Sides 5, 12, 13 form a:",["Equilateral","Isosceles","Right-angled","Obtuse"],2,"5²+12²=13²."],
-[S,"Circle's radius increases 50%. Area increases by:",["50%","100%","125%","150%"],2,"1.5² = 2.25."],
-[S,"A does a job in 10 days; A+B in 6. B alone:",["12","15","18","20"],1,"1/6 − 1/10 = 1/15."],
-[S,"Ratio of 45 minutes to 2 hours:",["3:8","1:3","3:4","1:4"],0,"45:120."],
-[S,"1, 8, 27, 64, 125, ?",["196","216","226","256"],1,"6³."],
-[S,"12 oranges cost Rs. 180. Cost of 20?",["280","300","320","350"],1,"Rs. 15 each."],
-[S,"6 workers build a wall in 15 days. Workers needed for 9 days:",["8","9","10","12"],2,"90/9."],
-[S,"Pipe A fills in 6 h, B empties in 8 h. Together fill in:",["12 h","16 h","20 h","24 h"],3,"1/6 − 1/8 = 1/24."],
-[S,"Of 50 students, 30 like Maths, 25 Science, 15 both. Like at least one:",["35","40","45","50"],1,"30+25−15."],
-[S,"12 + 8 ÷ 4 × 2 − 3 =",["13","17","21","9"],0,"BODMAS."],
-[S,"√50 in simplest form:",["5√2","2√5","10√5","25√2"],0,"√(25×2)."],
-[S,"A and B invest 40,000 and 60,000; profit 15,000. B gets:",["6,000","9,000","7,500","10,000"],1,"Ratio 2:3."],
-[S,"A father is 3× his son's age; in 12 years, 2×. Son now:",["10","12","14","16"],1,"3x+12 = 2(x+12)."],
-[S,"A century year is a leap year only if divisible by:",["4","100","400","1000"],2,"2000 yes, 1900 no."],
-[I,"Khilafat differs from Malookiyat in being:",["Identical","Consultative, not hereditary","Earlier kingship","Non-existent"],1,"Malookiyat became hereditary."],
-[I,"Huquq-ul-Walidayn are the rights of:",["Neighbours","Spouses","Parents","Orphans"],2,"Parents."],
-[I,"'Shariah' is best defined as:",["Human interpretation","Divine law from Quran and Sunnah","A school of thought","A charity"],1,"Fiqh is the human part."],
-[I,"A Hadith is:",["Quran text","Reported saying/action of the Prophet (PBUH)","A caliph's ruling","A tax"],1,"Transmitted via Isnad."],
-[I,"Citizenship is:",["A religious duty","Legal status with rights and duties","A military rank","An economic class"],1,"Rights and duties."],
-[I,"Federalism means:",["One branch holds power","Power shared between centre and units","Clerical rule","Direct democracy"],1,"Centre plus provinces."],
-[I,"Separation of Powers prevents:",["Inequality","Concentration of power in one branch","Religious conflict","Autonomy"],1,"Executive, legislature, judiciary."],
-[I,"The Guru Granth Sahib is the scripture of:",["Hinduism","Buddhism","Sikhism","Judaism"],2,"Sikhism."],
-[I,"The Tripitaka is the scripture of:",["Christianity","Judaism","Buddhism","Hinduism"],2,"Buddhism."],
-[I,"Islam regards Isa (AS) as:",["Son of God","A Prophet of Allah","A myth","Unrelated"],1,"A Prophet, not divine."],
-[I,"The Umayyad Caliphate lasted until:",["750 CE","900 CE","1000 CE","1258 CE"],0,"661–750 CE."],
-[I,"Shah Jahan built the Taj Mahal for:",["Mumtaz Mahal","Noor Jahan","Jodha Bai","Razia"],0,"His wife."],
-[U,"بیانیہ جملے کی مثال:",["کیا تم آ رہے ہو؟","دروازہ بند کرو۔","علی سکول جاتا ہے۔","واہ! کیا منظر ہے!"],2,"محض بیان۔"],
-[U,"امریہ جملے کی مثال:",["علی سکول جاتا ہے۔","دروازہ بند کرو۔","کیا تم آ رہے ہو؟","واہ!"],1,"حکم یا درخواست۔"],
-[U,"حیرت کے اظہار کے لیے کون سی علامت؟",["ختمہ (۔)","علامت تعجب (!)","رابطہ (:)","واوین"],1,"علامت تعجب (!)۔"],
-[U,"لفظ ‘کتاب’ کس زبان سے آیا؟",["فارسی","عربی","ترکی","انگریزی"],1,"عربی۔"],
-[G,"Mesopotamia lay between the:",["Nile and Indus","Tigris and Euphrates","Ganges and Yamuna","Yangtze and Yellow"],1,"Cradle of civilization."],
-[G,"Mohenjo-daro and Harappa are in:",["India","Pakistan","Afghanistan","Iran"],1,"Sindh and Punjab."],
-[G,"Ancient Egypt grew along the:",["Tigris","Euphrates","Nile","Jordan"],2,"Nile."],
-[G,"Ancient Greece is known for:",["Gunpowder","Democracy and philosophy","Paper","Compass"],1,"Socrates, Plato, Aristotle."],
-[G,"The Strait of Malacca lies between Indonesia and:",["Thailand","Malaysia","Philippines","Vietnam"],1,"Malaysia."],
-[G,"The Bosphorus passes through:",["Ankara","Istanbul","Izmir","Antalya"],1,"Istanbul."],
-[G,"The Suez Canal is in:",["Israel","Egypt","Jordan","Saudi Arabia"],1,"Egypt."],
-[G,"The capital of Saudi Arabia is:",["Jeddah","Makkah","Riyadh","Madinah"],2,"Riyadh."],
-[G,"The modern Olympics began in 1896 in:",["Paris","Athens","London","Rome"],1,"Athens."],
-[G,"Currency of Afghanistan:",["Rupee","Afghani","Dinar","Taka"],1,"Afghani."],
-[G,"First to climb Everest (1953):",["Messner","Hillary and Tenzing Norgay","Mallory and Irvine","Tabei"],1,"Hillary and Tenzing."],
-[G,"The first woman in space:",["Sally Ride","Valentina Tereshkova","Mae Jemison","Helen Sharman"],1,"1963, USSR."],
-[G,"International Women's Day is on:",["8 March","21 February","7 April","12 August"],0,"8 March."],
-[G,"International Day of Peace is on:",["5 June","12 August","21 September","24 October"],2,"21 September."],
-[G,"United Nations Day is on:",["21 Sept","1 Oct","24 Oct","10 Dec"],2,"24 October."]
+// ---- Pakistan Affairs (40)
+["P","Which Constitutional Amendment (1974) declared Ahmadis/Qadianis non-Muslims?","1st|2nd|3rd|4th",1,"The Second Amendment (1974), passed under the 1973 Constitution during the Bhutto government."],
+["P","Nawaz Sharif first became Prime Minister of Pakistan in:","1988|1990|1993|1997",1,"November 1990, after the IJI won the general elections."],
+["P","PRODA (Public Representatives Disqualification Act) was passed in:","1947|1949|1951|1958",1,"January 1949, to disqualify public office holders found guilty of misconduct."],
+["P","Pakistan rejoined the Commonwealth in:","1972|1989|1999|2004",1,"Pakistan left in 1972 (over recognition of Bangladesh) and rejoined in 1989."],
+["P","The rule of the East India Company in India formally ended in:","1757|1857|1858|1877",2,"The Government of India Act 1858 transferred power to the British Crown after the 1857 War of Independence."],
+["P","The First Battle of Panipat (Babur vs Ibrahim Lodi) was fought in:","1526|1556|1761|1192",0,"21 April 1526; it laid the foundation of the Mughal Empire."],
+["P","Muhammad bin Qasim was recalled from Sindh by the Caliph:","Walid bin Abdul Malik|Sulaiman bin Abdul Malik|Umar bin Abdul Aziz|Hisham bin Abdul Malik",1,"Sulaiman bin Abdul Malik, who succeeded Walid I in 715 CE."],
+["P","The first martial law (October 1958) removed the government of Prime Minister:","H. S. Suhrawardy|Feroz Khan Noon|I. I. Chundrigar|Muhammad Ali Bogra",1,"President Iskander Mirza dismissed Noon's government and Ayub Khan became Chief Martial Law Administrator."],
+["P","The Cabinet Mission arrived in Delhi on:","24 March 1946|24 March 1945|23 March 1940|16 August 1946",0,"24 March 1946; its plan was accepted by the League and later rejected by Congress."],
+["P","Diarchy (dual government) in the provinces was introduced by the Government of India Act of:","1909|1919|1935|1947",1,"The 1919 Act (Montagu-Chelmsford Reforms)."],
+["P","Pakistan joined SEATO in:","1954|1956|1959|1962",0,"1954 (Manila Treaty); it joined the Baghdad Pact (later CENTO) in 1955."],
+["P","Pakistan joined the Baghdad Pact in:","1953|1955|1958|1960",1,"1955; the pact was renamed CENTO after Iraq withdrew in 1959."],
+["P","The book 'The Great Tragedy' (1971) was written by:","Z. A. Bhutto|Ayub Khan|Benazir Bhutto|Yahya Khan",0,"Zulfikar Ali Bhutto, on the East Pakistan crisis."],
+["P","The second Governor-General of Pakistan was:","Ghulam Muhammad|Khawaja Nazimuddin|Iskander Mirza|Sir Zafrullah Khan",1,"Khawaja Nazimuddin (1948-1951), after the death of Quaid-e-Azam."],
+["P","The One Unit scheme in West Pakistan was abolished in:","1965|1969|1970|1973",2,"On 1 July 1970 under Yahya Khan; the four provinces were restored."],
+["P","Karachi Nuclear Power Plant (KANUPP) was inaugurated on:","28 May 1971|28 November 1972|18 November 1973|20 November 1974",1,"28 November 1972, Pakistan's first commercial nuclear power plant."],
+["P","The 'Murree Declaration' (2008) was signed between the PPP and the:","PML-N|PML-Q|MQM|JUI-F",0,"Asif Zardari and Nawaz Sharif agreed on restoring the judges and reforming the coalition."],
+["P","Sachal Sarmast, the Sufi poet, belonged to:","Punjab|Sindh|Balochistan|Khyber Pakhtunkhwa",1,"Sindh (1739-1829); he wrote in Sindhi, Saraiki, Persian and Urdu."],
+["P","Zia-ul-Haq's martial law formally ended in:","August 1988|March 1984|December 1985|January 1990",2,"December 1985, after the 8th Amendment indemnified his actions."],
+["P","The Qadirabad Barrage is built on the river:","Indus|Jhelum|Chenab|Ravi",2,"The Chenab, in Punjab."],
+["P","The Basic Democracies system was introduced by Ayub Khan in:","1955|1959|1962|1965",1,"1959, with 80,000 Basic Democrats acting as an electoral college."],
+["P","Dhaka fell and Pakistan's forces surrendered on:","16 December 1971|3 December 1971|26 March 1971|20 December 1971",0,"16 December 1971, ending the 1971 war."],
+["P","The Simla Agreement was signed on 2 July of:","1965|1971|1972|1974",2,"1972, by Z. A. Bhutto and Indira Gandhi."],
+["P","The 1973 Constitution came into force on:","10 April 1973|14 August 1973|23 March 1973|5 July 1973",1,"It was adopted on 10 April 1973 and enforced on 14 August 1973."],
+["P","Pakistan conducted its nuclear tests at Chagai on:","28 May 1998|11 May 1998|30 May 1998|6 August 1998",0,"28 May 1998, celebrated as Youm-e-Takbeer (a second test followed on 30 May)."],
+["P","The Kargil conflict took place in:","1971|1984|1999|2001",2,"Summer of 1999."],
+["P","General Zia-ul-Haq imposed martial law on:","5 July 1977|5 July 1979|12 October 1977|4 April 1979",0,"5 July 1977 (Operation Fair Play), overthrowing Z. A. Bhutto."],
+["P","General Pervez Musharraf took power on:","12 October 1999|12 October 1998|5 July 1999|28 May 2000",0,"12 October 1999, removing the government of Nawaz Sharif."],
+["P","The 8th Amendment (1985) inserted which power for the President?","Article 58(2)(b) to dissolve the National Assembly|Article 6|Article 62|Article 25",0,"Article 58(2)(b); it was repealed by the 13th Amendment in 1997."],
+["P","Which amendment repealed Article 58(2)(b) in 1997?","10th|12th|13th|17th",2,"The 13th Amendment, passed under Nawaz Sharif."],
+["P","The 18th Amendment was passed in:","2008|2010|2015|2018",1,"April 2010; it devolved powers to the provinces."],
+["P","The 21st Amendment (2015) allowed the establishment of:","Military courts for terrorism cases|Federal Constitutional Court|Provincial senates|Women's seats",0,"Military courts, after the Army Public School Peshawar attack of December 2014."],
+["P","Gwadar Port's operations were handed over to a Chinese company in:","2005|2008|2013|2018",2,"2013 (China Overseas Port Holding Company)."],
+["P","CPEC projects were formally launched during Xi Jinping's visit to Pakistan in:","2013|2014|2015|2017",2,"April 2015, with about $46 billion of agreements."],
+["P","The Lahore Declaration was signed by Nawaz Sharif and A. B. Vajpayee in:","1972|1988|1999|2004",2,"February 1999, just before the Kargil conflict."],
+["P","Pakistan left the Commonwealth in:","1971|1972|1974|1977",1,"January 1972, after the Commonwealth recognised Bangladesh."],
+["P","The first Constituent Assembly of Pakistan was dissolved in October:","1951|1953|1954|1956",2,"1954, by Governor-General Ghulam Muhammad."],
+["P","Pakistan became an Islamic Republic on:","14 August 1947|23 March 1956|1 January 1960|14 August 1973",1,"23 March 1956, when the first Constitution came into force."],
+["P","The 7th NFC Award, which raised the provinces' share to 57.5%, was announced in:","2005|2009|2013|2018",1,"2009, after consensus among all provinces."],
+["P","Prime Minister Liaquat Ali Khan was assassinated in Rawalpindi in:","1949|1951|1953|1956",1,"16 October 1951, at Company Bagh (now Liaquat Bagh)."],
+// ---- International / Current Affairs (35)
+["C","The Strategic Mutual Defence Agreement of September 2025 was signed between Pakistan and:","Turkey|Saudi Arabia|China|UAE",1,"Saudi Arabia, signed on 17 September 2025: aggression against one is aggression against both."],
+["C","The Pakistan-Saudi Strategic Mutual Defence Agreement was signed in:","Islamabad|Jeddah|Riyadh|Doha",2,"At Al-Yamamah Palace, Riyadh, by PM Shehbaz Sharif and Crown Prince Mohammed bin Salman."],
+["C","The 27th Constitutional Amendment, signed in November 2025, created the:","Federal Constitutional Court|Federal Shariat Court|Senate of the Provinces|Election Appellate Tribunal",0,"A Federal Constitutional Court to hear constitutional cases; it was signed into law on 13 November 2025."],
+["C","The 27th Amendment changed Article 243 to create the post of:","Chairman Joint Chiefs|Chief of Defence Forces|Field Marshal Commissioner|Army Secretary",1,"Chief of Defence Forces (CDF), a post held by the Army Chief."],
+["C","The Chief of Defence Forces serves for a term of:","3 years|4 years|5 years|6 years",2,"Five years from the date of appointment."],
+["C","The first Chief Justice of the Federal Constitutional Court was:","Justice Aminuddin Khan|Justice Yahya Afridi|Justice Mansoor Ali Shah|Justice Athar Minallah",0,"Justice Aminuddin Khan took oath in November 2025."],
+["C","The 26th Constitutional Amendment, which changed judicial appointments, was passed in:","October 2023|October 2024|April 2025|January 2025",1,"October 2024."],
+["C","Pakistan's 2025-26 term as a non-permanent member of the UN Security Council is its:","fifth|sixth|seventh|eighth",3,"Its eighth term; earlier terms included 2012-13."],
+["C","Pakistan was elected to the UNSC in June 2024 with how many votes (out of 193)?","124|150|182|193",2,"182 votes; 124 votes (two-thirds) were required."],
+["C","Pakistan held the UN Security Council presidency in:","January 2025|July 2025|December 2025|July 2026",1,"July 2025, by alphabetical rotation."],
+["C","The Pahalgam attack in Indian-administered Kashmir took place on:","22 April 2025|7 May 2025|10 May 2025|5 August 2019",0,"22 April 2025; 26 people were killed."],
+["C","India placed the Indus Waters Treaty 'in abeyance' on:","22 April 2025|23 April 2025|7 May 2025|10 May 2025",1,"23 April 2025, a day after the Pahalgam attack."],
+["C","Pakistan's May 2025 military response to India was codenamed:","Operation Zarb-e-Azb|Operation Radd-ul-Fasaad|Operation Bunyan-um-Marsoos|Operation Swift Retort",2,"Bunyan-um-Marsoos, launched on 10 May 2025."],
+["C","India's May 2025 strikes on Pakistan were codenamed:","Operation Meghdoot|Operation Sindoor|Operation Vijay|Operation Parakram",1,"Operation Sindoor (6-7 May 2025)."],
+["C","The India-Pakistan ceasefire of May 2025 took effect on:","6 May|8 May|10 May|15 May",2,"10 May 2025."],
+["C","The UN was founded in 1945; its 80th anniversary was observed in:","2023|2024|2025|2026",2,"2025 (UN Day is 24 October)."],
+["C","UN Day is observed on:","24 October|10 December|21 September|1 May",0,"24 October, marking the UN Charter's entry into force in 1945."],
+["C","World Press Freedom Day is observed on:","3 May|1 May|8 March|5 June",0,"3 May."],
+["C","International Day of Peace is observed on:","21 September|10 December|24 October|5 June",0,"21 September."],
+["C","Human Rights Day (Universal Declaration of Human Rights) is observed on:","10 December|20 November|8 March|24 October",0,"10 December; the UDHR was adopted in 1948."],
+["C","World Environment Day is observed on:","22 April|5 June|16 September|8 March",1,"5 June."],
+["C","Kashmir Solidarity Day is observed in Pakistan on:","5 February|5 August|27 October|23 March",0,"5 February."],
+["C","NATO was founded in:","1945|1949|1955|1991",1,"4 April 1949; its headquarters are in Brussels."],
+["C","The Maastricht Treaty, which created the European Union, was signed in:","1957|1992|2002|2009",1,"1992 (effective 1993)."],
+["C","The United Kingdom formally left the European Union on:","31 January 2020|23 June 2016|1 January 2021|29 March 2019",0,"31 January 2020 (the referendum was on 23 June 2016)."],
+["C","In the acronym BRICS, the 'S' stands for:","Singapore|South Africa|South Korea|Saudi Arabia",1,"South Africa, which joined in 2010."],
+["C","The G20 summit in November 2025 was held in:","Johannesburg|Rio de Janeiro|New Delhi|Bali",0,"Johannesburg, the first G20 summit on African soil."],
+["C","COP30 (UN climate conference, November 2025) was hosted by:","Egypt|Brazil|UAE|Azerbaijan",1,"Brazil, in Belém."],
+["C","The 2025 SCO Heads of State summit was held in:","Astana|Tianjin|Tashkent|Bishkek",1,"Tianjin, China (31 August - 1 September 2025)."],
+["C","The 2026 FIFA World Cup is hosted jointly by:","USA, Canada and Mexico|USA only|Qatar and UAE|Morocco, Spain and Portugal",0,"The first 48-team World Cup, hosted by the USA, Canada and Mexico."],
+["C","AUKUS is a security pact between Australia, the UK and:","USA|India|Japan|Canada",0,"The USA, announced in 2021."],
+["C","The Quad consists of the USA, India, Japan and:","Australia|South Korea|Indonesia|Pakistan",0,"Australia."],
+["C","Malala Yousafzai won the Nobel Peace Prize in:","2012|2013|2014|2016",2,"2014, aged 17, the youngest Nobel laureate."],
+["C","Pakistan's first Nobel laureate, Dr Abdus Salam, won the Nobel Prize in Physics in:","1965|1974|1979|1988",2,"1979, shared with Glashow and Weinberg."],
+// ---- Islamic Studies (25)
+["I","The Treaty of Hudaybiyyah was signed in:","4 AH|6 AH|8 AH|10 AH",1,"6 AH, between the Muslims and the Quraysh."],
+["I","The truce under the Treaty of Hudaybiyyah was for:","2 years|5 years|10 years|20 years",2,"Ten years of peace."],
+["I","Which Surah was revealed after Hudaybiyyah, calling it a 'clear victory'?","Al-Fath|Al-Anfal|At-Tawbah|Al-Ahzab",0,"Surah Al-Fath (48)."],
+["I","The Charter of Madinah (Meethaq-e-Madinah) was drawn up after the Hijra, in:","1 AH|3 AH|5 AH|8 AH",0,"Around 1 AH; it is regarded as the first written constitution."],
+["I","The Conquest of Makkah took place in:","6 AH|7 AH|8 AH|9 AH",2,"8 AH (630 CE), in Ramadan."],
+["I","The Battle of Uhud took place in:","2 AH|3 AH|5 AH|7 AH",1,"3 AH (625 CE)."],
+["I","The Battle of Khandaq (Trench) took place in:","3 AH|4 AH|5 AH|6 AH",2,"5 AH; the trench was dug on the advice of Salman Farsi."],
+["I","The conquest of Khyber took place in:","5 AH|6 AH|7 AH|8 AH",2,"7 AH."],
+["I","The Farewell Sermon (Khutbah Hajjat al-Wida) was delivered in:","8 AH|9 AH|10 AH|11 AH",2,"10 AH, at Arafat."],
+["I","The Holy Prophet (PBUH) was born in the Year of the Elephant on:","12 Rabi ul Awwal|1 Muharram|27 Rajab|10 Ramadan",0,"12 Rabi ul Awwal (about 570 CE) in Makkah."],
+["I","The Holy Prophet (PBUH) passed away in:","10 AH|11 AH|12 AH|13 AH",1,"11 AH (632 CE), in Madinah."],
+["I","The Prophet (PBUH) spent how many years in Makkah after the first revelation?","10|13|15|23",1,"About 13 years; then he spent about 10 years in Madinah."],
+["I","The first woman to accept Islam was:","Hazrat Ayesha (RA)|Hazrat Khadijah (RA)|Hazrat Fatimah (RA)|Hazrat Sumayyah (RA)",1,"Hazrat Khadijah (RA)."],
+["I","The first adult man to accept Islam was:","Hazrat Abu Bakr (RA)|Hazrat Umar (RA)|Hazrat Ali (RA)|Hazrat Bilal (RA)",0,"Hazrat Abu Bakr (RA); Hazrat Ali (RA) was the first among boys."],
+["I","The Battle of Jamal was fought in:","30 AH|36 AH|37 AH|41 AH",1,"36 AH, between the forces of Hazrat Ali (RA) and Hazrat Ayesha (RA)."],
+["I","The tragedy of Karbala occurred in:","41 AH|50 AH|61 AH|72 AH",2,"61 AH (680 CE)."],
+["I","Hazrat Umar (RA) was Caliph for about:","2 years|10 years|12 years|5 years",1,"About 10 years (13-23 AH)."],
+["I","The Hanafi school of fiqh was founded by:","Imam Malik|Imam Abu Hanifa|Imam Shafi'i|Imam Ahmad bin Hanbal",1,"Imam Abu Hanifa (d. 150 AH)."],
+["I","'Al-Muwatta', an early Hadith and fiqh collection, was compiled by:","Imam Bukhari|Imam Malik|Imam Muslim|Imam Tirmidhi",1,"Imam Malik bin Anas."],
+["I","The number of books in the Kutub al-Sittah (Sihah Sittah) is:","4|6|8|10",1,"Six canonical Hadith collections."],
+["I","The Quran was revealed to the Prophet (PBUH) over about:","10 years|13 years|23 years|30 years",2,"About 23 years."],
+["I","The first revelation was the opening verses of Surah:","Al-Fatiha|Al-Alaq|Al-Muddaththir|Al-Muzzammil",1,"Surah Al-Alaq (96:1-5), in Cave Hira."],
+["I","The last complete Surah revealed is generally held to be:","An-Nasr|Al-Ikhlas|Al-Kawthar|Al-Falaq",0,"Surah An-Nasr."],
+["I","The only Surah that does not begin with Bismillah is:","At-Tawbah|Al-Anfal|Al-Fatiha|Yasin",0,"Surah At-Tawbah (Surah 9)."],
+["I","The number of Prophets mentioned by name in the Quran is:","15|20|25|30",2,"Twenty-five."],
 ];
-const SEC=[...new Set(Q.map(x=>x[0]))],app=document.getElementById('app');
-let pool,i,ans,sc,sec;
-function start(){app.innerHTML=`<div class="c"><p class="s">Pick a section or take all. ${Q.length} fresh questions, none repeated from earlier sets.</p><div class="chips"><div class="chip a" data-s="All">All (${Q.length})</div>${SEC.map(s=>`<div class="chip" data-s="${s}">${s} (${Q.filter(x=>x[0]==s).length})</div>`).join("")}</div><div class="r"><button class="b" id="go">Start Quiz</button></div></div>`;let ch="All";document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{document.querySelectorAll(".chip").forEach(x=>x.classList.remove("a"));c.classList.add("a");ch=c.dataset.s});document.getElementById("go").onclick=()=>{sec=ch;pool=ch=="All"?Q:Q.filter(x=>x[0]==ch);i=0;ans={};sc=0;show()}}
-function show(){const q=pool[i],a=ans[i],n=pool.length;app.innerHTML=`<div class="s" style="display:flex;justify-content:space-between"><span>Question ${i+1} / ${n}</span><span>Score: ${sc}</span></div><div class="bar"><div style="width:${i/n*100}%"></div></div><div class="c"><div class="t">${q[0]}</div><div class="q">${q[1]}</div>${q[2].map((o,k)=>`<button class="opt${a!==undefined?(k==q[3]?" ok":k==a?" no":""):""}" data-k="${k}" ${a!==undefined?"disabled":""}>${"ABCD"[k]}. ${o}</button>`).join("")}${a!==undefined?`<div class="ex"><b>${a==q[3]?"Correct. ":"Not quite. "}</b>${q[4]}</div>`:""}<div class="r"><button class="b g" id="pv" ${i?"":"disabled"}>Previous</button><button class="b" id="nx" ${a===undefined?"disabled":""}>${i==n-1?"Finish":"Next"}</button></div></div>`;
-document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{const k=+b.dataset.k;ans[i]=k;if(k==q[3])sc++;show()});
-pv.onclick=()=>{i--;show()};nx.onclick=()=>{if(i<n-1){i++;show()}else done()}}
-function done(){const n=pool.length;app.innerHTML=`<div class="c" style="text-align:center"><div class="t">${sec}</div><div class="big">${sc} / ${n}</div><div class="s">${Math.round(sc/n*100)}% correct</div><div class="r"><button class="b g" id="rt">Retry</button><button class="b" id="hm">Choose Section</button></div></div>`;rt.onclick=()=>{i=0;ans={};sc=0;show()};hm.onclick=start}
-start();
-</script></body></html>
+
+const SECTIONS={P:"Pakistan Affairs",C:"International and Current Affairs",I:"Islamic Studies"};
+const BANK=Q.map((r,i)=>({id:i,sec:r[0],q:r[1],opts:r[2].split("|"),ans:r[3],why:r[4]}));
+const $=id=>document.getElementById(id);
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+
+let selSec="ALL", items=[], idx=0, mode="practice", answered=false;
+// each item: {q, sec, opts:[{t,ok}], why, pick:null}
+
+/* ---------- Home ---------- */
+function secCount(k){return k==="ALL"?BANK.length:BANK.filter(b=>b.sec===k).length}
+function renderChips(){
+  const box=$("secChips");box.innerHTML="";
+  [["ALL","All sections"],["P",SECTIONS.P],["C",SECTIONS.C],["I",SECTIONS.I]].forEach(([k,label])=>{
+    const b=document.createElement("button");
+    b.setAttribute("aria-pressed",String(selSec===k));
+    b.innerHTML=label+"<small>"+secCount(k)+" questions</small>";
+    b.onclick=()=>{selSec=k;renderChips();renderCounts()};
+    box.appendChild(b);
+  });
+}
+function renderCounts(){
+  const n=secCount(selSec), sel=$("count"), prev=sel.value;
+  const opts=[10,20,30,50].filter(x=>x<n);opts.push(n);
+  sel.innerHTML=opts.map(x=>`<option value="${x}">${x===n?"All "+n:x}</option>`).join("");
+  if(prev&&opts.includes(+prev))sel.value=prev;
+}
+function show(id){["home","quiz","result"].forEach(s=>$(s).classList.toggle("hide",s!==id));window.scrollTo(0,0)}
+
+/* ---------- Quiz ---------- */
+function begin(pool){
+  mode=$("mode").value;
+  const so=$("shuffleO").checked;
+  items=pool.map(b=>{
+    let o=b.opts.map((t,i)=>({t,ok:i===b.ans}));
+    if(so)o=shuffle(o);
+    return {q:b.q,sec:b.sec,opts:o,why:b.why,pick:null,id:b.id};
+  });
+  idx=0;show("quiz");renderQ();
+}
+function startFromHome(){
+  let pool=BANK.filter(b=>selSec==="ALL"||b.sec===selSec);
+  if($("shuffleQ").checked)pool=shuffle(pool);
+  pool=pool.slice(0,+$("count").value);
+  begin(pool);
+}
+function renderQ(){
+  const it=items[idx];answered=false;
+  $("qCount").textContent=`Question ${idx+1} of ${items.length}`;
+  $("barFill").style.width=(idx/items.length*100)+"%";
+  $("qSection").textContent=SECTIONS[it.sec];
+  $("qText").textContent=it.q;
+  $("expl").classList.add("hide");
+  $("next").disabled=true;
+  $("next").textContent=idx===items.length-1?"Finish quiz":"Next question";
+  updateScore();
+  const box=$("choices");box.innerHTML="";
+  it.opts.forEach((o,i)=>{
+    const b=document.createElement("button");
+    b.className="choice";
+    b.innerHTML=`<b>${i+1}</b><span></span>`;
+    b.lastChild.textContent=o.t;
+    b.onclick=()=>choose(i);
+    box.appendChild(b);
+  });
+}
+function choose(i){
+  if(answered)return;
+  answered=true;
+  const it=items[idx];it.pick=i;
+  const btns=$("choices").children;
+  if(mode==="practice"){
+    it.opts.forEach((o,k)=>{
+      if(o.ok)btns[k].classList.add("correct");
+      else if(k===i)btns[k].classList.add("wrong");
+    });
+    $("expl").textContent=(it.opts[i].ok?"Correct. ":"Not quite. ")+it.why;
+    $("expl").classList.remove("hide");
+  }else{
+    btns[i].classList.add("picked");
+  }
+  Array.from(btns).forEach(b=>b.disabled=true);
+  $("next").disabled=false;
+  updateScore();
+  $("next").focus({preventScroll:true});
+}
+function updateScore(){
+  const ok=items.filter(x=>x.pick!==null&&x.opts[x.pick].ok).length;
+  $("liveScore").textContent=mode==="practice"?`Score ${ok}`:`Answered ${items.filter(x=>x.pick!==null).length}`;
+}
+function next(){
+  if(idx<items.length-1){idx++;renderQ()}else finish();
+}
+
+/* ---------- Result ---------- */
+function finish(){
+  const ok=items.filter(x=>x.pick!==null&&x.opts[x.pick].ok).length;
+  const skip=items.filter(x=>x.pick===null).length;
+  const bad=items.length-ok-skip;
+  const pct=Math.round(ok/items.length*100);
+  $("rPct").textContent=pct+"%";
+  $("rOk").textContent=ok;$("rBad").textContent=bad;$("rSkip").textContent=skip;
+  $("rMsg").textContent=`You answered ${ok} of ${items.length} correctly. `+(pct>=80?"Excellent work.":pct>=60?"Good progress. Review the wrong answers below.":"Keep practising. Retry the wrong answers to lock them in.");
+  const secs={};
+  items.forEach(x=>{const s=secs[x.sec]=secs[x.sec]||{ok:0,n:0};s.n++;if(x.pick!==null&&x.opts[x.pick].ok)s.ok++});
+  $("rSec").innerHTML=Object.keys(secs).map(k=>{
+    const s=secs[k],p=Math.round(s.ok/s.n*100);
+    return `<div style="margin-top:10px"><div class="top"><span>${SECTIONS[k]}</span><strong>${s.ok}/${s.n}</strong></div><div class="bar"><i style="width:${p}%"></i></div></div>`;
+  }).join("");
+  $("retryWrong").disabled=(bad+skip)===0;
+  filter="all";setFilter("all");
+  show("result");
+}
+let filter="all";
+function setFilter(f){
+  filter=f;
+  $("fAll").setAttribute("aria-pressed",String(f==="all"));
+  $("fWrong").setAttribute("aria-pressed",String(f==="wrong"));
+  const box=$("review");box.innerHTML="";
+  let shown=0;
+  items.forEach((it,n)=>{
+    const good=it.pick!==null&&it.opts[it.pick].ok;
+    if(f==="wrong"&&good)return;
+    shown++;
+    const d=document.createElement("div");d.className="rev";
+    const right=it.opts.find(o=>o.ok).t;
+    const mine=it.pick===null?"No answer":it.opts[it.pick].t;
+    const h=document.createElement("div");
+    h.innerHTML=`<strong></strong><p></p><p></p><p class="mute"></p>`;
+    h.children[0].textContent=`${n+1}. ${it.q}`;
+    h.children[1].innerHTML=`<span class="tag" style="background:${good?"var(--okbg)":"var(--badbg)"};color:${good?"var(--ok)":"var(--bad)"}">${good?"Correct":"Wrong"}</span> Your answer: <b></b>`;
+    h.children[1].querySelector("b").textContent=mine;
+    h.children[2].innerHTML="Correct answer: <b></b>";
+    h.children[2].querySelector("b").textContent=right;
+    h.children[3].textContent=it.why;
+    d.appendChild(h);box.appendChild(d);
+  });
+  if(!shown)box.innerHTML='<p class="mute">Nothing to review here. Every answer was correct.</p>';
+}
+
+/* ---------- Wiring ---------- */
+$("start").onclick=startFromHome;
+$("next").onclick=next;
+$("quit").onclick=()=>{if(confirm("End the quiz and see your result?"))finish()};
+$("again").onclick=()=>show("home");
+$("retryWrong").onclick=()=>{
+  const ids=items.filter(x=>!(x.pick!==null&&x.opts[x.pick].ok)).map(x=>x.id);
+  begin(shuffle(ids.map(i=>BANK[i])));
+};
+$("fAll").onclick=()=>setFilter("all");
+$("fWrong").onclick=()=>setFilter("wrong");
+$("theme").onclick=()=>{
+  const r=document.documentElement;
+  const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+  r.dataset.theme=dark?"light":"dark";
+};
+document.addEventListener("keydown",e=>{
+  if($("quiz").classList.contains("hide"))return;
+  if(e.key>="1"&&e.key<="4"){const i=+e.key-1;if(items[idx]&&i<items[idx].opts.length)choose(i)}
+  else if(e.key==="Enter"&&answered&&document.activeElement.id!=="quit"){e.preventDefault();next()}
+});
+renderChips();renderCounts();
+</script>
+</body>
+</html>
