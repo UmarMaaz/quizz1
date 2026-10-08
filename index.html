@@ -1,407 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>CSS Quiz: Pakistan Affairs, Current Affairs, Islamiat</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600;700&display=swap">
+<title>CSS/FPSC MPT Quiz — Set 8</title>
 <style>
-:root{--bg:#eef3f1;--card:#fff;--ink:#12302b;--mute:#5d726d;--line:#cfdcd8;--brand:#0e6b55;--brand-ink:#fff;--ok:#12794f;--okbg:#dff3e9;--bad:#b3261e;--badbg:#fbe4e1;--sun:#c98a00;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a17;--card:#14262l;--card:#142621;--ink:#e4f0ec;--mute:#93aaa4;--line:#27403a;--brand:#3fbf98;--brand-ink:#062019;--ok:#5fd6a0;--okbg:#12362a;--bad:#ff8a80;--badbg:#3b1d1a;--sun:#e8b43a}}
-:root[data-theme="dark"]{--bg:#0d1a17;--card:#142621;--ink:#e4f0ec;--mute:#93aaa4;--line:#27403a;--brand:#3fbf98;--brand-ink:#062019;--ok:#5fd6a0;--okbg:#12362a;--bad:#ff8a80;--badbg:#3b1d1a;--sun:#e8b43a}
-*{box-sizing:border-box}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}
-.wrap{max-width:680px;margin:0 auto;padding:20px 16px 48px}
-h1,h2{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;margin:0;line-height:1.2}
-h1{font-size:2rem}
-h2{font-size:1.35rem}
-p{margin:.4rem 0}
-.mute{color:var(--mute)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:16px}
-.row{display:flex;gap:10px;flex-wrap:wrap}
-button{font:inherit;cursor:pointer;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:12px 16px;min-height:46px}
-button:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
-.primary{background:var(--brand);color:var(--brand-ink);border-color:var(--brand);font-weight:700}
-.primary:disabled{opacity:.45;cursor:not-allowed}
-.chips button{flex:1 1 150px;text-align:left;padding:12px 14px}
-.chips button[aria-pressed="true"]{border-color:var(--brand);box-shadow:inset 0 0 0 2px var(--brand);font-weight:600}
-.chips small{display:block;color:var(--mute);font-weight:400}
-label.opt{display:flex;align-items:center;gap:10px;padding:8px 0}
-input[type=checkbox]{width:20px;height:20px;accent-color:var(--brand)}
-select{font:inherit;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);min-height:44px}
-.top{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.bar{height:8px;background:var(--line);border-radius:6px;overflow:hidden;margin-top:10px}
-.bar>i{display:block;height:100%;background:var(--brand);width:0;transition:width .25s}
-.tag{display:inline-block;font-size:.85rem;font-weight:600;padding:2px 10px;border-radius:20px;background:var(--okbg);color:var(--ok)}
-.q{font-family:"Source Serif 4",Georgia,serif;font-size:1.3rem;line-height:1.35;margin:12px 0 16px;font-weight:600}
-.choices{display:grid;gap:10px}
-.choice{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;padding:13px 14px}
-.choice b{flex:0 0 26px;height:26px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:.85rem}
-.choice.correct{background:var(--okbg);border-color:var(--ok)}
-.choice.correct b{background:var(--ok);color:var(--card);border-color:var(--ok)}
-.choice.wrong{background:var(--badbg);border-color:var(--bad)}
-.choice.wrong b{background:var(--bad);color:var(--card);border-color:var(--bad)}
-.choice.picked{border-color:var(--brand);box-shadow:inset 0 0 0 2px var(--brand)}
-.expl{margin-top:14px;padding:12px 14px;border-left:4px solid var(--brand);background:var(--bg);border-radius:6px}
-.big{font-family:"Source Serif 4",Georgia,serif;font-size:3.2rem;font-weight:700;line-height:1}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
-.stats div{background:var(--bg);border-radius:10px;padding:10px;text-align:center}
-.stats b{display:block;font-size:1.3rem}
-.rev{border-top:1px solid var(--line);padding:12px 0}
-.rev:first-child{border-top:0}
-.hide{display:none}
+:root{
+  --bg:#f6f5f2; --card:#ffffff; --ink:#1c1c1c; --sub:#6b6b6b;
+  --accent:#0f5132; --accent2:#8a6d00; --line:#e4e1da; --danger:#8a1f11; --good:#0f5132bb;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#161512; --card:#1f1e1a; --ink:#f0efe9; --sub:#a9a69d; --line:#33322c;
+  }
+}
+:root[data-theme="dark"]{--bg:#161512;--card:#1f1e1a;--ink:#f0efe9;--sub:#a9a69d;--line:#33322c;}
+*{box-sizing:border-box;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:'Georgia','Times New Roman',serif;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  min-height:100%;
+}
+.wrap{max-width:720px;margin:0 auto;padding:24px 18px 60px;}
+header{text-align:center;margin-bottom:20px;}
+h1{font-size:1.5rem;margin:0 0 4px;letter-spacing:.3px;}
+.sub{color:var(--sub);font-size:.85rem;font-family:system-ui,sans-serif;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;margin-bottom:16px;}
+.section-picker{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:18px;}
+.chip{
+  font-family:system-ui,sans-serif;font-size:.8rem;padding:7px 13px;border-radius:20px;
+  border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;
+}
+.chip.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+.progress-row{display:flex;justify-content:space-between;align-items:center;font-family:system-ui,sans-serif;font-size:.8rem;color:var(--sub);margin-bottom:10px;}
+.bar{height:6px;background:var(--line);border-radius:4px;overflow:hidden;margin-bottom:18px;}
+.bar-fill{height:100%;background:var(--accent);transition:width .25s;}
+.qtag{font-family:system-ui,sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent2);margin-bottom:8px;}
+.qtext{font-size:1.15rem;line-height:1.5;margin-bottom:18px;}
+.opt{
+  display:block;width:100%;text-align:left;padding:12px 14px;margin-bottom:10px;
+  border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--ink);
+  font-family:system-ui,sans-serif;font-size:.95rem;cursor:pointer;
+}
+.opt:hover{border-color:var(--accent);}
+.opt.correct{background:#0f513222;border-color:var(--accent);}
+.opt.wrong{background:#8a1f1122;border-color:var(--danger);}
+.opt[disabled]{cursor:default;}
+.explain{
+  margin-top:14px;padding:12px 14px;border-radius:8px;background:var(--bg);
+  border:1px dashed var(--line);font-family:system-ui,sans-serif;font-size:.88rem;line-height:1.5;color:var(--sub);
+}
+.explain b{color:var(--ink);}
+.nav-row{display:flex;justify-content:space-between;margin-top:18px;gap:10px;font-family:system-ui,sans-serif;}
+button.nav{
+  flex:1;padding:11px;border-radius:8px;border:none;background:var(--accent);color:#fff;
+  font-size:.9rem;cursor:pointer;
+}
+button.nav.secondary{background:transparent;color:var(--ink);border:1px solid var(--line);}
+button.nav:disabled{opacity:.4;cursor:default;}
+.score-screen{text-align:center;}
+.score-num{font-size:3rem;margin:10px 0;color:var(--accent);font-family:system-ui,sans-serif;font-weight:700;}
+.start-screen p{font-family:system-ui,sans-serif;color:var(--sub);font-size:.9rem;line-height:1.6;}
+footer{text-align:center;font-family:system-ui,sans-serif;font-size:.72rem;color:var(--sub);margin-top:20px;}
 </style>
 </head>
 <body>
 <div class="wrap">
+<header>
+  <h1>CSS / FPSC MPT — MCQ Quiz (Set 8)</h1>
+  <div class="sub">Practice questions from your preparation notes</div>
+</header>
 
-<section id="home">
-  <h1>CSS Quiz</h1>
-  <p class="mute">100 MCQs on Pakistan Affairs, International and Current Affairs, and Islamic Studies.</p>
-  <div class="card">
-    <h2>Choose a section</h2>
-    <div class="row chips" id="secChips" style="margin-top:12px"></div>
-  </div>
-  <div class="card">
-    <h2>Settings</h2>
-    <div style="margin-top:10px">
-      <label for="count">Number of questions</label><br>
-      <select id="count"></select>
-    </div>
-    <div style="margin-top:10px">
-      <label for="mode">Mode</label><br>
-      <select id="mode">
-        <option value="practice">Practice: show the answer after each question</option>
-        <option value="exam">Exam: show all answers at the end</option>
-      </select>
-    </div>
-    <label class="opt"><input type="checkbox" id="shuffleQ" checked> Shuffle questions</label>
-    <label class="opt"><input type="checkbox" id="shuffleO" checked> Shuffle answer options</label>
-    <div class="row" style="margin-top:12px">
-      <button class="primary" id="start">Start quiz</button>
-      <button id="theme">Switch theme</button>
-    </div>
-  </div>
-</section>
+<div id="app"></div>
 
-<section id="quiz" class="hide">
-  <div class="top">
-    <strong id="qCount">Question 1 of 10</strong>
-    <span id="liveScore" class="tag">Score 0</span>
-  </div>
-  <div class="bar"><i id="barFill"></i></div>
-  <div class="card">
-    <span class="mute" id="qSection"></span>
-    <p class="q" id="qText"></p>
-    <div class="choices" id="choices"></div>
-    <div class="expl hide" id="expl"></div>
-    <div class="row" style="margin-top:16px">
-      <button class="primary" id="next" disabled>Next question</button>
-      <button id="quit">End quiz</button>
-    </div>
-    <p class="mute" style="font-size:.85rem;margin-top:12px">Keyboard: press 1 to 4 to answer, Enter for next.</p>
-  </div>
-</section>
-
-<section id="result" class="hide">
-  <div class="card">
-    <h2>Your result</h2>
-    <p class="big" id="rPct">0%</p>
-    <p id="rMsg" class="mute"></p>
-    <div class="stats">
-      <div><b id="rOk">0</b>Correct</div>
-      <div><b id="rBad">0</b>Wrong</div>
-      <div><b id="rSkip">0</b>Skipped</div>
-    </div>
-    <h2 style="margin-top:18px">By section</h2>
-    <div id="rSec"></div>
-    <div class="row" style="margin-top:16px">
-      <button class="primary" id="retryWrong">Retry wrong answers</button>
-      <button id="again">New quiz</button>
-    </div>
-  </div>
-  <div class="card">
-    <h2>Review</h2>
-    <div class="row" style="margin:10px 0">
-      <button id="fAll" aria-pressed="true">All</button>
-      <button id="fWrong" aria-pressed="false">Wrong only</button>
-    </div>
-    <div id="review"></div>
-  </div>
-</section>
-
+<footer>Based on the CSS/FPSC MPT Complete Preparation Notes · 100 questions across 5 sections (Set 8 — Dates/Years, International Relations, Islamic Studies, English &amp; Maths)</footer>
 </div>
 
 <script>
-/* Row format: [section, question, "A|B|C|D", correctIndex, explanation] */
-const Q=[
-// ---- Pakistan Affairs (40)
-["P","Which Constitutional Amendment (1974) declared Ahmadis/Qadianis non-Muslims?","1st|2nd|3rd|4th",1,"The Second Amendment (1974), passed under the 1973 Constitution during the Bhutto government."],
-["P","Nawaz Sharif first became Prime Minister of Pakistan in:","1988|1990|1993|1997",1,"November 1990, after the IJI won the general elections."],
-["P","PRODA (Public Representatives Disqualification Act) was passed in:","1947|1949|1951|1958",1,"January 1949, to disqualify public office holders found guilty of misconduct."],
-["P","Pakistan rejoined the Commonwealth in:","1972|1989|1999|2004",1,"Pakistan left in 1972 (over recognition of Bangladesh) and rejoined in 1989."],
-["P","The rule of the East India Company in India formally ended in:","1757|1857|1858|1877",2,"The Government of India Act 1858 transferred power to the British Crown after the 1857 War of Independence."],
-["P","The First Battle of Panipat (Babur vs Ibrahim Lodi) was fought in:","1526|1556|1761|1192",0,"21 April 1526; it laid the foundation of the Mughal Empire."],
-["P","Muhammad bin Qasim was recalled from Sindh by the Caliph:","Walid bin Abdul Malik|Sulaiman bin Abdul Malik|Umar bin Abdul Aziz|Hisham bin Abdul Malik",1,"Sulaiman bin Abdul Malik, who succeeded Walid I in 715 CE."],
-["P","The first martial law (October 1958) removed the government of Prime Minister:","H. S. Suhrawardy|Feroz Khan Noon|I. I. Chundrigar|Muhammad Ali Bogra",1,"President Iskander Mirza dismissed Noon's government and Ayub Khan became Chief Martial Law Administrator."],
-["P","The Cabinet Mission arrived in Delhi on:","24 March 1946|24 March 1945|23 March 1940|16 August 1946",0,"24 March 1946; its plan was accepted by the League and later rejected by Congress."],
-["P","Diarchy (dual government) in the provinces was introduced by the Government of India Act of:","1909|1919|1935|1947",1,"The 1919 Act (Montagu-Chelmsford Reforms)."],
-["P","Pakistan joined SEATO in:","1954|1956|1959|1962",0,"1954 (Manila Treaty); it joined the Baghdad Pact (later CENTO) in 1955."],
-["P","Pakistan joined the Baghdad Pact in:","1953|1955|1958|1960",1,"1955; the pact was renamed CENTO after Iraq withdrew in 1959."],
-["P","The book 'The Great Tragedy' (1971) was written by:","Z. A. Bhutto|Ayub Khan|Benazir Bhutto|Yahya Khan",0,"Zulfikar Ali Bhutto, on the East Pakistan crisis."],
-["P","The second Governor-General of Pakistan was:","Ghulam Muhammad|Khawaja Nazimuddin|Iskander Mirza|Sir Zafrullah Khan",1,"Khawaja Nazimuddin (1948-1951), after the death of Quaid-e-Azam."],
-["P","The One Unit scheme in West Pakistan was abolished in:","1965|1969|1970|1973",2,"On 1 July 1970 under Yahya Khan; the four provinces were restored."],
-["P","Karachi Nuclear Power Plant (KANUPP) was inaugurated on:","28 May 1971|28 November 1972|18 November 1973|20 November 1974",1,"28 November 1972, Pakistan's first commercial nuclear power plant."],
-["P","The 'Murree Declaration' (2008) was signed between the PPP and the:","PML-N|PML-Q|MQM|JUI-F",0,"Asif Zardari and Nawaz Sharif agreed on restoring the judges and reforming the coalition."],
-["P","Sachal Sarmast, the Sufi poet, belonged to:","Punjab|Sindh|Balochistan|Khyber Pakhtunkhwa",1,"Sindh (1739-1829); he wrote in Sindhi, Saraiki, Persian and Urdu."],
-["P","Zia-ul-Haq's martial law formally ended in:","August 1988|March 1984|December 1985|January 1990",2,"December 1985, after the 8th Amendment indemnified his actions."],
-["P","The Qadirabad Barrage is built on the river:","Indus|Jhelum|Chenab|Ravi",2,"The Chenab, in Punjab."],
-["P","The Basic Democracies system was introduced by Ayub Khan in:","1955|1959|1962|1965",1,"1959, with 80,000 Basic Democrats acting as an electoral college."],
-["P","Dhaka fell and Pakistan's forces surrendered on:","16 December 1971|3 December 1971|26 March 1971|20 December 1971",0,"16 December 1971, ending the 1971 war."],
-["P","The Simla Agreement was signed on 2 July of:","1965|1971|1972|1974",2,"1972, by Z. A. Bhutto and Indira Gandhi."],
-["P","The 1973 Constitution came into force on:","10 April 1973|14 August 1973|23 March 1973|5 July 1973",1,"It was adopted on 10 April 1973 and enforced on 14 August 1973."],
-["P","Pakistan conducted its nuclear tests at Chagai on:","28 May 1998|11 May 1998|30 May 1998|6 August 1998",0,"28 May 1998, celebrated as Youm-e-Takbeer (a second test followed on 30 May)."],
-["P","The Kargil conflict took place in:","1971|1984|1999|2001",2,"Summer of 1999."],
-["P","General Zia-ul-Haq imposed martial law on:","5 July 1977|5 July 1979|12 October 1977|4 April 1979",0,"5 July 1977 (Operation Fair Play), overthrowing Z. A. Bhutto."],
-["P","General Pervez Musharraf took power on:","12 October 1999|12 October 1998|5 July 1999|28 May 2000",0,"12 October 1999, removing the government of Nawaz Sharif."],
-["P","The 8th Amendment (1985) inserted which power for the President?","Article 58(2)(b) to dissolve the National Assembly|Article 6|Article 62|Article 25",0,"Article 58(2)(b); it was repealed by the 13th Amendment in 1997."],
-["P","Which amendment repealed Article 58(2)(b) in 1997?","10th|12th|13th|17th",2,"The 13th Amendment, passed under Nawaz Sharif."],
-["P","The 18th Amendment was passed in:","2008|2010|2015|2018",1,"April 2010; it devolved powers to the provinces."],
-["P","The 21st Amendment (2015) allowed the establishment of:","Military courts for terrorism cases|Federal Constitutional Court|Provincial senates|Women's seats",0,"Military courts, after the Army Public School Peshawar attack of December 2014."],
-["P","Gwadar Port's operations were handed over to a Chinese company in:","2005|2008|2013|2018",2,"2013 (China Overseas Port Holding Company)."],
-["P","CPEC projects were formally launched during Xi Jinping's visit to Pakistan in:","2013|2014|2015|2017",2,"April 2015, with about $46 billion of agreements."],
-["P","The Lahore Declaration was signed by Nawaz Sharif and A. B. Vajpayee in:","1972|1988|1999|2004",2,"February 1999, just before the Kargil conflict."],
-["P","Pakistan left the Commonwealth in:","1971|1972|1974|1977",1,"January 1972, after the Commonwealth recognised Bangladesh."],
-["P","The first Constituent Assembly of Pakistan was dissolved in October:","1951|1953|1954|1956",2,"1954, by Governor-General Ghulam Muhammad."],
-["P","Pakistan became an Islamic Republic on:","14 August 1947|23 March 1956|1 January 1960|14 August 1973",1,"23 March 1956, when the first Constitution came into force."],
-["P","The 7th NFC Award, which raised the provinces' share to 57.5%, was announced in:","2005|2009|2013|2018",1,"2009, after consensus among all provinces."],
-["P","Prime Minister Liaquat Ali Khan was assassinated in Rawalpindi in:","1949|1951|1953|1956",1,"16 October 1951, at Company Bagh (now Liaquat Bagh)."],
-// ---- International / Current Affairs (35)
-["C","The Strategic Mutual Defence Agreement of September 2025 was signed between Pakistan and:","Turkey|Saudi Arabia|China|UAE",1,"Saudi Arabia, signed on 17 September 2025: aggression against one is aggression against both."],
-["C","The Pakistan-Saudi Strategic Mutual Defence Agreement was signed in:","Islamabad|Jeddah|Riyadh|Doha",2,"At Al-Yamamah Palace, Riyadh, by PM Shehbaz Sharif and Crown Prince Mohammed bin Salman."],
-["C","The 27th Constitutional Amendment, signed in November 2025, created the:","Federal Constitutional Court|Federal Shariat Court|Senate of the Provinces|Election Appellate Tribunal",0,"A Federal Constitutional Court to hear constitutional cases; it was signed into law on 13 November 2025."],
-["C","The 27th Amendment changed Article 243 to create the post of:","Chairman Joint Chiefs|Chief of Defence Forces|Field Marshal Commissioner|Army Secretary",1,"Chief of Defence Forces (CDF), a post held by the Army Chief."],
-["C","The Chief of Defence Forces serves for a term of:","3 years|4 years|5 years|6 years",2,"Five years from the date of appointment."],
-["C","The first Chief Justice of the Federal Constitutional Court was:","Justice Aminuddin Khan|Justice Yahya Afridi|Justice Mansoor Ali Shah|Justice Athar Minallah",0,"Justice Aminuddin Khan took oath in November 2025."],
-["C","The 26th Constitutional Amendment, which changed judicial appointments, was passed in:","October 2023|October 2024|April 2025|January 2025",1,"October 2024."],
-["C","Pakistan's 2025-26 term as a non-permanent member of the UN Security Council is its:","fifth|sixth|seventh|eighth",3,"Its eighth term; earlier terms included 2012-13."],
-["C","Pakistan was elected to the UNSC in June 2024 with how many votes (out of 193)?","124|150|182|193",2,"182 votes; 124 votes (two-thirds) were required."],
-["C","Pakistan held the UN Security Council presidency in:","January 2025|July 2025|December 2025|July 2026",1,"July 2025, by alphabetical rotation."],
-["C","The Pahalgam attack in Indian-administered Kashmir took place on:","22 April 2025|7 May 2025|10 May 2025|5 August 2019",0,"22 April 2025; 26 people were killed."],
-["C","India placed the Indus Waters Treaty 'in abeyance' on:","22 April 2025|23 April 2025|7 May 2025|10 May 2025",1,"23 April 2025, a day after the Pahalgam attack."],
-["C","Pakistan's May 2025 military response to India was codenamed:","Operation Zarb-e-Azb|Operation Radd-ul-Fasaad|Operation Bunyan-um-Marsoos|Operation Swift Retort",2,"Bunyan-um-Marsoos, launched on 10 May 2025."],
-["C","India's May 2025 strikes on Pakistan were codenamed:","Operation Meghdoot|Operation Sindoor|Operation Vijay|Operation Parakram",1,"Operation Sindoor (6-7 May 2025)."],
-["C","The India-Pakistan ceasefire of May 2025 took effect on:","6 May|8 May|10 May|15 May",2,"10 May 2025."],
-["C","The UN was founded in 1945; its 80th anniversary was observed in:","2023|2024|2025|2026",2,"2025 (UN Day is 24 October)."],
-["C","UN Day is observed on:","24 October|10 December|21 September|1 May",0,"24 October, marking the UN Charter's entry into force in 1945."],
-["C","World Press Freedom Day is observed on:","3 May|1 May|8 March|5 June",0,"3 May."],
-["C","International Day of Peace is observed on:","21 September|10 December|24 October|5 June",0,"21 September."],
-["C","Human Rights Day (Universal Declaration of Human Rights) is observed on:","10 December|20 November|8 March|24 October",0,"10 December; the UDHR was adopted in 1948."],
-["C","World Environment Day is observed on:","22 April|5 June|16 September|8 March",1,"5 June."],
-["C","Kashmir Solidarity Day is observed in Pakistan on:","5 February|5 August|27 October|23 March",0,"5 February."],
-["C","NATO was founded in:","1945|1949|1955|1991",1,"4 April 1949; its headquarters are in Brussels."],
-["C","The Maastricht Treaty, which created the European Union, was signed in:","1957|1992|2002|2009",1,"1992 (effective 1993)."],
-["C","The United Kingdom formally left the European Union on:","31 January 2020|23 June 2016|1 January 2021|29 March 2019",0,"31 January 2020 (the referendum was on 23 June 2016)."],
-["C","In the acronym BRICS, the 'S' stands for:","Singapore|South Africa|South Korea|Saudi Arabia",1,"South Africa, which joined in 2010."],
-["C","The G20 summit in November 2025 was held in:","Johannesburg|Rio de Janeiro|New Delhi|Bali",0,"Johannesburg, the first G20 summit on African soil."],
-["C","COP30 (UN climate conference, November 2025) was hosted by:","Egypt|Brazil|UAE|Azerbaijan",1,"Brazil, in Belém."],
-["C","The 2025 SCO Heads of State summit was held in:","Astana|Tianjin|Tashkent|Bishkek",1,"Tianjin, China (31 August - 1 September 2025)."],
-["C","The 2026 FIFA World Cup is hosted jointly by:","USA, Canada and Mexico|USA only|Qatar and UAE|Morocco, Spain and Portugal",0,"The first 48-team World Cup, hosted by the USA, Canada and Mexico."],
-["C","AUKUS is a security pact between Australia, the UK and:","USA|India|Japan|Canada",0,"The USA, announced in 2021."],
-["C","The Quad consists of the USA, India, Japan and:","Australia|South Korea|Indonesia|Pakistan",0,"Australia."],
-["C","Malala Yousafzai won the Nobel Peace Prize in:","2012|2013|2014|2016",2,"2014, aged 17, the youngest Nobel laureate."],
-["C","Pakistan's first Nobel laureate, Dr Abdus Salam, won the Nobel Prize in Physics in:","1965|1974|1979|1988",2,"1979, shared with Glashow and Weinberg."],
-// ---- Islamic Studies (25)
-["I","The Treaty of Hudaybiyyah was signed in:","4 AH|6 AH|8 AH|10 AH",1,"6 AH, between the Muslims and the Quraysh."],
-["I","The truce under the Treaty of Hudaybiyyah was for:","2 years|5 years|10 years|20 years",2,"Ten years of peace."],
-["I","Which Surah was revealed after Hudaybiyyah, calling it a 'clear victory'?","Al-Fath|Al-Anfal|At-Tawbah|Al-Ahzab",0,"Surah Al-Fath (48)."],
-["I","The Charter of Madinah (Meethaq-e-Madinah) was drawn up after the Hijra, in:","1 AH|3 AH|5 AH|8 AH",0,"Around 1 AH; it is regarded as the first written constitution."],
-["I","The Conquest of Makkah took place in:","6 AH|7 AH|8 AH|9 AH",2,"8 AH (630 CE), in Ramadan."],
-["I","The Battle of Uhud took place in:","2 AH|3 AH|5 AH|7 AH",1,"3 AH (625 CE)."],
-["I","The Battle of Khandaq (Trench) took place in:","3 AH|4 AH|5 AH|6 AH",2,"5 AH; the trench was dug on the advice of Salman Farsi."],
-["I","The conquest of Khyber took place in:","5 AH|6 AH|7 AH|8 AH",2,"7 AH."],
-["I","The Farewell Sermon (Khutbah Hajjat al-Wida) was delivered in:","8 AH|9 AH|10 AH|11 AH",2,"10 AH, at Arafat."],
-["I","The Holy Prophet (PBUH) was born in the Year of the Elephant on:","12 Rabi ul Awwal|1 Muharram|27 Rajab|10 Ramadan",0,"12 Rabi ul Awwal (about 570 CE) in Makkah."],
-["I","The Holy Prophet (PBUH) passed away in:","10 AH|11 AH|12 AH|13 AH",1,"11 AH (632 CE), in Madinah."],
-["I","The Prophet (PBUH) spent how many years in Makkah after the first revelation?","10|13|15|23",1,"About 13 years; then he spent about 10 years in Madinah."],
-["I","The first woman to accept Islam was:","Hazrat Ayesha (RA)|Hazrat Khadijah (RA)|Hazrat Fatimah (RA)|Hazrat Sumayyah (RA)",1,"Hazrat Khadijah (RA)."],
-["I","The first adult man to accept Islam was:","Hazrat Abu Bakr (RA)|Hazrat Umar (RA)|Hazrat Ali (RA)|Hazrat Bilal (RA)",0,"Hazrat Abu Bakr (RA); Hazrat Ali (RA) was the first among boys."],
-["I","The Battle of Jamal was fought in:","30 AH|36 AH|37 AH|41 AH",1,"36 AH, between the forces of Hazrat Ali (RA) and Hazrat Ayesha (RA)."],
-["I","The tragedy of Karbala occurred in:","41 AH|50 AH|61 AH|72 AH",2,"61 AH (680 CE)."],
-["I","Hazrat Umar (RA) was Caliph for about:","2 years|10 years|12 years|5 years",1,"About 10 years (13-23 AH)."],
-["I","The Hanafi school of fiqh was founded by:","Imam Malik|Imam Abu Hanifa|Imam Shafi'i|Imam Ahmad bin Hanbal",1,"Imam Abu Hanifa (d. 150 AH)."],
-["I","'Al-Muwatta', an early Hadith and fiqh collection, was compiled by:","Imam Bukhari|Imam Malik|Imam Muslim|Imam Tirmidhi",1,"Imam Malik bin Anas."],
-["I","The number of books in the Kutub al-Sittah (Sihah Sittah) is:","4|6|8|10",1,"Six canonical Hadith collections."],
-["I","The Quran was revealed to the Prophet (PBUH) over about:","10 years|13 years|23 years|30 years",2,"About 23 years."],
-["I","The first revelation was the opening verses of Surah:","Al-Fatiha|Al-Alaq|Al-Muddaththir|Al-Muzzammil",1,"Surah Al-Alaq (96:1-5), in Cave Hira."],
-["I","The last complete Surah revealed is generally held to be:","An-Nasr|Al-Ikhlas|Al-Kawthar|Al-Falaq",0,"Surah An-Nasr."],
-["I","The only Surah that does not begin with Bismillah is:","At-Tawbah|Al-Anfal|Al-Fatiha|Yasin",0,"Surah At-Tawbah (Surah 9)."],
-["I","The number of Prophets mentioned by name in the Quran is:","15|20|25|30",2,"Twenty-five."],
-];
+const QUESTIONS = [{"section": "Pakistan Affairs (Dates & Years)", "q": "Pakistan came into existence on:", "opts": ["14 August 1947", "15 August 1947", "23 March 1947", "11 September 1947"], "ans": 0, "exp": "Pakistan gained independence on 14 August 1947."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "The Lahore Resolution was passed on:", "opts": ["23 March 1940", "14 August 1947", "23 March 1956", "29 July 1945"], "ans": 0, "exp": "The Lahore Resolution (also called the Pakistan Resolution) was passed on 23 March 1940."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "Pakistan's first Constitution was enforced in:", "opts": ["1947", "1956", "1962", "1973"], "ans": 1, "exp": "Pakistan's first Constitution was enforced on 23 March 1956, making it an Islamic Republic."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "The current Constitution of Pakistan was enforced in:", "opts": ["1956", "1962", "1973", "1985"], "ans": 2, "exp": "The 1973 Constitution, still in force today (with amendments), was enforced on 14 August 1973."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "Pakistan conducted its first nuclear tests (Chagai-I) in:", "opts": ["1971", "1988", "1998", "2001"], "ans": 2, "exp": "Pakistan conducted its first nuclear tests at Chagai, Balochistan, on 28 May 1998."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "The separation of East Pakistan (Bangladesh) occurred in:", "opts": ["1965", "1969", "1971", "1973"], "ans": 2, "exp": "East Pakistan separated to become Bangladesh on 16 December 1971, following the 1971 war."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "The Suez Crisis, which influenced Pakistan's early foreign policy debates, occurred in:", "opts": ["1952", "1956", "1960", "1962"], "ans": 1, "exp": "The Suez Crisis occurred in 1956 when Egypt nationalised the Suez Canal, prompting international intervention."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "General Zia-ul-Haq imposed Martial Law in:", "opts": ["1971", "1977", "1985", "1988"], "ans": 1, "exp": "General Zia-ul-Haq imposed Martial Law on 5 July 1977, overthrowing Zulfikar Ali Bhutto's government."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "The 18th Amendment to the Constitution, a landmark in provincial autonomy, was passed in:", "opts": ["2008", "2010", "2013", "2015"], "ans": 1, "exp": "The 18th Amendment was passed in April 2010, significantly devolving powers to the provinces."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "CPEC (China-Pakistan Economic Corridor) was formally launched in:", "opts": ["2013", "2015", "2017", "2019"], "ans": 1, "exp": "CPEC was formally launched in April 2015 during President Xi Jinping's visit to Pakistan."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "The Objectives Resolution was passed by the Constituent Assembly in:", "opts": ["1947", "1949", "1956", "1962"], "ans": 1, "exp": "The Objectives Resolution was passed on 12 March 1949, laying the ideological foundation for future constitutions."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "Pakistan became a member of the United Nations in:", "opts": ["1945", "1947", "1948", "1950"], "ans": 1, "exp": "Pakistan was admitted to the United Nations on 30 September 1947."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "The Tashkent Declaration between Pakistan and India was signed in:", "opts": ["1965", "1966", "1971", "1972"], "ans": 1, "exp": "The Tashkent Declaration was signed on 10 January 1966, ending the 1965 war."}, {"section": "International Relations", "q": "The headquarters of UNICEF (United Nations Children's Fund) is located in:", "opts": ["Geneva", "New York", "Paris", "Rome"], "ans": 1, "exp": "UNICEF is headquartered in New York City, USA."}, {"section": "International Relations", "q": "The International Court of Justice (ICJ) is headquartered in:", "opts": ["Geneva", "Brussels", "The Hague", "Vienna"], "ans": 2, "exp": "The ICJ is headquartered in The Hague, Netherlands."}, {"section": "International Relations", "q": "ECO (Economic Cooperation Organisation), of which Pakistan is a founding member, primarily includes countries from:", "opts": ["Western Europe", "South Asia, Central Asia, and the Middle East", "Sub-Saharan Africa", "South America"], "ans": 1, "exp": "ECO, founded in 1985 by Pakistan, Iran, and Turkey, has since expanded to include Central Asian and other regional states."}, {"section": "International Relations", "q": "The headquarters of OIC (Organisation of Islamic Cooperation) is located in:", "opts": ["Makkah", "Jeddah", "Cairo", "Istanbul"], "ans": 1, "exp": "The OIC's headquarters is in Jeddah, Saudi Arabia."}, {"section": "International Relations", "q": "The Warsaw Pact, formed as a counterbalance to NATO during the Cold War, was established in:", "opts": ["1949", "1955", "1961", "1970"], "ans": 1, "exp": "The Warsaw Pact was established in 1955 by the Soviet Union and its Eastern European allies in response to NATO."}, {"section": "International Relations", "q": "The World Trade Organization (WTO) is headquartered in:", "opts": ["Geneva", "Brussels", "Vienna", "Paris"], "ans": 0, "exp": "The WTO is headquartered in Geneva, Switzerland."}, {"section": "International Relations", "q": "The G7 group consists of how many major economies?", "opts": ["Five", "Six", "Seven", "Eight"], "ans": 2, "exp": "The G7 (Group of Seven) consists of seven major advanced economies."}, {"section": "International Relations", "q": "The term 'Veto Power' in the UN Security Council belongs to how many permanent members?", "opts": ["Three", "Four", "Five", "Ten"], "ans": 2, "exp": "The UN Security Council has five permanent members (USA, UK, France, Russia, China) each holding veto power."}, {"section": "International Relations", "q": "The Kyoto Protocol is primarily associated with:", "opts": ["Nuclear disarmament", "Climate change and greenhouse gas reduction", "Trade tariffs", "Refugee rights"], "ans": 1, "exp": "The Kyoto Protocol (1997) committed nations to reducing greenhouse gas emissions."}, {"section": "International Relations", "q": "The term 'Bilateral Relations' refers to relations between:", "opts": ["Many countries", "Two countries", "A country and an organisation", "Regional blocs only"], "ans": 1, "exp": "Bilateral relations refer specifically to relations between two countries."}, {"section": "Islamic Studies", "q": "The Quran was revealed over a period of approximately:", "opts": ["10 years", "15 years", "23 years", "30 years"], "ans": 2, "exp": "The Quran was revealed over approximately 23 years, starting in 610 CE."}, {"section": "Islamic Studies", "q": "The first revelation to Prophet Muhammad (PBUH) took place in the cave of:", "opts": ["Thawr", "Hira", "Uhud", "Badr"], "ans": 1, "exp": "The first revelation occurred in the Cave of Hira, near Makkah, in 610 CE."}, {"section": "Islamic Studies", "q": "The migration (Hijrah) of the Prophet (PBUH) from Makkah to Madinah took place in:", "opts": ["610 CE", "620 CE", "622 CE", "632 CE"], "ans": 2, "exp": "The Hijrah took place in 622 CE, marking the start of the Islamic calendar."}, {"section": "Islamic Studies", "q": "The Battle of Badr took place in which year (Hijri)?", "opts": ["1 A.H.", "2 A.H.", "3 A.H.", "5 A.H."], "ans": 1, "exp": "The Battle of Badr took place in 2 A.H. (624 CE)."}, {"section": "Islamic Studies", "q": "The conquest of Makkah (Fath Makkah) took place in which year?", "opts": ["6 A.H.", "8 A.H.", "9 A.H.", "10 A.H."], "ans": 1, "exp": "The Conquest of Makkah took place in 8 A.H. (630 CE)."}, {"section": "Islamic Studies", "q": "The Farewell Pilgrimage (Hajjat-ul-Wida) of the Prophet (PBUH) took place in:", "opts": ["8 A.H.", "9 A.H.", "10 A.H.", "11 A.H."], "ans": 2, "exp": "The Farewell Pilgrimage took place in 10 A.H. (632 CE), shortly before the Prophet's death."}, {"section": "Islamic Studies", "q": "Zakat is obligatory on wealth that has been held for at least:", "opts": ["Six months", "One lunar year", "Two lunar years", "One solar year"], "ans": 1, "exp": "Zakat becomes obligatory on wealth held for one complete lunar year (Hawl), above the Nisab threshold."}, {"section": "Islamic Studies", "q": "The number of verses (Ayat) in the Quran is approximately:", "opts": ["6,236", "5,000", "7,000", "6,000"], "ans": 0, "exp": "The Quran contains approximately 6,236 verses, according to standard counting."}, {"section": "Islamic Studies", "q": "Which Surah is known as the 'Heart of the Quran'?", "opts": ["Surah Al-Fatiha", "Surah Yaseen", "Surah Al-Baqarah", "Surah Ar-Rahman"], "ans": 1, "exp": "Surah Yaseen is traditionally referred to as the 'Heart of the Quran'."}, {"section": "Islamic Studies", "q": "The event of Mubahila (mutual imprecation) involved the Prophet (PBUH) and representatives of:", "opts": ["The Jews of Madinah", "The Christians of Najran", "The Quraysh of Makkah", "The Persians"], "ans": 1, "exp": "The Mubahila event involved the Prophet (PBUH) and a Christian delegation from Najran."}, {"section": "English", "q": "Choose the correct passive voice: 'They are building a new bridge.'", "opts": ["A new bridge is being built by them.", "A new bridge was being built by them.", "A new bridge has being built by them.", "A new bridge being built by them."], "ans": 0, "exp": "Present Continuous passive: 'is/are being + past participle' → 'A new bridge is being built by them.'"}, {"section": "English", "q": "Choose the correct indirect speech: He said, 'I am tired.'", "opts": ["He said that he is tired.", "He said that he was tired.", "He says that he was tired.", "He said that he were tired."], "ans": 1, "exp": "In reported speech, present tense shifts to past: 'am' → 'was'."}, {"section": "English", "q": "Identify the correctly punctuated sentence:", "opts": ["Although it was raining, we went out.", "Although it was raining we went out.", "Although, it was raining, we went out.", "Although it was raining; we went out."], "ans": 0, "exp": "A comma is required after an introductory subordinate clause: 'Although it was raining, we went out.'"}, {"section": "English", "q": "Choose the word opposite in meaning to 'Diligent':", "opts": ["Hardworking", "Lazy", "Careful", "Thorough"], "ans": 1, "exp": "'Diligent' means careful and hardworking; 'Lazy' is its antonym."}, {"section": "English", "q": "Choose the word opposite in meaning to 'Transparent':", "opts": ["Clear", "Obvious", "Opaque", "Visible"], "ans": 2, "exp": "'Opaque' (not able to be seen through) is the antonym of 'Transparent'."}, {"section": "English", "q": "Choose the correctly spelled word:", "opts": ["Occassion", "Occasion", "Ocassion", "Occation"], "ans": 1, "exp": "The correct spelling is 'Occasion'."}, {"section": "English", "q": "'To cut corners' means:", "opts": ["To finish a task perfectly", "To do something in the easiest/cheapest way, often sacrificing quality", "To travel a long distance", "To avoid a task entirely"], "ans": 1, "exp": "This idiom means to do something in the easiest, quickest, or cheapest way, often at the cost of quality or thoroughness."}, {"section": "English", "q": "'To be on cloud nine' means:", "opts": ["To be confused", "To be extremely happy", "To be in danger", "To be very tired"], "ans": 1, "exp": "This idiom describes a state of extreme happiness or elation."}, {"section": "English", "q": "Choose the correct sentence:", "opts": ["Neither of the boys were present.", "Neither of the boys was present.", "Neither of the boy was present.", "Neither of boys was present."], "ans": 1, "exp": "'Neither' takes a singular verb: 'Neither of the boys was present.'"}, {"section": "English", "q": "Choose the correct preposition: 'He is good ___ mathematics.'", "opts": ["in", "at", "on", "with"], "ans": 1, "exp": "'Good at' is the correct idiomatic preposition usage for skills/subjects."}, {"section": "Maths / General Science & Ability", "q": "If 3x − 7 = 11, find x:", "opts": ["4", "5", "6", "7"], "ans": 2, "exp": "3x=18 → x=6."}, {"section": "Maths / General Science & Ability", "q": "The average of 10, 20, 30, 40, and 50 is:", "opts": ["25", "30", "35", "40"], "ans": 1, "exp": "Sum=150; Average=150/5=30."}, {"section": "Maths / General Science & Ability", "q": "If a:b = 3:4 and b:c = 4:5, find a:b:c:", "opts": ["3:4:5", "3:4:6", "4:5:6", "3:5:6"], "ans": 0, "exp": "Since b is common (4 in both ratios), a:b:c = 3:4:5 directly."}, {"section": "Maths / General Science & Ability", "q": "The HCF of 36 and 48 is:", "opts": ["6", "8", "12", "16"], "ans": 2, "exp": "36=2²×3²; 48=2⁴×3. HCF=2²×3=12."}, {"section": "Maths / General Science & Ability", "q": "A shopkeeper sells an item for Rs. 440, gaining 10%. Find the cost price.", "opts": ["Rs. 380", "Rs. 400", "Rs. 410", "Rs. 420"], "ans": 1, "exp": "CP = SP/(1+gain%) = 440/1.10 = Rs. 400."}, {"section": "Maths / General Science & Ability", "q": "If the area of a circle is 154 cm² (using π=22/7), find its radius.", "opts": ["5 cm", "6 cm", "7 cm", "8 cm"], "ans": 2, "exp": "Area=πr² → 154=(22/7)r² → r²=49 → r=7 cm."}, {"section": "Maths / General Science & Ability", "q": "Find the value of 15% of 200:", "opts": ["25", "30", "35", "40"], "ans": 1, "exp": "15% of 200 = 0.15×200=30."}, {"section": "Maths / General Science & Ability", "q": "If 5 men can complete a task in 12 days, how many days will 6 men take?", "opts": ["8", "9", "10", "11"], "ans": 2, "exp": "Using inverse proportion: 5×12=6×x → x=60/6=10 days."}, {"section": "Maths / General Science & Ability", "q": "The next number in the series 2, 5, 10, 17, 26, ? is:", "opts": ["35", "36", "37", "38"], "ans": 2, "exp": "Differences are 3,5,7,9,11 (odd numbers): 26+11=37."}, {"section": "Maths / General Science & Ability", "q": "If the perimeter of an equilateral triangle is 36 cm, find the length of each side.", "opts": ["10 cm", "11 cm", "12 cm", "13 cm"], "ans": 2, "exp": "Perimeter/3 = 36/3 = 12 cm."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "The Delhi Resolution/Muslim League's Allahabad Address by Allama Iqbal, proposing a separate Muslim state, was delivered in:", "opts": ["1928", "1930", "1935", "1940"], "ans": 1, "exp": "Allama Iqbal delivered his famous Allahabad Address in December 1930."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "The Radcliffe Line, demarcating the border between India and Pakistan, was announced in:", "opts": ["August 1947", "July 1947", "September 1947", "June 1947"], "ans": 0, "exp": "The Radcliffe Line was publicly announced on 17 August 1947, two days after independence."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "Pakistan's first Prime Minister, Liaquat Ali Khan, was assassinated in:", "opts": ["1948", "1951", "1953", "1958"], "ans": 1, "exp": "Liaquat Ali Khan was assassinated on 16 October 1951 in Rawalpindi."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "The second Indo-Pak war took place in:", "opts": ["1948", "1965", "1971", "1999"], "ans": 1, "exp": "The second Indo-Pak war occurred in September 1965."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "The Kargil conflict between Pakistan and India took place in:", "opts": ["1989", "1999", "2001", "2008"], "ans": 1, "exp": "The Kargil conflict took place in 1999, in the Kargil district of Kashmir."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "Benazir Bhutto became the first woman Prime Minister of Pakistan (and the Muslim world) in:", "opts": ["1985", "1988", "1990", "1993"], "ans": 1, "exp": "Benazir Bhutto first became Prime Minister in December 1988."}, {"section": "Pakistan Affairs (Dates & Years)", "q": "The 25th Constitutional Amendment, merging FATA with Khyber Pakhtunkhwa, was passed in:", "opts": ["2016", "2018", "2020", "2021"], "ans": 1, "exp": "The 25th Amendment, merging FATA into KP, was passed in May 2018."}, {"section": "International Relations", "q": "The Treaty of Westphalia (1648), foundational to the modern state system, ended which major European conflict?", "opts": ["The Hundred Years' War", "The Thirty Years' War", "The Napoleonic Wars", "World War I"], "ans": 1, "exp": "The Treaty of Westphalia (1648) ended the Thirty Years' War and established the modern concept of state sovereignty."}, {"section": "International Relations", "q": "ASEAN stands for:", "opts": ["Association of Southeast Asian Nations", "Alliance of South East Asian Nations", "Association of South European and African Nations", "Assembly of Southeast Asian Nations"], "ans": 0, "exp": "ASEAN stands for Association of Southeast Asian Nations, founded in 1967."}, {"section": "International Relations", "q": "The headquarters of the International Monetary Fund (IMF) is located in:", "opts": ["New York", "Washington D.C.", "Geneva", "Paris"], "ans": 1, "exp": "The IMF is headquartered in Washington D.C., USA."}, {"section": "International Relations", "q": "The term 'Détente' refers to:", "opts": ["A declaration of war", "An easing of strained relations between states", "A trade embargo", "A military alliance"], "ans": 1, "exp": "Détente refers to the easing of tension or strained relations, notably used for US-Soviet relations during the Cold War."}, {"section": "International Relations", "q": "The Treaty of Versailles, which ended World War I, was signed in:", "opts": ["1917", "1918", "1919", "1920"], "ans": 2, "exp": "The Treaty of Versailles was signed on 28 June 1919."}, {"section": "International Relations", "q": "The United Nations was formally established in:", "opts": ["1943", "1945", "1947", "1950"], "ans": 1, "exp": "The United Nations was established on 24 October 1945."}, {"section": "International Relations", "q": "The Non-Aligned Movement (NAM) was founded primarily to:", "opts": ["Join either the US or Soviet bloc", "Avoid formal alignment with any major power bloc during the Cold War", "Promote European unity", "Oppose the United Nations"], "ans": 1, "exp": "NAM, founded in 1961, aimed to keep member states independent of the US and Soviet blocs during the Cold War."}, {"section": "International Relations", "q": "The term 'Suzerainty' refers to:", "opts": ["Complete independence", "A relationship where one state controls the foreign affairs of another while it retains internal autonomy", "A military occupation", "A trade partnership"], "ans": 1, "exp": "Suzerainty describes a relationship where a dominant state controls another state's foreign relations while the latter retains internal self-governance."}, {"section": "International Relations", "q": "The Bretton Woods Conference (1944) led to the creation of which two institutions?", "opts": ["UN and WHO", "IMF and World Bank", "NATO and WTO", "ICJ and ICC"], "ans": 1, "exp": "The Bretton Woods Conference led to the creation of the IMF and the World Bank."}, {"section": "International Relations", "q": "The term 'Most Favoured Nation (MFN)' status in trade means:", "opts": ["A nation receives the worst trade terms", "A nation receives trade advantages equal to the best given to any other nation", "Complete trade embargo", "A military alliance status"], "ans": 1, "exp": "MFN status ensures a country receives trade terms at least as favourable as those given to any other trading partner."}, {"section": "Islamic Studies", "q": "The Charter/Constitution of Madinah, drafted by the Prophet (PBUH), established relations between Muslims and:", "opts": ["Only the Ansar", "Muslims, Jews, and other tribes of Madinah", "Only the Quraysh", "Only the Christians of Najran"], "ans": 1, "exp": "The Constitution of Madinah (622 CE) established mutual rights and obligations between Muslims, Jews, and other tribes of Madinah."}, {"section": "Islamic Studies", "q": "The Treaty of Hudaybiyyah was signed in which year (Hijri)?", "opts": ["5 A.H.", "6 A.H.", "7 A.H.", "8 A.H."], "ans": 1, "exp": "The Treaty of Hudaybiyyah was signed in 6 A.H. (628 CE)."}, {"section": "Islamic Studies", "q": "Which Surah does not begin with 'Bismillah'?", "opts": ["Surah Al-Fatiha", "Surah At-Tawbah", "Surah Al-Ikhlas", "Surah An-Nas"], "ans": 1, "exp": "Surah At-Tawbah (Chapter 9) is the only Surah that does not begin with 'Bismillah'."}, {"section": "Islamic Studies", "q": "The compilation of the Quran into a single official text (Mus'haf) was completed during the caliphate of:", "opts": ["Hazrat Abu Bakr (RA)", "Hazrat Umar (RA)", "Hazrat Usman (RA)", "Hazrat Ali (RA)"], "ans": 2, "exp": "The standardised compilation of the Quran into one official text was completed during Hazrat Usman's caliphate."}, {"section": "Islamic Studies", "q": "The initial collection of the Quran into one manuscript (after the Prophet's death) was undertaken during the caliphate of:", "opts": ["Hazrat Abu Bakr (RA)", "Hazrat Umar (RA)", "Hazrat Usman (RA)", "Hazrat Ali (RA)"], "ans": 0, "exp": "Hazrat Abu Bakr (RA) ordered the first compilation of the Quran into a single manuscript after the Battle of Yamama."}, {"section": "Islamic Studies", "q": "The number of Surahs in the Quran is:", "opts": ["100", "104", "114", "120"], "ans": 2, "exp": "The Quran contains 114 Surahs (chapters)."}, {"section": "Islamic Studies", "q": "The longest Surah in the Quran is:", "opts": ["Surah Yaseen", "Surah Al-Baqarah", "Surah Al-Imran", "Surah An-Nisa"], "ans": 1, "exp": "Surah Al-Baqarah is the longest Surah in the Quran."}, {"section": "Islamic Studies", "q": "The shortest Surah in the Quran is:", "opts": ["Surah Al-Kawthar", "Surah Al-Ikhlas", "Surah An-Nas", "Surah Al-Asr"], "ans": 0, "exp": "Surah Al-Kawthar, with only three verses, is the shortest Surah in the Quran."}, {"section": "Islamic Studies", "q": "The Prophet's (PBUH) journey of Isra and Mi'raj is believed to have occurred approximately:", "opts": ["One year before Hijrah", "Five years before Hijrah", "Ten years before Hijrah", "After Hijrah"], "ans": 0, "exp": "The Isra and Mi'raj is commonly dated to around one year before the Hijrah (migration to Madinah)."}, {"section": "Islamic Studies", "q": "The term 'Sunnah' refers to:", "opts": ["Only the sayings of the Prophet (PBUH)", "The practices, sayings, and approvals of the Prophet (PBUH)", "Only the Quranic verses", "Islamic jurisprudence rulings only"], "ans": 1, "exp": "'Sunnah' encompasses the sayings, actions, and tacit approvals of the Prophet Muhammad (PBUH)."}, {"section": "English", "q": "Choose the correctly used conditional: 'If I ___ rich, I would travel the world.'", "opts": ["am", "was", "were", "will be"], "ans": 2, "exp": "In the Second Conditional (hypothetical present), 'were' is used for all subjects: 'If I were rich...'"}, {"section": "English", "q": "Choose the correct sentence using 'who' or 'whom':", "opts": ["Who did you give the book to?", "Whom did you give the book to?", "Who you gave the book to?", "Whom you gave the book to?"], "ans": 1, "exp": "'Whom' is correct as the object of the preposition 'to': 'Whom did you give the book to?'"}, {"section": "English", "q": "'To hit the nail on the head' means:", "opts": ["To cause damage", "To say or do something exactly right", "To waste time", "To make a mistake"], "ans": 1, "exp": "This idiom means to describe or identify something precisely and accurately."}, {"section": "English", "q": "Choose the word closest in meaning to 'Ubiquitous':", "opts": ["Rare", "Omnipresent", "Hidden", "Temporary"], "ans": 1, "exp": "'Ubiquitous' means present everywhere, synonymous with 'omnipresent'."}, {"section": "English", "q": "Choose the word closest in meaning to 'Candid':", "opts": ["Deceptive", "Frank and honest", "Shy", "Formal"], "ans": 1, "exp": "'Candid' means being open, frank, and honest."}, {"section": "English", "q": "Identify the correct sentence:", "opts": ["Each of the students have submitted their assignment.", "Each of the students has submitted their assignment.", "Each of the student has submitted his assignment.", "Each of students has submitted assignment."], "ans": 1, "exp": "'Each' takes a singular verb: 'Each of the students has submitted...'"}, {"section": "English", "q": "Choose the correctly spelled word:", "opts": ["Accomodate", "Accommodate", "Acommodate", "Accommadate"], "ans": 1, "exp": "The correct spelling is 'Accommodate' (double 'c', double 'm')."}, {"section": "English", "q": "'A storm in a teacup' means:", "opts": ["A severe natural disaster", "A small event blown out of proportion", "A pleasant surprise", "A long-lasting argument"], "ans": 1, "exp": "This idiom refers to a small, unimportant matter being treated as a major crisis."}, {"section": "English", "q": "Choose the correct form: 'By next year, she ___ her degree.'", "opts": ["will complete", "will have completed", "completes", "is completing"], "ans": 1, "exp": "Future Perfect Tense is used for an action that will be completed before a specific future time: 'will have completed'."}, {"section": "Maths / General Science & Ability", "q": "If a wheel of radius 14 cm makes 100 revolutions, find the distance covered (use π=22/7).", "opts": ["66 m", "77 m", "88 m", "99 m"], "ans": 2, "exp": "Circumference = 2πr = 2×(22/7)×14 = 88 cm; distance = 88×100 = 8800 cm = 88 m."}, {"section": "Maths / General Science & Ability", "q": "If the simple interest on Rs. 8,000 for 3 years is Rs. 1,440, find the rate of interest.", "opts": ["5%", "6%", "7%", "8%"], "ans": 1, "exp": "Rate = (SI×100)/(P×T) = (1440×100)/(8000×3) = 144000/24000 = 6%."}, {"section": "Maths / General Science & Ability", "q": "Find the value of (2³ × 3²):", "opts": ["48", "56", "62", "72"], "ans": 3, "exp": "2³=8, 3²=9; 8×9=72."}, {"section": "Maths / General Science & Ability", "q": "A train 150 m long passes a pole in 10 seconds. Find its speed in km/h.", "opts": ["45 km/h", "54 km/h", "60 km/h", "72 km/h"], "ans": 1, "exp": "Speed = 150m/10s = 15 m/s = 15×18/5 = 54 km/h."}, {"section": "Maths / General Science & Ability", "q": "If 40% of a number is 80, find the number.", "opts": ["160", "180", "200", "220"], "ans": 2, "exp": "40%×x=80 → x=80/0.4=200."}, {"section": "Maths / General Science & Ability", "q": "The next term in the series 3, 6, 11, 18, 27, ? is:", "opts": ["36", "37", "38", "40"], "ans": 2, "exp": "Differences are 3,5,7,9,11 (odd numbers): 27+11=38."}, {"section": "Maths / General Science & Ability", "q": "Two numbers are in the ratio 5:7. If their sum is 144, find the larger number.", "opts": ["60", "70", "80", "84"], "ans": 3, "exp": "Total parts=12; 1 part=144/12=12; larger=7×12=84."}, {"section": "Maths / General Science & Ability", "q": "Find the compound interest on Rs. 10,000 for 2 years at 10% per annum.", "opts": ["Rs. 2,000", "Rs. 2,100", "Rs. 2,200", "Rs. 2,500"], "ans": 1, "exp": "CI = P[(1+R/100)^T − 1] = 10000[(1.1)²−1] = 10000×0.21 = Rs. 2,100."}, {"section": "Maths / General Science & Ability", "q": "If the length of a rectangle is increased by 20% and width decreased by 20%, the area:", "opts": ["Increases by 4%", "Decreases by 4%", "Remains unchanged", "Increases by 20%"], "ans": 1, "exp": "New area = 1.2×0.8 = 0.96 of original, i.e., a 4% decrease."}, {"section": "Maths / General Science & Ability", "q": "A man covers a distance of 300 km in 5 hours partly by car at 60 km/h and partly by bus at 50 km/h. If he covered 180 km by car, how long did the journey by bus take?", "opts": ["2 hours", "2.4 hours", "3 hours", "3.5 hours"], "ans": 1, "exp": "Distance by bus = 300−180=120 km; time=120/50=2.4 hours."}, {"section": "Maths / General Science & Ability", "q": "Find the missing number: 4, 9, 16, 25, 36, ?", "opts": ["42", "45", "49", "54"], "ans": 2, "exp": "This is the sequence of perfect squares (2²,3²,4²,5²,6²); next is 7²=49."}];
 
-const SECTIONS={P:"Pakistan Affairs",C:"International and Current Affairs",I:"Islamic Studies"};
-const BANK=Q.map((r,i)=>({id:i,sec:r[0],q:r[1],opts:r[2].split("|"),ans:r[3],why:r[4]}));
-const $=id=>document.getElementById(id);
-const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const SECTIONS = [...new Set(QUESTIONS.map(q=>q.section))];
+let state = {
+  section: 'All',
+  pool: [],
+  idx: 0,
+  answered: {},
+  score: 0
+};
 
-let selSec="ALL", items=[], idx=0, mode="practice", answered=false;
-// each item: {q, sec, opts:[{t,ok}], why, pick:null}
+function buildPool(section){
+  const list = section === 'All' ? QUESTIONS : QUESTIONS.filter(q=>q.section===section);
+  return list.map((q,i)=>({...q, poolIndex:i}));
+}
 
-/* ---------- Home ---------- */
-function secCount(k){return k==="ALL"?BANK.length:BANK.filter(b=>b.sec===k).length}
-function renderChips(){
-  const box=$("secChips");box.innerHTML="";
-  [["ALL","All sections"],["P",SECTIONS.P],["C",SECTIONS.C],["I",SECTIONS.I]].forEach(([k,label])=>{
-    const b=document.createElement("button");
-    b.setAttribute("aria-pressed",String(selSec===k));
-    b.innerHTML=label+"<small>"+secCount(k)+" questions</small>";
-    b.onclick=()=>{selSec=k;renderChips();renderCounts()};
-    box.appendChild(b);
-  });
+function startQuiz(section){
+  state.section = section;
+  state.pool = buildPool(section);
+  state.idx = 0;
+  state.answered = {};
+  state.score = 0;
+  renderQuestion();
 }
-function renderCounts(){
-  const n=secCount(selSec), sel=$("count"), prev=sel.value;
-  const opts=[10,20,30,50].filter(x=>x<n);opts.push(n);
-  sel.innerHTML=opts.map(x=>`<option value="${x}">${x===n?"All "+n:x}</option>`).join("");
-  if(prev&&opts.includes(+prev))sel.value=prev;
-}
-function show(id){["home","quiz","result"].forEach(s=>$(s).classList.toggle("hide",s!==id));window.scrollTo(0,0)}
 
-/* ---------- Quiz ---------- */
-function begin(pool){
-  mode=$("mode").value;
-  const so=$("shuffleO").checked;
-  items=pool.map(b=>{
-    let o=b.opts.map((t,i)=>({t,ok:i===b.ans}));
-    if(so)o=shuffle(o);
-    return {q:b.q,sec:b.sec,opts:o,why:b.why,pick:null,id:b.id};
-  });
-  idx=0;show("quiz");renderQ();
-}
-function startFromHome(){
-  let pool=BANK.filter(b=>selSec==="ALL"||b.sec===selSec);
-  if($("shuffleQ").checked)pool=shuffle(pool);
-  pool=pool.slice(0,+$("count").value);
-  begin(pool);
-}
-function renderQ(){
-  const it=items[idx];answered=false;
-  $("qCount").textContent=`Question ${idx+1} of ${items.length}`;
-  $("barFill").style.width=(idx/items.length*100)+"%";
-  $("qSection").textContent=SECTIONS[it.sec];
-  $("qText").textContent=it.q;
-  $("expl").classList.add("hide");
-  $("next").disabled=true;
-  $("next").textContent=idx===items.length-1?"Finish quiz":"Next question";
-  updateScore();
-  const box=$("choices");box.innerHTML="";
-  it.opts.forEach((o,i)=>{
-    const b=document.createElement("button");
-    b.className="choice";
-    b.innerHTML=`<b>${i+1}</b><span></span>`;
-    b.lastChild.textContent=o.t;
-    b.onclick=()=>choose(i);
-    box.appendChild(b);
-  });
-}
-function choose(i){
-  if(answered)return;
-  answered=true;
-  const it=items[idx];it.pick=i;
-  const btns=$("choices").children;
-  if(mode==="practice"){
-    it.opts.forEach((o,k)=>{
-      if(o.ok)btns[k].classList.add("correct");
-      else if(k===i)btns[k].classList.add("wrong");
+function renderStart(){
+  const app = document.getElementById('app');
+  let chips = SECTIONS.map(s=>`<div class="chip" data-sec="${s}">${s} (${QUESTIONS.filter(q=>q.section===s).length})</div>`).join('');
+  app.innerHTML = `
+    <div class="card start-screen">
+      <p>Choose a section to focus on, or take the full mixed quiz. Each question shows a short explanation right after you answer.</p>
+      <div class="section-picker">
+        <div class="chip active" data-sec="All">All Sections (${QUESTIONS.length})</div>
+        ${chips}
+      </div>
+      <div class="nav-row">
+        <button class="nav" id="beginBtn">Start Quiz</button>
+      </div>
+    </div>`;
+  let chosen = 'All';
+  document.querySelectorAll('.chip').forEach(c=>{
+    c.addEventListener('click', ()=>{
+      document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));
+      c.classList.add('active');
+      chosen = c.dataset.sec;
     });
-    $("expl").textContent=(it.opts[i].ok?"Correct. ":"Not quite. ")+it.why;
-    $("expl").classList.remove("hide");
-  }else{
-    btns[i].classList.add("picked");
-  }
-  Array.from(btns).forEach(b=>b.disabled=true);
-  $("next").disabled=false;
-  updateScore();
-  $("next").focus({preventScroll:true});
-}
-function updateScore(){
-  const ok=items.filter(x=>x.pick!==null&&x.opts[x.pick].ok).length;
-  $("liveScore").textContent=mode==="practice"?`Score ${ok}`:`Answered ${items.filter(x=>x.pick!==null).length}`;
-}
-function next(){
-  if(idx<items.length-1){idx++;renderQ()}else finish();
-}
-
-/* ---------- Result ---------- */
-function finish(){
-  const ok=items.filter(x=>x.pick!==null&&x.opts[x.pick].ok).length;
-  const skip=items.filter(x=>x.pick===null).length;
-  const bad=items.length-ok-skip;
-  const pct=Math.round(ok/items.length*100);
-  $("rPct").textContent=pct+"%";
-  $("rOk").textContent=ok;$("rBad").textContent=bad;$("rSkip").textContent=skip;
-  $("rMsg").textContent=`You answered ${ok} of ${items.length} correctly. `+(pct>=80?"Excellent work.":pct>=60?"Good progress. Review the wrong answers below.":"Keep practising. Retry the wrong answers to lock them in.");
-  const secs={};
-  items.forEach(x=>{const s=secs[x.sec]=secs[x.sec]||{ok:0,n:0};s.n++;if(x.pick!==null&&x.opts[x.pick].ok)s.ok++});
-  $("rSec").innerHTML=Object.keys(secs).map(k=>{
-    const s=secs[k],p=Math.round(s.ok/s.n*100);
-    return `<div style="margin-top:10px"><div class="top"><span>${SECTIONS[k]}</span><strong>${s.ok}/${s.n}</strong></div><div class="bar"><i style="width:${p}%"></i></div></div>`;
-  }).join("");
-  $("retryWrong").disabled=(bad+skip)===0;
-  filter="all";setFilter("all");
-  show("result");
-}
-let filter="all";
-function setFilter(f){
-  filter=f;
-  $("fAll").setAttribute("aria-pressed",String(f==="all"));
-  $("fWrong").setAttribute("aria-pressed",String(f==="wrong"));
-  const box=$("review");box.innerHTML="";
-  let shown=0;
-  items.forEach((it,n)=>{
-    const good=it.pick!==null&&it.opts[it.pick].ok;
-    if(f==="wrong"&&good)return;
-    shown++;
-    const d=document.createElement("div");d.className="rev";
-    const right=it.opts.find(o=>o.ok).t;
-    const mine=it.pick===null?"No answer":it.opts[it.pick].t;
-    const h=document.createElement("div");
-    h.innerHTML=`<strong></strong><p></p><p></p><p class="mute"></p>`;
-    h.children[0].textContent=`${n+1}. ${it.q}`;
-    h.children[1].innerHTML=`<span class="tag" style="background:${good?"var(--okbg)":"var(--badbg)"};color:${good?"var(--ok)":"var(--bad)"}">${good?"Correct":"Wrong"}</span> Your answer: <b></b>`;
-    h.children[1].querySelector("b").textContent=mine;
-    h.children[2].innerHTML="Correct answer: <b></b>";
-    h.children[2].querySelector("b").textContent=right;
-    h.children[3].textContent=it.why;
-    d.appendChild(h);box.appendChild(d);
   });
-  if(!shown)box.innerHTML='<p class="mute">Nothing to review here. Every answer was correct.</p>';
+  document.getElementById('beginBtn').addEventListener('click', ()=> startQuiz(chosen));
 }
 
-/* ---------- Wiring ---------- */
-$("start").onclick=startFromHome;
-$("next").onclick=next;
-$("quit").onclick=()=>{if(confirm("End the quiz and see your result?"))finish()};
-$("again").onclick=()=>show("home");
-$("retryWrong").onclick=()=>{
-  const ids=items.filter(x=>!(x.pick!==null&&x.opts[x.pick].ok)).map(x=>x.id);
-  begin(shuffle(ids.map(i=>BANK[i])));
-};
-$("fAll").onclick=()=>setFilter("all");
-$("fWrong").onclick=()=>setFilter("wrong");
-$("theme").onclick=()=>{
-  const r=document.documentElement;
-  const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
-  r.dataset.theme=dark?"light":"dark";
-};
-document.addEventListener("keydown",e=>{
-  if($("quiz").classList.contains("hide"))return;
-  if(e.key>="1"&&e.key<="4"){const i=+e.key-1;if(items[idx]&&i<items[idx].opts.length)choose(i)}
-  else if(e.key==="Enter"&&answered&&document.activeElement.id!=="quit"){e.preventDefault();next()}
-});
-renderChips();renderCounts();
+function renderQuestion(){
+  const app = document.getElementById('app');
+  const total = state.pool.length;
+  const q = state.pool[state.idx];
+  const pct = Math.round((state.idx/total)*100);
+  const already = state.answered[state.idx];
+
+  const optsHtml = q.opts.map((opt,i)=>{
+    let cls = 'opt';
+    let disabledAttr = '';
+    if(already !== undefined){
+      disabledAttr = 'disabled';
+      if(i === q.ans) cls += ' correct';
+      else if(i === already) cls += ' wrong';
+    }
+    return `<button class="${cls}" data-i="${i}" ${disabledAttr}>${String.fromCharCode(65+i)}. ${opt}</button>`;
+  }).join('');
+
+  const explainHtml = already !== undefined ? `<div class="explain"><b>${already===q.ans?'Correct. ':'Not quite. '}</b>${q.exp}</div>` : '';
+
+  app.innerHTML = `
+    <div class="progress-row">
+      <span>Question ${state.idx+1} / ${total}</span>
+      <span>Score: ${state.score}</span>
+    </div>
+    <div class="bar"><div class="bar-fill" style="width:${pct}%"></div></div>
+    <div class="card">
+      <div class="qtag">${q.section}</div>
+      <div class="qtext">${q.q}</div>
+      ${optsHtml}
+      ${explainHtml}
+      <div class="nav-row">
+        <button class="nav secondary" id="prevBtn" ${state.idx===0?'disabled':''}>Previous</button>
+        <button class="nav" id="nextBtn" ${already===undefined?'disabled':''}>${state.idx===total-1?'Finish':'Next'}</button>
+      </div>
+    </div>`;
+
+  document.querySelectorAll('.opt').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      if(state.answered[state.idx] !== undefined) return;
+      const i = parseInt(btn.dataset.i);
+      state.answered[state.idx] = i;
+      if(i === q.ans) state.score++;
+      renderQuestion();
+    });
+  });
+  document.getElementById('prevBtn').addEventListener('click', ()=>{
+    if(state.idx>0){ state.idx--; renderQuestion(); }
+  });
+  document.getElementById('nextBtn').addEventListener('click', ()=>{
+    if(state.idx < total-1){ state.idx++; renderQuestion(); }
+    else renderScore();
+  });
+}
+
+function renderScore(){
+  const app = document.getElementById('app');
+  const total = state.pool.length;
+  const pct = Math.round((state.score/total)*100);
+  app.innerHTML = `
+    <div class="card score-screen">
+      <div class="qtag">${state.section}</div>
+      <div>You scored</div>
+      <div class="score-num">${state.score} / ${total}</div>
+      <div class="sub">${pct}% correct</div>
+      <div class="nav-row">
+        <button class="nav secondary" id="retryBtn">Retry Section</button>
+        <button class="nav" id="homeBtn">Choose Another Section</button>
+      </div>
+    </div>`;
+  document.getElementById('retryBtn').addEventListener('click', ()=> startQuiz(state.section));
+  document.getElementById('homeBtn').addEventListener('click', renderStart);
+}
+
+renderStart();
 </script>
 </body>
 </html>
